@@ -1,0 +1,283 @@
+/* style.css */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 320px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 15px;
+}
+
+/* هدر شامل لوگو و عنوان */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* فرم‌ها و لیبل‌ها */
+.form-group {
+    margin-bottom: 15px;
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+select:focus,
+input:focus {
+    border-color: var(--primary-color);
+}
+
+/* دکمه ذخیره */
+.save-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-hover));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.save-btn:hover {
+    box-shadow: 0 6px 8px rgba(0, 123, 255, 0.3);
+}
+
+.save-btn:active {
+    transform: scale(0.98);
+}
+
+/* استایل مخصوص فیلد فرکانس */
+.frequency-input {
+    display: flex;
+    align-items: center;
+}
+
+.frequency-input input {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.unit {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Modal Styles */
+.hidden {
+    display: none !important;
+}
+
+#favoritesManager {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 100;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Override header within modal */
+#favoritesManager .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.actions {
+    margin-bottom: 10px;
+}
+
+.small-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.favorites-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.fav-item {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.fav-item div {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    /* ensure text wraps */
+    word-wrap: break-word;
+}
+
+.fav-item input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.fav-controls {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.save-item-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.dev-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.dev-name a {
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links {
+    font-size: 0.75rem;
+}
+
+.social-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+.version {
+    font-size: 0.7rem;
+    color: #aaa;
+}

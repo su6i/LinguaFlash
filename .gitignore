@@ -1,0 +1,21 @@
+
+# System
+.DS_Store
+
+# Archives
+*.zip
+*.rar
+*.tar.gz
+
+# Node/Dependencies (if any future use)
+node_modules/
+
+# Logs
+npm-debug.log*
+
+# Brain/Artifacts (already outside but just in case)
+.gemini/
+
+# Scripts
+vocab_check.mjs
+check_syntax.mjs

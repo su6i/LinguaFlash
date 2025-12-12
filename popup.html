@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تنظیمات LinguaFlash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h3>LinguaFlash</h3>
+    </div>
+
+    <div class="form-group">
+        <label for="sourceLang">زبان مبدأ (که بلدید):</label>
+        <select id="sourceLang">
+            <option value="fa" selected>فارسی</option>
+            <option value="en">انگلیسی</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="targetLang">زبان هدف (برای یادگیری):</label>
+        <select id="targetLang">
+            <option value="en">انگلیسی</option>
+            <option value="fr">فرانسوی</option>
+            <option value="de">آلمانی</option>
+            <option value="it">ایتالیایی</option>
+            <option value="es">اسپانیایی</option>
+            <option value="ru">روسی</option>
+            <option value="zh">چینی</option>
+            <option value="ar">عربی</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="level">سطح (CEFR):</label>
+        <select id="level">
+            <option value="A1">مبتدی (A1)</option>
+            <option value="A2">مقدماتی (A2)</option>
+            <option value="B1">متوسط (B1)</option>
+            <option value="B2">پیشرفته (B2)</option>
+            <option value="C1">پیشرفته (C1)</option>
+            <option value="C2">پیشرفته (C2)</option>
+            <option value="A1_Sentences">جمله (A1)</option>
+            <option value="A2_Sentences">جمله (A2)</option>
+            <option value="B1_Sentences">جمله (B1)</option>
+            <option value="B2_Sentences">جمله (B2)</option>
+            <option value="C1_Sentences">جمله (C1)</option>
+            <option value="C2_Sentences">جمله (C2)</option>
+            <option value="Grammar_Tips">نکات گرامری</option>
+            <option value="Motivational">جملات انگیزشی</option>
+            <option value="Favorites">جملات منتخب من (Favorites)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="frequency">هر چند دقیقه تکرار شود؟</label>
+        <div class="frequency-input">
+            <input type="number" id="frequency" value="5" min="1" max="60">
+            <span class="unit">دقیقه</span>
+        </div>
+    </div>
+    <button id="manageBtn" style="background: #17a2b8; margin-bottom: 10px;">📂 مدیریت جملات من</button>
+    <button id="testBtn" style="background: #28a745; margin-bottom: 10px;">🔊 تست فوری صدا</button>
+    <button id="saveBtn" class="save-btn">شروع / ذخیره تنظیمات</button>
+
+    <!-- Favorites Manager Modal/Section -->
+    <div id="favoritesManager" class="hidden">
+        <div class="header">
+            <h3>مدیریت جملات انتخابی</h3>
+            <button id="closeManager" class="close-btn">×</button>
+        </div>
+        <div class="actions">
+            <button id="exportBtn" class="small-btn">⬇️ خروجی (CSV)</button>
+        </div>
+        <div id="favoritesList" class="favorites-list">
+            <!-- Items will be injected here via JS -->
+            <p style="text-align: center; color: #666;">لیست خالی است.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="profile-container">
+            <img src="https://github.com/su6i.png" alt="Su6i" class="avatar">
+            <div class="profile-info">
+                <span class="dev-name">Developed by <a href="https://github.com/su6i" target="_blank">Su6i</a></span>
+                <div class="social-links">
+                    <a href="https://github.com/su6i" target="_blank" class="social-link">GitHub</a> |
+                    <a href="https://linkedin.com/in/su6i/" target="_blank" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="version">v1.0.0</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
