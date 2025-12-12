@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="fa">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,19 +10,26 @@
 <body>
 
     <div class="header">
-        <h3>LinguaFlash</h3>
+        <h3 id="appTitle">LinguaFlash</h3>
     </div>
 
     <div class="form-group">
-        <label for="sourceLang">زبان مبدأ (که بلدید):</label>
+        <label id="lblSource" for="sourceLang">زبان مبدأ (که بلدید):</label>
         <select id="sourceLang">
-            <option value="fa" selected>فارسی</option>
-            <option value="en">انگلیسی</option>
+            <option value="en" selected>English</option>
+            <option value="fa">Persian (فارسی)</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="es">Spanish</option>
+            <option value="ru">Russian</option>
+            <option value="zh">Chinese</option>
+            <option value="ar">Arabic</option>
         </select>
     </div>
 
     <div class="form-group">
-        <label for="targetLang">زبان هدف (برای یادگیری):</label>
+        <label id="lblTarget" for="targetLang">زبان هدف (برای یادگیری):</label>
         <select id="targetLang">
             <option value="en">انگلیسی</option>
             <option value="fr">فرانسوی</option>
@@ -36,7 +43,7 @@
     </div>
 
     <div class="form-group">
-        <label for="level">سطح (CEFR):</label>
+        <label id="lblLevel" for="level">سطح (CEFR):</label>
         <select id="level">
             <option value="A1">مبتدی (A1)</option>
             <option value="A2">مقدماتی (A2)</option>
@@ -57,20 +64,25 @@
     </div>
 
     <div class="form-group">
-        <label for="frequency">هر چند دقیقه تکرار شود؟</label>
+        <label id="lblFreq" for="frequency">هر چند دقیقه تکرار شود؟</label>
         <div class="frequency-input">
             <input type="number" id="frequency" value="5" min="1" max="60">
-            <span class="unit">دقیقه</span>
+            <span id="lblUnit" class="unit">دقیقه</span>
         </div>
     </div>
     <button id="manageBtn" style="background: #17a2b8; margin-bottom: 10px;">📂 مدیریت جملات من</button>
-    <button id="testBtn" style="background: #28a745; margin-bottom: 10px;">🔊 تست فوری صدا</button>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <button id="testBtn" style="background: #28a745; flex: 1; margin: 0;">🔊 تست صدا</button>
+        <button id="pauseBtn"
+            style="background: #ffc107; color: #000; flex: 1; margin: 0; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">⏸
+            توقف</button>
+    </div>
     <button id="saveBtn" class="save-btn">شروع / ذخیره تنظیمات</button>
 
     <!-- Favorites Manager Modal/Section -->
     <div id="favoritesManager" class="hidden">
         <div class="header">
-            <h3>مدیریت جملات انتخابی</h3>
+            <h3 id="lblFavManager">مدیریت جملات انتخابی</h3>
             <button id="closeManager" class="close-btn">×</button>
         </div>
         <div class="actions">
@@ -78,7 +90,7 @@
         </div>
         <div id="favoritesList" class="favorites-list">
             <!-- Items will be injected here via JS -->
-            <p style="text-align: center; color: #666;">لیست خالی است.</p>
+            <p id="lblEmptyList" style="text-align: center; color: #666;">لیست خالی است.</p>
         </div>
     </div>
 
