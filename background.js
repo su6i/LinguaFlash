@@ -1,26 +1,59 @@
 import { vocabulary } from './vocabulary.js';
 
-// وقتی اکستنشن نصب یا آپدیت شد
+const menuTranslations = {
+    en: "Add to LinguaFlash Favorites",
+    fa: "افزودن به جملات LinguaFlash",
+    fr: "Ajouter aux favoris LinguaFlash",
+    de: "Zu LinguaFlash-Favoriten hinzufügen",
+    it: "Aggiungi ai preferiti LinguaFlash",
+    es: "Añadir a favoritos de LinguaFlash",
+    ru: "Добавить в избранное LinguaFlash",
+    zh: "添加到 LinguaFlash 收藏",
+    ar: "إضافة إلى مفضلة LinguaFlash"
+};
+
+function updateContextMenu(lang) {
+    const title = menuTranslations[lang] || menuTranslations['en'];
+    // Update if exists, otherwise create? 
+    // update only works if created. safe to call.
+    chrome.contextMenus.update("add_to_linguaflash", { title: title }, () => {
+        if (chrome.runtime.lastError) {
+            // Ignore error if item doesn't exist yet (unlikely)
+        }
+    });
+}
+
 chrome.runtime.onInstalled.addListener(() => {
     console.log("LinguaFlash installed.");
-    // تنظیم مقدار پیش‌فرض
-    chrome.storage.local.set({
-        sourceLang: 'fa',
-        targetLang: 'en',
-        level: 'A1',
-        frequency: 5
-    });
-    createAlarm(5);
+    chrome.storage.local.get(['sourceLang'], (result) => {
+        const lang = result.sourceLang || 'en';
 
-    // ایجاد منوی کلیک راست
-    chrome.contextMenus.create({
-        id: "add_to_linguaflash",
-        title: "افزودن به جملات LinguaFlash",
-        contexts: ["selection"]
+        // Initialize defaults if not present
+        if (!result.sourceLang) {
+            chrome.storage.local.set({
+                sourceLang: 'en',
+                targetLang: 'en', // Default target (user should change)
+                level: 'A1',
+                frequency: 5
+            });
+        }
+        createAlarm(5);
+
+        chrome.contextMenus.create({
+            id: "add_to_linguaflash",
+            title: menuTranslations[lang] || menuTranslations['en'],
+            contexts: ["selection"]
+        });
     });
 });
 
-// گوش دادن به کلیک روی منوی راست کلیک
+// Listen for language changes to update context menu dynamically
+chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local' && changes.sourceLang) {
+        updateContextMenu(changes.sourceLang.newValue);
+    }
+});
+
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "add_to_linguaflash" && info.selectionText) {
         const text = info.selectionText.trim();
