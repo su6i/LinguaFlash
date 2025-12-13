@@ -19,3 +19,4 @@ npm-debug.log*
 # Scripts
 vocab_check.mjs
 check_syntax.mjs
+translate_vocab_ko.py

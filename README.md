@@ -1,43 +1,39 @@
-# LinguaFlash Chrome Extension ⚡
+# LinguaFlash ⚡
 
-LinguaFlash is a powerful Chrome extension designed to help you learn new languages (English, French, German, etc.) seamlessly while browsing the web. It uses interval-based notifications (Space Repetition) to show you vocabulary and sentences, pronouncing them for better retention.
+**LinguaFlash** is a smart Chrome extension designed to help you learn new languages seamlessly while browsing the web. By utilizing **Spaced Repetition** and interval-based notifications, it introduces new vocabulary and sentences with automated pronunciation, ensuring consistent learning without disrupting your workflow.
 
-## Features
+## 🚀 Features
 
-- **Interval Learning**: Set a timer (e.g., every 5 minutes) to receive a new word or sentence notification.
-- **Multi-Language Support**: Learn English, French, German, Italian, Spanish, Russian, Chinese, Arabic.
-- **Fully Localized Interface**: The UI adapts to your language (English default, supports Persian, French, etc.).
-- **Pause/Resume**: Quickly pause learning sessions without disabling the extension.
-- **CEFR Levels**: Choose from A1, A2, B2, C1 levels, plus Grammar Tips and Motivational Quotes.
-- **Bilingual Audio**: Listens to the target language followed by your native language (Persian/English etc).
-- **Favorites Manager**: Save interesting sentences from any webpage (Right-click "Add to LinguaFlash"). Edit, translate, and export them as CSV.
+- **Multi-Language Support**: Learn **English, French, German, Italian, Spanish, Russian, Chinese, Arabic, and Korean**.
+- **CEFR Level-Based Learning**: Structured vocabulary from **A1 (Beginner)** to **C2 (Mastery)**, including Grammar Tips and Motivational Quotes.
+- **Interval Notifications**: Set a timer (e.g., every 5 minutes) to receive a flashcard with audio.
+- **Auto-Pronunciation (TTS)**: Listens to the target language followed by your native language for reinforcement.
+- **Smart Pause**: Quickly pause sessions during meetings or focus time without disabling the extension.
+- **Favorites Manager**:
+    - Right-click any text on the web to "Add to LinguaFlash".
+    - **Edit, Translate, Import, and Export (CSV)** your collection.
+- **Customizable Settings**: Toggle Audio, Notification visibility, and adjust frequency to your pace.
+- **Localized UI**: Interface adapts to your preferred language (English, Persian, French, etc.).
 
-## Installation
+## 📦 Installation
 
-1. Download the latest `linguaflash_v1.0.3.zip` file.
-2. Unzip the file.
-3. Open Google Chrome and go to `chrome://extensions`.
-4. Enable **"Developer mode"** in the top right corner.
-5. Click **"Load unpacked"** and select the unzipped folder.
+1. Clone or download this repository.
+2. Open Google Chrome and navigate to `chrome://extensions`.
+3. Enable **"Developer mode"** (top right toggle).
+4. Click **"Load unpacked"**.
+5. Select the **LinguaFlash** directory.
 
-## Usage
+> **Note on Timing**: Chrome enforces a minimum alarm interval of **1 minute**. To save battery, the browser may occasionally delay notifications if your computer is idle or under heavy load. This is standard browser behavior.
 
-1. Click the extension icon to open the settings popup.
-2. Select your **Source Language** (UI Language) and **Target Language** (To learn).
-3. Select your **Level** (A1, A2, etc.) or choose **"Favorites"** to review your saved items.
-4. Set the **Frequency** (in minutes) for notifications.
-5. Click **"Start / Save Settings"**.
+## 🛠 Usage
 
-### Adding Custom Sentences
-- Highlight text on a webpage.
-- Right-click and select **"Add to LinguaFlash Sentences"**.
-- Open the extension popup, click **"Manage Favorites"** to translate them or change their language.
+1. **Setup**: Click the extension icon. Choose your **Source Language** (Native) and **Target Language** (Learning).
+2. **Select Material**: Pick a CEFR level (e.g., B1 Sentences) or "My Favorites".
+3. **Set Timer**: Choose how often you want to see a card.
+4. **Manage Favorites**: Use the 📂 button to view, edit, import, or export your custom list.
 
-## Author & Credits
+## 👨‍💻 Author
 
-**Developed by [Su6i](https://github.com/su6i)** 💻
+**Developed by [Su6i](https://github.com/su6i)**
 
-- [GitHub](https://github.com/su6i)
-- [LinkedIn](https://linkedin.com/in/su6i/)
-
-Designed for language learners who want to turn their browsing time into learning time.
+Designed for language enthusiasts who want to turn every browsing session into a learning opportunity.
