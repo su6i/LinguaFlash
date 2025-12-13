@@ -95,6 +95,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "resetTimer") {
         createAlarm(request.settings.frequency);
         console.log(`Timer reset to ${request.settings.frequency} minutes.`);
+
+        // UX Enhancement: Show a notification immediately so user knows it's working
+        showNotification();
+
+    } else if (request.action === "stopTimer") {
+        chrome.alarms.clearAll();
+        console.log("Timer stopped (Paused).");
     }
 });
 
@@ -115,8 +122,8 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 
 function showNotification() {
-    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify'], (settings) => {
-        const { targetLang, level, sourceLang, customItems, muteAudio, showNotify } = settings;
+    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify', 'contentMode'], (settings) => {
+        const { targetLang, level, sourceLang, customItems, muteAudio, showNotify, contentMode } = settings;
         let filteredItems = [];
 
         if (level === 'Favorites') {
@@ -137,8 +144,35 @@ function showNotification() {
         // 2. انتخاب یک مورد تصادفی
         const randomItem = filteredItems[Math.floor(Math.random() * filteredItems.length)];
 
-        // پیدا کردن ترجمه به زبان مادری (مثلا فارسی) برای نمایش در نوتیفیکیشن
-        const translation = randomItem.translations[sourceLang] || "---";
+        // تعیین محتوا بر اساس تنظیمات (کلمه یا جمله)
+        // Default mode is 'word'
+        const mode = contentMode || 'word';
+
+        let targetText = randomItem.word;
+        let sourceText = randomItem.translations[sourceLang] || "---";
+
+        // === اصلاح: لاجیک اختصاصی برای گرامر ===
+        if (level === 'Grammar_Tips') {
+            // در گرامر، Word عنوان است و Sentence مثال/توضیح. هر دو را با هم نشان می‌دهیم.
+            const title = randomItem.word;
+            const example = randomItem.sentence || "";
+
+            // ترکیب متن اصلی
+            targetText = `🔹 ${title}\n${example}`;
+
+            // ترکیب ترجمه (اگر موجود باشد)
+            const transTitle = randomItem.translations[sourceLang] || "";
+            const transExample = randomItem.translations['sentence_' + sourceLang] || "";
+            sourceText = `🔸 ${transTitle}\n${transExample}`;
+        }
+        // === لاجیک عادی برای سایر سطوح ===
+        else if (mode === 'sentence' && randomItem.sentence) {
+            targetText = randomItem.sentence;
+            const sentenceKey = 'sentence_' + sourceLang;
+            if (randomItem.translations[sentenceKey]) {
+                sourceText = randomItem.translations[sentenceKey];
+            }
+        }
 
         // 3. نمایش نوتیفیکیشن (اگر فعال باشد)
         if (showNotify !== false) { // Default is true if undefined
@@ -146,7 +180,7 @@ function showNotification() {
                 type: 'basic',
                 iconUrl: 'logo-128.png',
                 title: `LinguaFlash (${(randomItem.lang || targetLang).toUpperCase()})`,
-                message: `${randomItem.word}\n\n${translation}`,
+                message: `${targetText}\n\n${sourceText}`,
                 priority: 2
             });
         }
@@ -154,13 +188,35 @@ function showNotification() {
         // 4. پخش صدا (TTS) (اگر بی صدا نباشد)
         if (muteAudio !== true) { // Default is false if undefined
             const itemLang = randomItem.lang || targetLang;
-            playAudio(randomItem.word, itemLang, translation, sourceLang);
+
+            // اصلاح مهم: برای TTS باید متن خالص بفرستیم، نه متن تزیین شده با 🔹 و اینتر
+            let rawTargetText = randomItem.word;
+            let rawSourceText = randomItem.translations[sourceLang] || "";
+
+            if (level === 'Grammar_Tips') {
+                // برای گرامر، شاید بهتر باشد مثال را بخواند یا عنوان را؟
+                // معمولا مثال مهم‌تر است. بیایید هر دو را بخواند ولی با مکث.
+                // اما فعلا برای سادگی و اطمینان از کارکرد، عنوان را می‌دهیم.
+                // یا بهتر: عنوان + مکث + مثال.
+                // ولی TTS شاید با کاراکترهای خاص مشکل داشته باشد.
+                // بیایید همان title را بفرستیم، یا اگر example دارد، example را.
+                rawTargetText = randomItem.sentence || randomItem.word;
+                // در گرامر، sentence همان مثال است که برای شنیدن مهم‌تر است.
+            } else if (mode === 'sentence' && randomItem.sentence) {
+                rawTargetText = randomItem.sentence;
+                const key = 'sentence_' + sourceLang;
+                if (randomItem.translations[key]) rawSourceText = randomItem.translations[key];
+            }
+
+            playAudio(rawTargetText, itemLang, rawSourceText, sourceLang);
         }
     });
 }
 
 // تابع پخش صدا
 function playAudio(targetText, targetLang, sourceText, sourceLang) {
+    console.log("TTS Debug:", { targetText, targetLang, sourceText, sourceLang }); // Debug log
+
     // نگاشت کدهای زبان به کدهای استاندارد
     const localeMap = {
         en: "en-US",
@@ -185,6 +241,9 @@ function playAudio(targetText, targetLang, sourceText, sourceLang) {
         pitch: 1.0,
         volume: 1.0,
         onEvent: function (event) {
+            if (event.type === 'error') {
+                console.error("TTS Error:", event.errorMessage);
+            }
             if (event.type === 'end') {
                 // اگر متن ترجمه "متن انتخابی کاربر" باشد (یعنی کاربر هنوز ترجمه نکرده)، آن را نخوان
                 // یا اگر "-" باشد
@@ -198,7 +257,10 @@ function playAudio(targetText, targetLang, sourceText, sourceLang) {
                         lang: sourceLocale,
                         rate: 1.0, // سرعت عادی برای زبان مادری
                         pitch: 1.0,
-                        volume: 1.0
+                        volume: 1.0,
+                        onEvent: function (e) {
+                            if (e.type === 'error') console.error("TTS Source Error:", e.errorMessage);
+                        }
                     });
                 }, 500);
             }
