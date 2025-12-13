@@ -34,6 +34,6 @@
 
 ## 👨‍💻 Author
 
-**Developed by [Su6i](https://github.com/su6i)**
+**Developed by [Su6i](https://linkedin.com/in/su6i/)**
 
 Designed for language enthusiasts who want to turn every browsing session into a learning opportunity.
