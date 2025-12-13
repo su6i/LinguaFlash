@@ -21,8 +21,8 @@
 - **Favorites Manager**:
     - Right-click any text on the web to "Add to LinguaFlash".
     - **Edit, Translate, Import, and Export (CSV)** your collection.
-- **Customizable Settings**: Toggle Audio, Notification visibility, and adjust frequency to your pace.
-- **Localized UI**: Interface adapts to your preferred language (English, Persian, French, etc.).
+- **Customizable Settings**: Independent toggles for **Enable Audio** and **Show Notification**, plus adjustable frequency.
+- **Fully Localized UI**: Interface adapts completely to your preferred language (supporting all 10 languages including Persian, Arabic, & Chinese).
 
 ## 📦 Installation
 
