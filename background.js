@@ -115,8 +115,8 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 
 function showNotification() {
-    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems'], (settings) => {
-        const { targetLang, level, sourceLang, customItems } = settings;
+    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify'], (settings) => {
+        const { targetLang, level, sourceLang, customItems, muteAudio, showNotify } = settings;
         let filteredItems = [];
 
         if (level === 'Favorites') {
@@ -140,18 +140,22 @@ function showNotification() {
         // پیدا کردن ترجمه به زبان مادری (مثلا فارسی) برای نمایش در نوتیفیکیشن
         const translation = randomItem.translations[sourceLang] || "---";
 
-        // 3. نمایش نوتیفیکیشن
-        chrome.notifications.create({
-            type: 'basic',
-            iconUrl: 'logo-128.png',
-            title: `LinguaFlash (${(randomItem.lang || targetLang).toUpperCase()})`,
-            message: `${randomItem.word}\n\n${translation}`,
-            priority: 2
-        });
+        // 3. نمایش نوتیفیکیشن (اگر فعال باشد)
+        if (showNotify !== false) { // Default is true if undefined
+            chrome.notifications.create({
+                type: 'basic',
+                iconUrl: 'logo-128.png',
+                title: `LinguaFlash (${(randomItem.lang || targetLang).toUpperCase()})`,
+                message: `${randomItem.word}\n\n${translation}`,
+                priority: 2
+            });
+        }
 
-        // 4. پخش صدا (TTS)
-        const itemLang = randomItem.lang || targetLang;
-        playAudio(randomItem.word, itemLang, translation, sourceLang);
+        // 4. پخش صدا (TTS) (اگر بی صدا نباشد)
+        if (muteAudio !== true) { // Default is false if undefined
+            const itemLang = randomItem.lang || targetLang;
+            playAudio(randomItem.word, itemLang, translation, sourceLang);
+        }
     });
 }
 
@@ -167,7 +171,8 @@ function playAudio(targetText, targetLang, sourceText, sourceLang) {
         ru: "ru-RU",
         zh: "zh-CN",
         ar: "ar-SA",
-        fa: "fa-IR"
+        fa: "fa-IR",
+        ko: "ko-KR"
     };
 
     const targetLocale = localeMap[targetLang] || targetLang;

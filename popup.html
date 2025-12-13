@@ -25,6 +25,7 @@
             <option value="ru">Russian</option>
             <option value="zh">Chinese</option>
             <option value="ar">Arabic</option>
+            <option value="ko">Korean</option>
         </select>
     </div>
 
@@ -39,6 +40,7 @@
             <option value="ru">روسی</option>
             <option value="zh">چینی</option>
             <option value="ar">عربی</option>
+            <option value="ko">کره‌ای</option>
         </select>
     </div>
 
@@ -70,6 +72,17 @@
             <span id="lblUnit" class="unit">دقیقه</span>
         </div>
     </div>
+
+    <!-- NEW: Settings Checkboxes -->
+    <div style="margin-top: 10px; display: flex; justify-content: space-between;">
+        <label style="font-size: 13px; display: flex; align-items: center; gap: 5px;">
+            <input type="checkbox" id="muteAudio"> <span id="lblMute">Mute Audio</span>
+        </label>
+        <label style="font-size: 13px; display: flex; align-items: center; gap: 5px;">
+            <input type="checkbox" id="showNotify" checked> <span id="lblNotify">Show Notification</span>
+        </label>
+    </div>
+
     <button id="manageBtn" style="background: #17a2b8; margin-bottom: 10px;">📂 مدیریت جملات من</button>
     <div style="display: flex; gap: 10px; margin-bottom: 10px;">
         <button id="testBtn" style="background: #28a745; flex: 1; margin: 0;">🔊 تست صدا</button>

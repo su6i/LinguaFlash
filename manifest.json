@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "LinguaFlash - آموزش زبان صوتی",
-    "version": "1.0.5",
-    "description": "آموزش کلمات زبان با تلفظ خودکار بر اساس سطح‌بندی اروپایی",
+    "name": "LinguaFlash",
+    "version": "1.1.5",
+    "description": "Learn vocabulary with automated pronunciation based on CEFR levels",
     "icons": {
         "128": "logo-128.png",
         "48": "logo-48.png",
