@@ -3,123 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>تنظیمات LinguaFlash</title>
+    <title>LinguaFlash Settings</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
+    <!-- Header -->
     <div class="header">
-        <h3 id="appTitle">LinguaFlash</h3>
-    </div>
-
-    <div class="form-group">
-        <label id="lblSource" for="sourceLang">زبان مبدأ (که بلدید):</label>
-        <select id="sourceLang">
-            <option value="en" selected>English</option>
-            <option value="fa">Persian (فارسی)</option>
-            <option value="fr">French</option>
-            <option value="de">German</option>
-            <option value="it">Italian</option>
-            <option value="es">Spanish</option>
-            <option value="ru">Russian</option>
-            <option value="zh">Chinese</option>
-            <option value="ar">Arabic</option>
-            <option value="ko">Korean</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label id="lblTarget" for="targetLang">زبان هدف (برای یادگیری):</label>
-        <select id="targetLang">
-            <option value="en">انگلیسی</option>
-            <option value="fr">فرانسوی</option>
-            <option value="de">آلمانی</option>
-            <option value="it">ایتالیایی</option>
-            <option value="es">اسپانیایی</option>
-            <option value="ru">روسی</option>
-            <option value="zh">چینی</option>
-            <option value="ar">عربی</option>
-            <option value="ko">کره‌ای</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label id="lblLevel" for="level">سطح (CEFR):</label>
-        <select id="level">
-            <option value="A1">مبتدی (A1)</option>
-            <option value="A2">مقدماتی (A2)</option>
-            <option value="B1">متوسط (B1)</option>
-            <option value="B2">پیشرفته (B2)</option>
-            <option value="C1">پیشرفته (C1)</option>
-            <option value="C2">پیشرفته (C2)</option>
-            <option value="Grammar_Tips">نکات گرامری</option>
-            <option value="Favorites">جملات منتخب من (Favorites)</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label id="lblContent" for="contentMode">Content Type:</label>
-        <select id="contentMode">
-            <option value="word">Word</option>
-            <option value="sentence">Sentence</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label id="lblFreq" for="frequency">هر چند دقیقه تکرار شود؟</label>
-        <div class="frequency-input">
-            <input type="number" id="frequency" value="5" min="1" max="60">
-            <span id="lblUnit" class="unit">دقیقه</span>
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <div class="title">
+            <span class="title-lingua">Lingua</span><span class="title-flash">Flash</span>
         </div>
     </div>
 
-    <!-- NEW: Settings Checkboxes -->
-    <div style="margin-top: 10px; display: flex; justify-content: space-between;">
-        <label style="font-size: 13px; display: flex; align-items: center; gap: 5px;">
-            <input type="checkbox" id="muteAudio"> <span id="lblMute">Mute Audio</span>
-        </label>
-        <label style="font-size: 13px; display: flex; align-items: center; gap: 5px;">
-            <input type="checkbox" id="showNotify" checked> <span id="lblNotify">Show Notification</span>
-        </label>
+    <!-- Language Selection Row -->
+    <div class="language-container">
+        <!-- populated by JS -->
+        <select id="sourceLang" class="lang-select"></select>
+        <div class="arrow">➔</div>
+        <select id="targetLang" class="lang-select"></select>
     </div>
 
-    <button id="manageBtn" style="background: #17a2b8; margin-bottom: 10px;">📂 مدیریت جملات من</button>
-    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-        <button id="testBtn" style="background: #28a745; flex: 1; margin: 0;">🔊 تست صدا</button>
-        <button id="pauseBtn"
-            style="background: #ffc107; color: #000; flex: 1; margin: 0; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">⏸
-            توقف</button>
-    </div>
-    <button id="saveBtn" class="save-btn">شروع / ذخیره تنظیمات</button>
+    <div class="divider"></div>
 
-    <!-- Favorites Manager Modal/Section -->
-    <div id="favoritesManager" class="hidden">
-        <div class="header">
-            <h3 id="lblFavManager">مدیریت جملات انتخابی</h3>
-            <button id="closeManager" class="close-btn">×</button>
-        </div>
-        <div class="actions">
-            <button id="exportBtn" class="small-btn">⬇️ خروجی (CSV)</button>
-        </div>
-        <div id="favoritesList" class="favorites-list">
-            <!-- Items will be injected here via JS -->
-            <p id="lblEmptyList" style="text-align: center; color: #666;">لیست خالی است.</p>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="profile-container">
-            <img src="https://github.com/su6i.png" alt="Su6i" class="avatar">
-            <div class="profile-info">
-                <span class="dev-name">Developed by <a href="https://github.com/su6i" target="_blank">Su6i</a></span>
-                <div class="social-links">
-                    <a href="https://github.com/su6i" target="_blank" class="social-link">GitHub</a> |
-                    <a href="https://linkedin.com/in/su6i/" target="_blank" class="social-link">LinkedIn</a>
-                </div>
+    <!-- Settings Form -->
+    <div class="settings-form">
+        <div class="form-row">
+            <label id="lblLevel" for="level">Level (CEFR):</label>
+            <div class="input-wrapper">
+                <select id="level"></select>
             </div>
         </div>
-        <div class="version">v1.0.0</div>
+
+        <div class="form-row">
+            <label id="lblContent" for="contentMode">Content Type:</label>
+            <div class="input-wrapper">
+                <select id="contentMode">
+                    <option value="word">Word</option>
+                    <option value="sentence">Sentence</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label id="lblFreq" for="frequency">Frequency (min):</label>
+            <div class="input-wrapper">
+                <input type="number" id="frequency" value="5" min="1" max="60">
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons Row -->
+    <div class="actions-row">
+        <button id="testBtn" class="action-btn">Test Audio</button>
+        <button id="pauseBtn" class="action-btn">Pause Timer</button>
+        <button id="manageBtn" class="action-btn">Manage Favorites</button>
+    </div>
+
+    <!-- Toggles Row -->
+    <div class="toggles-row">
+        <label class="checkbox-label">
+            <input type="checkbox" id="muteAudio">
+            <!-- Logic is reversed in JS previously, need to be careful. JS says checked=!muteAudio (Enable Audio). existing JS: muteAudioEl.checked = !result.muteAudio -->
+            <span id="lblMute">Enable Audio</span>
+        </label>
+        <label class="checkbox-label">
+            <input type="checkbox" id="showNotify" checked>
+            <span id="lblNotify">Show Notification</span>
+        </label>
+    </div>
+
+    <!-- Save Button -->
+    <button id="saveBtn" class="main-btn">Start / Save Settings</button>
+
+    <!-- Favorites Manager Modal (Hidden) -->
+    <div id="favoritesManager" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="lblFavManager">Manage Favorites</h3>
+                <button id="closeManager" class="close-btn">×</button>
+            </div>
+            <div class="modal-actions">
+                <button id="exportBtn" class="small-btn">⬇️ Export</button>
+                <button id="importBtn" class="small-btn">⬆️ Import</button>
+                <input type="file" id="importFile" accept=".csv" style="display: none;">
+            </div>
+            <div id="favoritesList" class="favorites-list">
+                <p id="lblEmptyList">List is empty.</p>
+            </div>
+        </div>
     </div>
 
     <script src="popup.js"></script>

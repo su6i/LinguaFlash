@@ -64,7 +64,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 });
 
 function addCustomSentence(text) {
-    // دریافت زبان فعلی انتخاب شده توسط کاربر برای ذخیره به عنوان زبان این جمله
+    // Get current target language to save as this sentence's language
     chrome.storage.local.get(['customItems', 'targetLang'], (result) => {
         const items = result.customItems || [];
         const currentTargetLang = result.targetLang || 'en';
@@ -74,15 +74,15 @@ function addCustomSentence(text) {
                 id: Date.now().toString(),
                 word: text,
                 level: "Favorites",
-                lang: currentTargetLang, // ذخیره زبان فعلی اکستنشن برای این جمله
-                translations: { fa: "متن انتخابی کاربر" }
+                lang: currentTargetLang, // Save current extension language for this item
+                translations: { fa: "متن انتخابی کاربر" } // "User selected text" placeholder
             });
             chrome.storage.local.set({ customItems: items }, () => {
                 chrome.notifications.create({
                     type: 'basic',
                     iconUrl: 'logo-128.png',
                     title: 'LinguaFlash',
-                    message: `جمله ذخیره شد (${currentTargetLang})!`,
+                    message: `Sentence saved (${currentTargetLang})!`,
                     priority: 1
                 });
             });
@@ -90,7 +90,7 @@ function addCustomSentence(text) {
     });
 }
 
-// گوش دادن به پیام‌ها از popup.js (برای ریست کردن تایمر)
+// Listen for popup messages (to reset timer)
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "resetTimer") {
         createAlarm(request.settings.frequency);
@@ -105,7 +105,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
 });
 
-// تابع ایجاد آلارم
+// Alarm Creation Function
 function createAlarm(minutes) {
     chrome.alarms.clearAll();
     chrome.alarms.create("vocabAlarm", {
@@ -114,7 +114,7 @@ function createAlarm(minutes) {
     });
 }
 
-// وقتی آلارم زنگ می‌خورد (زمان نمایش کلمه/جمله)
+// When alarm triggers (time to show word/sentence)
 chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "vocabAlarm") {
         showNotification();
@@ -127,10 +127,10 @@ function showNotification() {
         let filteredItems = [];
 
         if (level === 'Favorites') {
-            // استفاده از آیتم‌های کاستوم
+            // Use custom items
             filteredItems = customItems || [];
         } else {
-            // استفاده از دیتابیس اصلی
+            // Use main database
             filteredItems = vocabulary.filter(item =>
                 item.lang === targetLang && item.level === level
             );
@@ -138,34 +138,42 @@ function showNotification() {
 
         if (filteredItems.length === 0) {
             console.log("No items found for this level/language.");
+            // Notify user instead of being silent
+            chrome.notifications.create({
+                type: 'basic',
+                iconUrl: 'logo-128.png',
+                title: 'LinguaFlash',
+                message: `No words found for level: ${level} / ${targetLang}`,
+                priority: 2
+            });
             return;
         }
 
-        // 2. انتخاب یک مورد تصادفی
+        // 2. Select a random item
         const randomItem = filteredItems[Math.floor(Math.random() * filteredItems.length)];
 
-        // تعیین محتوا بر اساس تنظیمات (کلمه یا جمله)
+        // Determine content based on settings (word or sentence)
         // Default mode is 'word'
         const mode = contentMode || 'word';
 
         let targetText = randomItem.word;
         let sourceText = randomItem.translations[sourceLang] || "---";
 
-        // === اصلاح: لاجیک اختصاصی برای گرامر ===
+        // === Fix: Special logic for grammar ===
         if (level === 'Grammar_Tips') {
-            // در گرامر، Word عنوان است و Sentence مثال/توضیح. هر دو را با هم نشان می‌دهیم.
+            // In grammar, Word is the title and Sentence is the example. Show both.
             const title = randomItem.word;
             const example = randomItem.sentence || "";
 
-            // ترکیب متن اصلی
+            // Combine main text
             targetText = `🔹 ${title}\n${example}`;
 
-            // ترکیب ترجمه (اگر موجود باشد)
+            // Combine translation (if available)
             const transTitle = randomItem.translations[sourceLang] || "";
             const transExample = randomItem.translations['sentence_' + sourceLang] || "";
             sourceText = `🔸 ${transTitle}\n${transExample}`;
         }
-        // === لاجیک عادی برای سایر سطوح ===
+        // === Normal logic for other levels ===
         else if (mode === 'sentence' && randomItem.sentence) {
             targetText = randomItem.sentence;
             const sentenceKey = 'sentence_' + sourceLang;
@@ -174,7 +182,7 @@ function showNotification() {
             }
         }
 
-        // 3. نمایش نوتیفیکیشن (اگر فعال باشد)
+        // 3. Show Notification (if enabled)
         if (showNotify !== false) { // Default is true if undefined
             chrome.notifications.create({
                 type: 'basic',
@@ -185,23 +193,17 @@ function showNotification() {
             });
         }
 
-        // 4. پخش صدا (TTS) (اگر بی صدا نباشد)
+        // 4. Play Audio (TTS) (if not muted)
         if (muteAudio !== true) { // Default is false if undefined
             const itemLang = randomItem.lang || targetLang;
 
-            // اصلاح مهم: برای TTS باید متن خالص بفرستیم، نه متن تزیین شده با 🔹 و اینتر
+            // Important: Send raw text to TTS, not decorated text with 🔹
             let rawTargetText = randomItem.word;
             let rawSourceText = randomItem.translations[sourceLang] || "";
 
             if (level === 'Grammar_Tips') {
-                // برای گرامر، شاید بهتر باشد مثال را بخواند یا عنوان را؟
-                // معمولا مثال مهم‌تر است. بیایید هر دو را بخواند ولی با مکث.
-                // اما فعلا برای سادگی و اطمینان از کارکرد، عنوان را می‌دهیم.
-                // یا بهتر: عنوان + مکث + مثال.
-                // ولی TTS شاید با کاراکترهای خاص مشکل داشته باشد.
-                // بیایید همان title را بفرستیم، یا اگر example دارد، example را.
+                // For grammar, read the title or example?
                 rawTargetText = randomItem.sentence || randomItem.word;
-                // در گرامر، sentence همان مثال است که برای شنیدن مهم‌تر است.
             } else if (mode === 'sentence' && randomItem.sentence) {
                 rawTargetText = randomItem.sentence;
                 const key = 'sentence_' + sourceLang;
@@ -213,11 +215,12 @@ function showNotification() {
     });
 }
 
-// تابع پخش صدا
-function playAudio(targetText, targetLang, sourceText, sourceLang) {
-    console.log("TTS Debug:", { targetText, targetLang, sourceText, sourceLang }); // Debug log
 
-    // نگاشت کدهای زبان به کدهای استاندارد
+// Function to play audio
+function playAudio(targetText, targetLang, sourceText, sourceLang) {
+    console.log("TTS Debug:", { targetText, targetLang, sourceText, sourceLang });
+
+    // Map language codes to standard locales
     const localeMap = {
         en: "en-US",
         fr: "fr-FR",
@@ -234,36 +237,42 @@ function playAudio(targetText, targetLang, sourceText, sourceLang) {
     const targetLocale = localeMap[targetLang] || targetLang;
     const sourceLocale = localeMap[sourceLang] || sourceLang;
 
-    // پخش زبان هدف (مثلا انگلیسی)
+    // 1. Stop any previous audio to prevent overlap/stuck queue
+    chrome.tts.stop();
+
+    // 2. Play Target Language
     chrome.tts.speak(targetText, {
         lang: targetLocale,
-        rate: 0.8, // کمی آرام‌تر برای یادگیری
+        rate: 0.8,
         pitch: 1.0,
         volume: 1.0,
+        enqueue: false, // Start immediately
         onEvent: function (event) {
-            if (event.type === 'error') {
-                console.error("TTS Error:", event.errorMessage);
-            }
-            if (event.type === 'end') {
-                // اگر متن ترجمه "متن انتخابی کاربر" باشد (یعنی کاربر هنوز ترجمه نکرده)، آن را نخوان
-                // یا اگر "-" باشد
-                if (!sourceText || sourceText === "---" || sourceText === "متن انتخابی کاربر") {
-                    return;
-                }
-
-                // پخش زبان مادری (مثلا فارسی) با کمی تاخیر
-                setTimeout(() => {
-                    chrome.tts.speak(sourceText, {
-                        lang: sourceLocale,
-                        rate: 1.0, // سرعت عادی برای زبان مادری
-                        pitch: 1.0,
-                        volume: 1.0,
-                        onEvent: function (e) {
-                            if (e.type === 'error') console.error("TTS Source Error:", e.errorMessage);
-                        }
-                    });
-                }, 500);
-            }
+            if (event.type === 'error') console.error("TTS Target Error:", event.errorMessage);
         }
     });
+
+    // 3. Play Translation (if exists)
+    if (sourceText && sourceText !== "---" && sourceText !== "متن انتخابی کاربر") {
+
+        // Hack: Speak whitespace/punctuation to create a small gap using the TTS engine itself
+        // This avoids using setTimeout which kills the Service Worker
+        chrome.tts.speak(" . ", {
+            lang: targetLocale,
+            rate: 0.5,
+            volume: 0.01, // Low volume for the spacer
+            enqueue: true
+        });
+
+        chrome.tts.speak(sourceText, {
+            lang: sourceLocale,
+            rate: 1.0,
+            pitch: 1.0,
+            volume: 1.0,
+            enqueue: true, // Play after the target and spacer
+            onEvent: function (e) {
+                if (e.type === 'error') console.error("TTS Source Error:", e.errorMessage);
+            }
+        });
+    }
 }

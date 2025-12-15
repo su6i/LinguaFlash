@@ -7,6 +7,8 @@
 
 ## 🚀 Features
 
+- **Refined User Interface**: A modern, clean card-based design with an intuitive layout for easier settings management.
+- **Robust Audio Engine**: Improved TTS reliability with smart queueing to prevent silence/crashes, plus a natural pause between sentences.
 - **Multi-Language Support**: Learn **English, French, German, Italian, Spanish, Russian, Chinese, Arabic, Korean, and Persian (Native)**.
 - **Massive Vocabulary Database (1,600+ Items)**:
     - **A1 (Beginner):** 201 items (Basic words, Family, Colors).
