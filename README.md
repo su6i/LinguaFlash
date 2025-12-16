@@ -103,10 +103,10 @@
     -   100% Native Example Coverage.
     -   Zero Duplicate Items.
     -   Zero "English Leakage" in translations.
--   [ ] **Chrome Web Store Publishing**:
-    -   [ ] Prepare promotional images (1280x800, 440x280).
-    -   [ ] Prepare privacy policy URL.
-    -   [ ] Verify production build settings (optimize code, remove logs).
+-   [x] **Chrome Web Store Publishing**:
+    -   [x] Prepare promotional images (1280x800, 440x280).
+    -   [x] Prepare privacy policy URL.
+    -   [x] Verify production build settings (optimize code, remove logs).
 -   [ ] **Leitner System Implementation**: Advanced spaced repetition logic to track learning progress for each word.
     -   [ ] Automated progression through "boxes" based on correct/incorrect recall.
     -   [ ] Optimized review intervals for long-term retention.
