@@ -264,14 +264,33 @@ function playAudio(targetText, targetLang, sourceText, sourceLang) {
             enqueue: true
         });
 
-        chrome.tts.speak(sourceText, {
-            lang: sourceLocale,
-            rate: 1.0,
-            pitch: 1.0,
-            volume: 1.0,
-            enqueue: true, // Play after the target and spacer
-            onEvent: function (e) {
-                if (e.type === 'error') console.error("TTS Source Error:", e.errorMessage);
+        // Split by comma (English/Persian) or Slash
+        // Regex: /[,،\/]/
+        const parts = sourceText.split(/[,،\/]/);
+
+        parts.forEach((part, index) => {
+            const trimmed = part.trim();
+            if (!trimmed) return;
+
+            chrome.tts.speak(trimmed, {
+                lang: sourceLocale,
+                rate: 1.0,
+                pitch: 1.0,
+                volume: 1.0,
+                enqueue: true, // Play after the target and spacer
+                onEvent: function (e) {
+                    if (e.type === 'error') console.error("TTS Source Error:", e.errorMessage);
+                }
+            });
+
+            // Add a mini pause between multiple meanings (but not after the last one)
+            if (index < parts.length - 1) {
+                chrome.tts.speak(" . ", {
+                    lang: sourceLocale,
+                    rate: 0.5,
+                    volume: 0.01,
+                    enqueue: true
+                });
             }
         });
     }
