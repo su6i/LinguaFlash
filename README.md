@@ -3,6 +3,9 @@
   <h1>LinguaFlash ⚡</h1>
 </div>
 
+![LinguaFlash Promo](media/marquee_promo.png)
+
+
 **LinguaFlash** is a smart Chrome extension designed to help you learn new languages seamlessly while browsing the web. By utilizing **Spaced Repetition** and interval-based notifications, it introduces new vocabulary and sentences with automated pronunciation, ensuring consistent learning without disrupting your workflow.
 
 ## 🚀 Features
@@ -25,6 +28,55 @@
     - **Edit, Translate, Import, and Export (CSV)** your collection.
 - **Customizable Settings**: Independent toggles for **Enable Audio** and **Show Notification**, plus adjustable frequency.
 - **Fully Localized UI**: Interface adapts completely to your preferred language (supporting all 10 languages including Persian, Arabic, & Chinese).
+
+## 📸 Visual Tour
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img src="media/promo_favorites.png" alt="Favorites Manager" width="100%">
+        <br><b>📁 Favorites Manager</b><br>Import, Export, and Edit your items.
+      </td>
+      <td align="center" width="50%">
+        <img src="media/promo_grammar.png" alt="Grammar Tips" width="100%">
+        <br><b>💡 Grammar Tips</b><br>Native-logic explanations for hard concepts.
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="50%">
+        <img src="media/promo_multilang.png" alt="Multi-Language" width="100%">
+        <br><b>🌍 Multi-Language Support</b><br>Learn 10+ languages with localized UI.
+      </td>
+      <td align="center" width="50%">
+        <img src="media/promo_final_github.png" alt="Seamless Integration" width="100%">
+        <br><b>✨ Seamless Integration</b><br>Unobtrusive design that fits your browser.
+      </td>
+    </tr>
+     <tr>
+      <td align="center" width="50%">
+        <img src="media/1_general.png" alt="Main View" width="100%">
+        <br><b>🎯 Interactive Learning</b><br>Engage with content in real-time.
+      </td>
+      <td align="center" width="50%">
+        <img src="media/2_languages.png" alt="Supported Languages" width="100%">
+        <br><b>🌐 10+ Languages</b><br>A wide range of supported languages.
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="50%">
+        <img src="media/3_levels.png" alt="CEFR Levels" width="100%">
+        <br><b>📊 CEFR Levels</b><br>From Beginner (A1) to Advanced (C1).
+      </td>
+      <td align="center" width="50%">
+        <img src="media/4_contents.png" alt="Vocabulary & Sentences" width="100%">
+        <br><b>📚 Rich Content</b><br>Thousands of words and sentences.
+      </td>
+    </tr>
+  </table>
+</div>
+
+
 
 ## 📦 Installation
 
