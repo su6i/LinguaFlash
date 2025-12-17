@@ -804,15 +804,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I see a red flower.",
-          fa: "من یک گل قرمز می‌بینم.",
-          fr: "Je vois une fleur rouge.",
-          de: "Ich sehe eine rote Blume.",
-          it: "Vedo un fiore rosso.",
-          es: "Veo una flor roja.",
-          ru: "Я вижу красный цветок.",
-          zh: "我看见一朵红花。",
-          ar: "أرى زهرة حمراء.",
-          ko: "나는 빨간 꽃을 봅니다."
+          fa: "سیب قرمز.",
+          fr: "Pomme rouge.",
+          de: "Roter Apfel.",
+          it: "Mela rossa.",
+          es: "Manzana roja.",
+          ru: "Красное яблоко.",
+          zh: "红苹果.",
+          ar: "تفاحة حمراء.",
+          ko: "빨간 사과."
         }
       },
       {
@@ -831,15 +831,15 @@ const wordCollections = [
         },
         sentence: {
           en: "The sky is blue.",
-          fa: "آسمان آبی است.",
-          fr: "Le ciel est bleu.",
-          de: "Der Himmel ist blau.",
-          it: "Il cielo è blu.",
-          es: "El cielo es azul.",
-          ru: "Небо синее.",
-          zh: "天空是蓝色的。",
-          ar: "السماء زرقاء.",
-          ko: "하늘은 파랗습니다."
+          fa: "آسمان آبی.",
+          fr: "Ciel bleu.",
+          de: "Blauer Himmel.",
+          it: "Cielo blu.",
+          es: "Cielo azul.",
+          ru: "Голубое небо.",
+          zh: "蓝天.",
+          ar: "سماء زرقاء.",
+          ko: "파란 하늘."
         }
       },
       {
@@ -858,15 +858,15 @@ const wordCollections = [
         },
         sentence: {
           en: "The grass is green.",
-          fa: "چمن سبز است.",
-          fr: "L'herbe est verte.",
-          de: "Das Gras ist grün.",
-          it: "L'erba è verde.",
-          es: "La hierba es verde.",
-          ru: "Трава зеленая.",
-          zh: "草是绿色的。",
-          ar: "العشب أخضر.",
-          ko: "잔디는 녹색입니다."
+          fa: "چمن سبز.",
+          fr: "Herbe verte.",
+          de: "Grünes Gras.",
+          it: "Erba verde.",
+          es: "Hierba verde.",
+          ru: "Зеленая трава.",
+          zh: "绿草.",
+          ar: "عشب أخضر.",
+          ko: "푸른 잔디."
         }
       },
       {
@@ -912,15 +912,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Open the door.",
-          fa: "در را باز کن.",
-          fr: "Oouvrez la porte.",
-          de: "Öffne die Tür.",
-          it: "Apri la porta.",
-          es: "Abre la puerta.",
-          ru: "Открой дверь.",
-          zh: "开门。",
-          ar: "افتح الباب.",
-          ko: "문을 여세요."
+          fa: "در را ببند.",
+          fr: "Ferme la porte.",
+          de: "Schließ die Tür.",
+          it: "Chiudi la porta.",
+          es: "Cierra la puerta.",
+          ru: "Закрой дверь.",
+          zh: "关上门.",
+          ar: "أغلق الباب.",
+          ko: "문을 닫으세요."
         }
       },
       {
@@ -939,15 +939,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Close the window.",
-          fa: "پنجره را ببند.",
-          fr: "Fermez la fenêtre.",
-          de: "Schließe das Fenster.",
-          it: "Chiudi la finestra.",
-          es: "Cierra la ventana.",
-          ru: "Закрой окно.",
-          zh: "关窗户。",
-          ar: "أغلق النافذة.",
-          ko: "창문을 닫으세요."
+          fa: "پنجره را باز کن.",
+          fr: "Ouvre la fenêtre.",
+          de: "Öffne das Fenster.",
+          it: "Apri la finestra.",
+          es: "Abre la ventana.",
+          ru: "Открой окно.",
+          zh: "打开窗户.",
+          ar: "افتح النافذة.",
+          ko: "창문을 여세요."
         }
       },
       {
@@ -993,15 +993,15 @@ const wordCollections = [
         },
         sentence: {
           en: "We take the bus.",
-          fa: "ما با اتوبوس می‌رویم.",
-          fr: "Nous prenons le bus.",
-          de: "Wir nehmen den Bus.",
-          it: "Prendiamo l'autobus.",
-          es: "Tomamos el autobús.",
-          ru: "Мы едем на автобусе.",
-          zh: "我们坐公共汽车。",
-          ar: "نستقل الحافلة.",
-          ko: "우리는 버스를 탑니다."
+          fa: "منتظر اتوبوس باش.",
+          fr: "Attends le bus.",
+          de: "Warte auf den Bus.",
+          it: "Aspetta l'autobus.",
+          es: "Espera el autobús.",
+          ru: "Жди автобус.",
+          zh: "等公交车.",
+          ar: "انتظر الحافلة.",
+          ko: "버스를 기다리세요."
         }
       },
       {
@@ -2193,7 +2193,7 @@ const wordCollections = [
         }
       },
       {
-        id: "a1_a1_new_1",
+        id: "aunt",
         word: {
           en: "Aunt",
           fa: "عمه/خاله",
@@ -2207,11 +2207,20 @@ const wordCollections = [
           ko: "이모/고모"
         },
         sentence: {
-          en: "My aunt lives in London."
+          en: "My aunt lives in London.",
+          fa: "عمه/خاله من در لندن زندگی می‌کند.",
+          fr: "Ma tante vit à Londres.",
+          de: "Meine Tante lebt in London.",
+          it: "Mia zia vive a Londra.",
+          es: "Mi tía vive en Londres.",
+          ru: "Моя тетя живет в Лондоне.",
+          zh: "我的阿姨住在伦敦。",
+          ar: "عمتي تعيش في لندن.",
+          ko: "나의 이모는 런던에 삽니다."
         }
       },
       {
-        id: "a1_a1_new_2",
+        id: "uncle",
         word: {
           en: "Uncle",
           fa: "عمو/دایی",
@@ -2225,11 +2234,20 @@ const wordCollections = [
           ko: "삼촌"
         },
         sentence: {
-          en: "He is my favorite uncle."
+          en: "He is my favorite uncle.",
+          fa: "او عموی مورد علاقه من است.",
+          fr: "C'est mon oncle préféré.",
+          de: "Er ist mein Lieblingsonkel.",
+          it: "Lui è il mio zio preferito.",
+          es: "Él es mi tío favorito.",
+          ru: "Он мой любимый дядя.",
+          zh: "他是我最喜欢的叔叔。",
+          ar: "هو عمي المفضل.",
+          ko: "그는 내가 가장 좋아하는 삼촌입니다."
         }
       },
       {
-        id: "a1_a1_new_3",
+        id: "cousin",
         word: {
           en: "Cousin",
           fa: "پسرعمو/دخترعمو",
@@ -2243,11 +2261,20 @@ const wordCollections = [
           ko: "사촌"
         },
         sentence: {
-          en: "She is my cousin."
+          en: "She is my cousin.",
+          fa: "او دخترعموی من است.",
+          fr: "C'est ma cousine.",
+          de: "Sie ist meine Cousine.",
+          it: "Lei è mia cugina.",
+          es: "Ella es mi prima.",
+          ru: "Она моя кузина.",
+          zh: "她是我的堂妹。",
+          ar: "هي ابنة عمي.",
+          ko: "그녀는 내 사촌입니다."
         }
       },
       {
-        id: "a1_a1_new_4",
+        id: "grandmother",
         word: {
           en: "Grandmother",
           fa: "مادربزرگ",
@@ -2261,11 +2288,20 @@ const wordCollections = [
           ko: "할머니"
         },
         sentence: {
-          en: "My grandmother is kind."
+          en: "My grandmother is kind.",
+          fa: "مادربزرگ من مهربان است.",
+          fr: "Ma grand-mère est gentille.",
+          de: "Meine Großmutter ist nett.",
+          it: "Mia nonna è gentile.",
+          es: "Mi abuela es amable.",
+          ru: "Моя бабушка добрая.",
+          zh: "我的奶奶很慈祥。",
+          ar: "جدتي لطيفة.",
+          ko: "나의 할머니는 친절하십니다."
         }
       },
       {
-        id: "a1_a1_new_5",
+        id: "grandfather",
         word: {
           en: "Grandfather",
           fa: "پدربزرگ",
@@ -2279,11 +2315,20 @@ const wordCollections = [
           ko: "할아버지"
         },
         sentence: {
-          en: "Grandfather reads a book."
+          en: "Grandfather reads a book.",
+          fa: "پدربزرگ کتاب می‌خواند.",
+          fr: "Grand-père lit un livre.",
+          de: "Großvater liest ein Buch.",
+          it: "Il nonno legge un libro.",
+          es: "El abuelo lee un libro.",
+          ru: "Дедушка читает книгу.",
+          zh: "爷爷在看书。",
+          ar: "جدي يقرأ كتابا.",
+          ko: "할아버지가 책을 읽으십니다."
         }
       },
       {
-        id: "a1_a1_new_6",
+        id: "wife",
         word: {
           en: "Wife",
           fa: "همسر (زن)",
@@ -2297,11 +2342,20 @@ const wordCollections = [
           ko: "아내"
         },
         sentence: {
-          en: "She is his wife."
+          en: "She is his wife.",
+          fa: "او همسر اوست.",
+          fr: "C'est sa femme.",
+          de: "Sie ist seine Frau.",
+          it: "Lei è sua moglie.",
+          es: "Ella es su esposa.",
+          ru: "Она его жена.",
+          zh: "她是他的妻子。",
+          ar: "هي زوجته.",
+          ko: "그녀는 그의 아내입니다."
         }
       },
       {
-        id: "a1_a1_new_7",
+        id: "husband",
         word: {
           en: "Husband",
           fa: "شوهر",
@@ -2315,11 +2369,20 @@ const wordCollections = [
           ko: "남편"
         },
         sentence: {
-          en: "He is her husband."
+          en: "He is her husband.",
+          fa: "او شوهر اوست.",
+          fr: "C'est son mari.",
+          de: "Er ist ihr Mann.",
+          it: "Lui è suo marito.",
+          es: "Él es su esposo.",
+          ru: "Он ее муж.",
+          zh: "他是她的丈夫。",
+          ar: "هو زوجها.",
+          ko: "그는 그녀의 남편입니다."
         }
       },
       {
-        id: "a1_a1_new_8",
+        id: "baby",
         word: {
           en: "Baby",
           fa: "نوزاد",
@@ -2333,11 +2396,20 @@ const wordCollections = [
           ko: "아기"
         },
         sentence: {
-          en: "The baby is sleeping."
+          en: "The baby is sleeping.",
+          fa: "نوزاد خواب است.",
+          fr: "Le bébé dort.",
+          de: "Das Baby schläft.",
+          it: "Il bambino dorme.",
+          es: "El bebé está durmiendo.",
+          ru: "Младенец спит.",
+          zh: "宝宝在睡觉。",
+          ar: "الرضيع نائم.",
+          ko: "아기가 자고 있습니다."
         }
       },
       {
-        id: "a1_a1_new_9",
+        id: "daughter",
         word: {
           en: "Daughter",
           fa: "دختر",
@@ -2351,11 +2423,20 @@ const wordCollections = [
           ko: "딸"
         },
         sentence: {
-          en: "She is my daughter."
+          en: "She is my daughter.",
+          fa: "او دختر من است.",
+          fr: "C'est ma fille.",
+          de: "Sie ist meine Tochter.",
+          it: "Lei è mia figlia.",
+          es: "Ella es mi hija.",
+          ru: "Она моя дочь.",
+          zh: "她是我的女儿。",
+          ar: "هي ابنتي.",
+          ko: "그녀는 내 딸입니다."
         }
       },
       {
-        id: "a1_a1_new_10",
+        id: "son",
         word: {
           en: "Son",
           fa: "پسر",
@@ -2369,11 +2450,20 @@ const wordCollections = [
           ko: "아들"
         },
         sentence: {
-          en: "He is my son."
+          en: "He is my son.",
+          fa: "او پسر من است.",
+          fr: "C'est mon fils.",
+          de: "Er ist mein Sohn.",
+          it: "Lui è mio figlio.",
+          es: "Él es mi hijo.",
+          ru: "Он мой сын.",
+          zh: "他是我的儿子。",
+          ar: "هو ابني.",
+          ko: "그는 내 아들입니다."
         }
       },
       {
-        id: "a1_a1_new_11",
+        id: "head",
         word: {
           en: "Head",
           fa: "سر",
@@ -2387,11 +2477,20 @@ const wordCollections = [
           ko: "머리"
         },
         sentence: {
-          en: "My head hurts."
+          en: "My head hurts.",
+          fa: "سرم درد می‌کند.",
+          fr: "J'ai mal à la tête.",
+          de: "Mein Kopf tut weh.",
+          it: "Mi fa male la testa.",
+          es: "Me duele la cabeza.",
+          ru: "У меня болит голова.",
+          zh: "我头疼。",
+          ar: "رأسي يؤلمني.",
+          ko: "머리가 아파요."
         }
       },
       {
-        id: "a1_a1_new_12",
+        id: "hair",
         word: {
           en: "Hair",
           fa: "مو",
@@ -2405,11 +2504,20 @@ const wordCollections = [
           ko: "모발"
         },
         sentence: {
-          en: "She has long hair."
+          en: "She has long hair.",
+          fa: "او موهای بلندی دارد.",
+          fr: "Elle a les cheveux longs.",
+          de: "Sie hat lange Haare.",
+          it: "Lei ha i capelli lunghi.",
+          es: "Ella tiene el pelo largo.",
+          ru: "У нее длинные волосы.",
+          zh: "她有长发。",
+          ar: "لديها شعر طويل.",
+          ko: "그녀는 긴 머리를 가지고 있습니다."
         }
       },
       {
-        id: "a1_a1_new_13",
+        id: "eye",
         word: {
           en: "Eye",
           fa: "چشم",
@@ -2423,11 +2531,20 @@ const wordCollections = [
           ko: "눈"
         },
         sentence: {
-          en: "Blue eyes."
+          en: "Blue eyes.",
+          fa: "چشمان آبی.",
+          fr: "Yeux bleus.",
+          de: "Blaue Augen.",
+          it: "Occhi blu.",
+          es: "Ojos azules.",
+          ru: "Голубые глаза.",
+          zh: "蓝眼睛。",
+          ar: "عيون زرقاء.",
+          ko: "파란 눈."
         }
       },
       {
-        id: "a1_a1_new_14",
+        id: "ear",
         word: {
           en: "Ear",
           fa: "گوش",
@@ -2441,11 +2558,20 @@ const wordCollections = [
           ko: "귀"
         },
         sentence: {
-          en: "I hear with my ear."
+          en: "I hear with my ear.",
+          fa: "من با گوشم می‌شنوم.",
+          fr: "J'entends avec mon oreille.",
+          de: "Ich höre mit meinem Ohr.",
+          it: "Sento con il mio orecchio.",
+          es: "Oigo con mi oído.",
+          ru: "Я слышу ухом.",
+          zh: "我用耳朵听。",
+          ar: "أسمع بأذني.",
+          ko: "나는 귀로 듣습니다."
         }
       },
       {
-        id: "a1_a1_new_15",
+        id: "nose",
         word: {
           en: "Nose",
           fa: "بینی",
@@ -2459,11 +2585,20 @@ const wordCollections = [
           ko: "코"
         },
         sentence: {
-          en: "Touch your nose."
+          en: "Touch your nose.",
+          fa: "بینی‌ات را لمس کن.",
+          fr: "Touche ton nez.",
+          de: "Fass deine Nase an.",
+          it: "Toccati il naso.",
+          es: "Toca tu nariz.",
+          ru: "Дотронься до носа.",
+          zh: "摸摸你的鼻子。",
+          ar: "المس أنفك.",
+          ko: "코를 만져보세요."
         }
       },
       {
-        id: "a1_a1_new_16",
+        id: "mouth",
         word: {
           en: "Mouth",
           fa: "دهان",
@@ -2477,11 +2612,20 @@ const wordCollections = [
           ko: "입"
         },
         sentence: {
-          en: "Open your mouth."
+          en: "Open your mouth.",
+          fa: "دهانت را باز کن.",
+          fr: "Ouvre ta bouche.",
+          de: "Öffne deinen Mund.",
+          it: "Apri la bocca.",
+          es: "Abre tu boca.",
+          ru: "Открой рот.",
+          zh: "张开嘴。",
+          ar: "افتح فمك.",
+          ko: "입을 벌리세요."
         }
       },
       {
-        id: "a1_a1_new_17",
+        id: "tooth",
         word: {
           en: "Tooth",
           fa: "دندان",
@@ -2495,11 +2639,20 @@ const wordCollections = [
           ko: "치아"
         },
         sentence: {
-          en: "One tooth, two teeth."
+          en: "One tooth, two teeth.",
+          fa: "یک دندان، دو دندان.",
+          fr: "Une dent, deux dents.",
+          de: "Ein Zahn, zwei Zähne.",
+          it: "Un dente, due denti.",
+          es: "Un diente, dos dientes.",
+          ru: "Один зуб, два зуба.",
+          zh: "一颗牙，两颗牙。",
+          ar: "سن واحد، سنان.",
+          ko: "이 하나, 이 두 개."
         }
       },
       {
-        id: "a1_a1_new_18",
+        id: "arm",
         word: {
           en: "Arm",
           fa: "بازو",
@@ -2513,11 +2666,20 @@ const wordCollections = [
           ko: "팔"
         },
         sentence: {
-          en: "Raise your arm."
+          en: "Raise your arm.",
+          fa: "بازویت را بالا ببر.",
+          fr: "Lève ton bras.",
+          de: "Heb deinen Arm.",
+          it: "Alza il braccio.",
+          es: "Levanta tu brazo.",
+          ru: "Подними руку.",
+          zh: "举起你的手臂。",
+          ar: "ارفع ذراعك.",
+          ko: "팔을 올리세요."
         }
       },
       {
-        id: "a1_a1_new_19",
+        id: "leg_noun",
         word: {
           en: "Leg",
           fa: "پا",
@@ -2531,11 +2693,20 @@ const wordCollections = [
           ko: "다리"
         },
         sentence: {
-          en: "He broke his leg."
+          en: "He broke his leg.",
+          fa: "پای او شکست.",
+          fr: "Il s'est cassé la jambe.",
+          de: "Er brach sich das Bein.",
+          it: "Si è rotto la gamba.",
+          es: "Se rompió la pierna.",
+          ru: "Он сломал ногу.",
+          zh: "他摔断了腿。",
+          ar: "كسر ساقه.",
+          ko: "그는 다리가 부러졌습니다."
         }
       },
       {
-        id: "a1_a1_new_20",
+        id: "foot",
         word: {
           en: "Foot",
           fa: "کف پا",
@@ -2549,11 +2720,20 @@ const wordCollections = [
           ko: "발"
         },
         sentence: {
-          en: "My left foot."
+          en: "My left foot.",
+          fa: "پای چپ من.",
+          fr: "Mon pied gauche.",
+          de: "Mein linker Fuß.",
+          it: "Il mio piede sinistro.",
+          es: "Mi pie izquierdo.",
+          ru: "Моя левая стопа.",
+          zh: "我的左脚。",
+          ar: "قدمي اليسرى.",
+          ko: "나의 왼발."
         }
       },
       {
-        id: "a1_a1_new_21",
+        id: "monday",
         word: {
           en: "Monday",
           fa: "دوشنبه",
@@ -2567,11 +2747,20 @@ const wordCollections = [
           ko: "월요일"
         },
         sentence: {
-          en: "Today is Monday."
+          en: "Today is Monday.",
+          fa: "امروز دوشنبه است.",
+          fr: "Aujourd'hui, c'est lundi.",
+          de: "Heute ist Montag.",
+          it: "Oggi è lunedì.",
+          es: "Hoy es lunes.",
+          ru: "Сегодня понедельник.",
+          zh: "今天是星期一。",
+          ar: "اليوم هو الاثنين.",
+          ko: "오늘은 월요일입니다."
         }
       },
       {
-        id: "a1_a1_new_22",
+        id: "tuesday",
         word: {
           en: "Tuesday",
           fa: "سه‌شنبه",
@@ -2585,11 +2774,20 @@ const wordCollections = [
           ko: "화요일"
         },
         sentence: {
-          en: "See you on Tuesday."
+          en: "See you on Tuesday.",
+          fa: "سه‌شنبه می‌بینمت.",
+          fr: "À mardi.",
+          de: "Bis Dienstag.",
+          it: "Ci vediamo martedì.",
+          es: "Nos vemos el martes.",
+          ru: "Увидимся во вторник.",
+          zh: "星期二见。",
+          ar: "أراك يوم الثلاثاء.",
+          ko: "화요일에 봐요."
         }
       },
       {
-        id: "a1_a1_new_23",
+        id: "wednesday",
         word: {
           en: "Wednesday",
           fa: "چهارشنبه",
@@ -2603,11 +2801,20 @@ const wordCollections = [
           ko: "수요일"
         },
         sentence: {
-          en: "Wednesday is busy."
+          en: "Wednesday is busy.",
+          fa: "چهارشنبه شلوغ است.",
+          fr: "Mercredi est chargé.",
+          de: "Mittwoch ist viel los.",
+          it: "Mercoledì è impegnativo.",
+          es: "El miércoles está ocupado.",
+          ru: "Среда занята.",
+          zh: "星期三很忙。",
+          ar: "الأربعاء مزدحم.",
+          ko: "수요일은 바쁩니다."
         }
       },
       {
-        id: "a1_a1_new_24",
+        id: "thursday",
         word: {
           en: "Thursday",
           fa: "پنج‌شنبه",
@@ -2621,11 +2828,20 @@ const wordCollections = [
           ko: "목요일"
         },
         sentence: {
-          en: "Thursday night."
+          en: "Thursday night.",
+          fa: "پنجشنبه شب.",
+          fr: "Jeudi soir.",
+          de: "Donnerstagabend.",
+          it: "Giovedì sera.",
+          es: "Jueves por la noche.",
+          ru: "Четверг вечером.",
+          zh: "星期四晚上。",
+          ar: "ليلة الخميس.",
+          ko: "목요일 밤."
         }
       },
       {
-        id: "a1_a1_new_25",
+        id: "friday",
         word: {
           en: "Friday",
           fa: "جمعه",
@@ -2639,11 +2855,20 @@ const wordCollections = [
           ko: "금요일"
         },
         sentence: {
-          en: "Friday is a holiday."
+          en: "Friday is a holiday.",
+          fa: "جمعه تعطیل است.",
+          fr: "Vendredi est un jour férié.",
+          de: "Freitag ist ein Feiertag.",
+          it: "Venerdì è festivo.",
+          es: "El viernes es feriado.",
+          ru: "Пятница выходной.",
+          zh: "星期五是假日。",
+          ar: "الجمعة يوم عطلة.",
+          ko: "금요일은 휴일입니다."
         }
       },
       {
-        id: "a1_a1_new_26",
+        id: "saturday",
         word: {
           en: "Saturday",
           fa: "شنبه",
@@ -2657,11 +2882,20 @@ const wordCollections = [
           ko: "토요일"
         },
         sentence: {
-          en: "Saturday morning."
+          en: "Saturday morning.",
+          fa: "شنبه صبح.",
+          fr: "Samedi matin.",
+          de: "Samstagmorgen.",
+          it: "Sabato mattina.",
+          es: "Sábado por la mañana.",
+          ru: "Суббота утро.",
+          zh: "星期六早上。",
+          ar: "صباح السبت.",
+          ko: "토요일 아침."
         }
       },
       {
-        id: "a1_a1_new_27",
+        id: "sunday",
         word: {
           en: "Sunday",
           fa: "یک‌شنبه",
@@ -2675,11 +2909,20 @@ const wordCollections = [
           ko: "일요일"
         },
         sentence: {
-          en: "Sunday is sunny."
+          en: "Sunday is sunny.",
+          fa: "یکشنبه آفتابی است.",
+          fr: "Dimanche est ensoleillé.",
+          de: "Sonntag ist sonnig.",
+          it: "Domenica è soleggiata.",
+          es: "El domingo está soleado.",
+          ru: "Воскресенье солнечное.",
+          zh: "星期天是晴天。",
+          ar: "الأحد مشمس.",
+          ko: "일요일은 맑습니다."
         }
       },
       {
-        id: "a1_a1_new_28",
+        id: "month",
         word: {
           en: "Month",
           fa: "ماه",
@@ -2693,11 +2936,20 @@ const wordCollections = [
           ko: "달"
         },
         sentence: {
-          en: "Which month is it?"
+          en: "Which month is it?",
+          fa: "کدام ماه است؟",
+          fr: "Quel mois est-ce ?",
+          de: "Welcher Monat ist es?",
+          it: "Che mese è?",
+          es: "¿Qué mes es?",
+          ru: "Какой сейчас месяц?",
+          zh: "现在是哪个月？",
+          ar: "أي شهر هذا؟",
+          ko: "몇 월입니까?"
         }
       },
       {
-        id: "a1_a1_new_29",
+        id: "year",
         word: {
           en: "Year",
           fa: "سال",
@@ -2711,11 +2963,20 @@ const wordCollections = [
           ko: "년"
         },
         sentence: {
-          en: "Happy New Year."
+          en: "Happy New Year.",
+          fa: "سال نو مبارک.",
+          fr: "Bonne année.",
+          de: "Frohes neues Jahr.",
+          it: "Buon anno.",
+          es: "Feliz año nuevo.",
+          ru: "С Новым годом.",
+          zh: "新年快乐。",
+          ar: "سنة جديدة سعيدة.",
+          ko: "새해 복 많이 받으세요."
         }
       },
       {
-        id: "a1_a1_new_30",
+        id: "minute",
         word: {
           en: "Minute",
           fa: "دقیقه",
@@ -2729,11 +2990,20 @@ const wordCollections = [
           ko: "분"
         },
         sentence: {
-          en: "Wait a minute."
+          en: "Wait a minute.",
+          fa: "یک دقیقه صبر کن.",
+          fr: "Attends une minute.",
+          de: "Warte eine Minute.",
+          it: "Aspetta un minuto.",
+          es: "Espera un minuto.",
+          ru: "Подожди минуту.",
+          zh: "等一下。",
+          ar: "انتظر دقيقة.",
+          ko: "잠시만 기다리세요."
         }
       },
       {
-        id: "a1_a1_new_31",
+        id: "sun",
         word: {
           en: "Sun",
           fa: "خورشید",
@@ -2747,11 +3017,20 @@ const wordCollections = [
           ko: "태양"
         },
         sentence: {
-          en: "The sun is hot."
+          en: "The sun is hot.",
+          fa: "خورشید داغ است.",
+          fr: "Le soleil est chaud.",
+          de: "Die Sonne ist heiß.",
+          it: "Il sole è caldo.",
+          es: "El sol está caliente.",
+          ru: "Солнце горячее.",
+          zh: "太阳很热。",
+          ar: "الشمس ساخنة.",
+          ko: "해는 뜨겁습니다."
         }
       },
       {
-        id: "a1_a1_new_32",
+        id: "moon",
         word: {
           en: "Moon",
           fa: "ماه",
@@ -2765,11 +3044,20 @@ const wordCollections = [
           ko: "달"
         },
         sentence: {
-          en: "The moon is white."
+          en: "The moon is white.",
+          fa: "ماه سفید است.",
+          fr: "La lune est blanche.",
+          de: "Der Mond ist weiß.",
+          it: "La luna è bianca.",
+          es: "La luna es blanca.",
+          ru: "Луна белая.",
+          zh: "月亮是白色的。",
+          ar: "القمر أبيض.",
+          ko: "달은 하얗습니다."
         }
       },
       {
-        id: "a1_a1_new_33",
+        id: "star",
         word: {
           en: "Star",
           fa: "ستاره",
@@ -2783,11 +3071,20 @@ const wordCollections = [
           ko: "별"
         },
         sentence: {
-          en: "Look at the star."
+          en: "Look at the star.",
+          fa: "به ستاره نگاه کن.",
+          fr: "Regarde l'étoile.",
+          de: "Schau dir den Stern an.",
+          it: "Guarda la stella.",
+          es: "Mira la estrella.",
+          ru: "Посмотри на звезду.",
+          zh: "看那颗星星。",
+          ar: "انظر إلى النجم.",
+          ko: "별을 보세요."
         }
       },
       {
-        id: "a1_a1_new_34",
+        id: "rain",
         word: {
           en: "Rain",
           fa: "باران",
@@ -2801,11 +3098,20 @@ const wordCollections = [
           ko: "비"
         },
         sentence: {
-          en: "I like rain."
+          en: "I like rain.",
+          fa: "من باران را دوست دارم.",
+          fr: "J'aime la pluie.",
+          de: "Ich mag Regen.",
+          it: "Mi piace la pioggia.",
+          es: "Me gusta la lluvia.",
+          ru: "Мне нравится дождь.",
+          zh: "我喜欢雨。",
+          ar: "أحب المطر.",
+          ko: "나는 비를 좋아합니다."
         }
       },
       {
-        id: "a1_a1_new_35",
+        id: "snow",
         word: {
           en: "Snow",
           fa: "برف",
@@ -2819,11 +3125,20 @@ const wordCollections = [
           ko: "눈"
         },
         sentence: {
-          en: "Snow is cold."
+          en: "Snow is cold.",
+          fa: "برف سرد است.",
+          fr: "La neige est froide.",
+          de: "Schnee ist kalt.",
+          it: "La neve è fredda.",
+          es: "La nieve es fría.",
+          ru: "Снег холодный.",
+          zh: "雪很冷。",
+          ar: "الثلج بارد.",
+          ko: "눈은 차갑습니다."
         }
       },
       {
-        id: "a1_a1_new_36",
+        id: "wind",
         word: {
           en: "Wind",
           fa: "باد",
@@ -2837,11 +3152,20 @@ const wordCollections = [
           ko: "바람"
         },
         sentence: {
-          en: "The wind blows."
+          en: "The wind blows.",
+          fa: "باد می‌وزد.",
+          fr: "Le vent souffle.",
+          de: "Der Wind weht.",
+          it: "Il vento soffia.",
+          es: "El viento sopla.",
+          ru: "Ветер дует.",
+          zh: "风在吹。",
+          ar: "الرياح تهب.",
+          ko: "바람이 붑니다."
         }
       },
       {
-        id: "a1_a1_new_37",
+        id: "tree",
         word: {
           en: "Tree",
           fa: "درخت",
@@ -2855,11 +3179,20 @@ const wordCollections = [
           ko: "나무"
         },
         sentence: {
-          en: "A green tree."
+          en: "A green tree.",
+          fa: "یک درخت سبز.",
+          fr: "Un arbre vert.",
+          de: "Ein grüner Baum.",
+          it: "Un albero verde.",
+          es: "Un árbol verde.",
+          ru: "Зеленое дерево.",
+          zh: "绿树。",
+          ar: "شجرة خضراء.",
+          ko: "푸른 나무."
         }
       },
       {
-        id: "a1_a1_new_38",
+        id: "flower",
         word: {
           en: "Flower",
           fa: "گل",
@@ -2873,11 +3206,20 @@ const wordCollections = [
           ko: "꽃"
         },
         sentence: {
-          en: "A red flower."
+          en: "A red flower.",
+          fa: "یک گل قرمز.",
+          fr: "Une fleur rouge.",
+          de: "Eine rote Blume.",
+          it: "Un fiore rosso.",
+          es: "Una flor roja.",
+          ru: "Красный цветок.",
+          zh: "红花。",
+          ar: "زهرة حمراء.",
+          ko: "빨간 꽃."
         }
       },
       {
-        id: "a1_a1_new_39",
+        id: "river",
         word: {
           en: "River",
           fa: "رودخانه",
@@ -2891,11 +3233,20 @@ const wordCollections = [
           ko: "강"
         },
         sentence: {
-          en: "A long river."
+          en: "A long river.",
+          fa: "یک رودخانه طولانی.",
+          fr: "Une longue rivière.",
+          de: "Ein langer Fluss.",
+          it: "Un lungo fiume.",
+          es: "Un río largo.",
+          ru: "Длинная река.",
+          zh: "长河。",
+          ar: "نهر طويل.",
+          ko: "긴 강."
         }
       },
       {
-        id: "a1_a1_new_40",
+        id: "sea",
         word: {
           en: "Sea",
           fa: "دریا",
@@ -2909,11 +3260,20 @@ const wordCollections = [
           ko: "바다"
         },
         sentence: {
-          en: "The sea is blue."
+          en: "The sea is blue.",
+          fa: "دریا آبی است.",
+          fr: "La mer est bleue.",
+          de: "Das Meer ist blau.",
+          it: "Il mare è blu.",
+          es: "El mar es azul.",
+          ru: "Море синее.",
+          zh: "大海是蓝色的。",
+          ar: "البحر أزرق.",
+          ko: "바다는 파랗습니다."
         }
       },
       {
-        id: "a1_a1_new_41",
+        id: "bed",
         word: {
           en: "Bed",
           fa: "تخت‌خواب",
@@ -2927,11 +3287,20 @@ const wordCollections = [
           ko: "침대"
         },
         sentence: {
-          en: "Go to bed."
+          en: "Go to bed.",
+          fa: "به رختخواب برو.",
+          fr: "Va au lit.",
+          de: "Geh ins Bett.",
+          it: "Vai a letto.",
+          es: "Ve a la cama.",
+          ru: "Иди спать.",
+          zh: "去睡觉。",
+          ar: "اذهب إلى السرير.",
+          ko: "잠자러 가세요."
         }
       },
       {
-        id: "a1_a1_new_42",
+        id: "chair",
         word: {
           en: "Chair",
           fa: "صندلی",
@@ -2945,11 +3314,20 @@ const wordCollections = [
           ko: "의자"
         },
         sentence: {
-          en: "Sit on the chair."
+          en: "Sit on the chair.",
+          fa: "روی صندلی بنشین.",
+          fr: "Assieds-toi sur la chaise.",
+          de: "Setz dich auf den Stuhl.",
+          it: "Siediti sulla sedia.",
+          es: "Siéntate en la silla.",
+          ru: "Сядь на стул.",
+          zh: "坐在椅子上。",
+          ar: "اجلس على الكرسي.",
+          ko: "의자에 앉으세요."
         }
       },
       {
-        id: "a1_a1_new_43",
+        id: "table",
         word: {
           en: "Table",
           fa: "میز",
@@ -2963,11 +3341,20 @@ const wordCollections = [
           ko: "책상"
         },
         sentence: {
-          en: "On the table."
+          en: "On the table.",
+          fa: "روی میز.",
+          fr: "Sur la table.",
+          de: "Auf dem Tisch.",
+          it: "Sul tavolo.",
+          es: "En la mesa.",
+          ru: "На столе.",
+          zh: "在桌子上。",
+          ar: "على الطاولة.",
+          ko: "탁자 위에."
         }
       },
       {
-        id: "a1_a1_new_44",
+        id: "window",
         word: {
           en: "Window",
           fa: "پنجره",
@@ -2981,11 +3368,20 @@ const wordCollections = [
           ko: "창문"
         },
         sentence: {
-          en: "Open the window."
+          en: "Open the window.",
+          fa: "پنجره را باز کن.",
+          fr: "Ouvre la fenêtre.",
+          de: "Öffne das Fenster.",
+          it: "Apri la finestra.",
+          es: "Abre la ventana.",
+          ru: "Открой окно.",
+          zh: "打开窗户.",
+          ar: "افتح النافذة.",
+          ko: "창문을 여세요."
         }
       },
       {
-        id: "a1_a1_new_45",
+        id: "door",
         word: {
           en: "Door",
           fa: "در",
@@ -2999,11 +3395,20 @@ const wordCollections = [
           ko: "문"
         },
         sentence: {
-          en: "Close the door."
+          en: "Close the door.",
+          fa: "در را ببند.",
+          fr: "Ferme la porte.",
+          de: "Schließ die Tür.",
+          it: "Chiudi la porta.",
+          es: "Cierra la puerta.",
+          ru: "Закрой дверь.",
+          zh: "关上门.",
+          ar: "أغلق الباب.",
+          ko: "문을 닫으세요."
         }
       },
       {
-        id: "a1_a1_new_46",
+        id: "key",
         word: {
           en: "Key",
           fa: "کلید",
@@ -3017,11 +3422,20 @@ const wordCollections = [
           ko: "열쇠"
         },
         sentence: {
-          en: "Where is my key?"
+          en: "Where is my key?",
+          fa: "کلید من کجاست؟",
+          fr: "Où est ma clé ?",
+          de: "Wo ist mein Schlüssel?",
+          it: "Dov'è la mia chiave?",
+          es: "¿Dónde está mi llave?",
+          ru: "Где мой ключ?",
+          zh: "我的钥匙在哪里？",
+          ar: "أين مفتاحي؟",
+          ko: "내 열쇠가 어디 있죠?"
         }
       },
       {
-        id: "a1_a1_new_47",
+        id: "bag",
         word: {
           en: "Bag",
           fa: "کیف",
@@ -3035,11 +3449,20 @@ const wordCollections = [
           ko: "가방"
         },
         sentence: {
-          en: "My school bag."
+          en: "My school bag.",
+          fa: "کیف مدرسه من.",
+          fr: "Mon sac d'école.",
+          de: "Meine Schultasche.",
+          it: "La mia cartella.",
+          es: "Mi mochila escolar.",
+          ru: "Мой школьный портфель.",
+          zh: "我的书包。",
+          ar: "حقيبتي المدرسية.",
+          ko: "나의 책가방."
         }
       },
       {
-        id: "a1_a1_new_48",
+        id: "pen",
         word: {
           en: "Pen",
           fa: "خودکار",
@@ -3053,11 +3476,20 @@ const wordCollections = [
           ko: "펜"
         },
         sentence: {
-          en: "Give me a pen."
+          en: "Give me a pen.",
+          fa: "به من یک خودکار بده.",
+          fr: "Donne-moi un stylo.",
+          de: "Gib mir einen Stift.",
+          it: "Dammi una penna.",
+          es: "Dame un bolígrafo.",
+          ru: "Дай мне ручку.",
+          zh: "给我一支笔。",
+          ar: "أعطني قلما.",
+          ko: "펜을 주세요."
         }
       },
       {
-        id: "a1_a1_new_49",
+        id: "phone",
         word: {
           en: "Phone",
           fa: "تلفن",
@@ -3071,11 +3503,20 @@ const wordCollections = [
           ko: "전화기"
         },
         sentence: {
-          en: "My phone rings."
+          en: "My phone rings.",
+          fa: "تلفن من زنگ می‌زند.",
+          fr: "Mon téléphone sonne.",
+          de: "Mein Telefon klingelt.",
+          it: "Il mio telefono squilla.",
+          es: "Mi teléfono suena.",
+          ru: "Мой телефон звонит.",
+          zh: "我的电话响了。",
+          ar: "هاتفي يرن.",
+          ko: "내 전화기가 울립니다."
         }
       },
       {
-        id: "a1_a1_new_50",
+        id: "watch",
         word: {
           en: "Watch",
           fa: "ساعت مچی",
@@ -3089,11 +3530,20 @@ const wordCollections = [
           ko: "시계"
         },
         sentence: {
-          en: "Nice watch."
+          en: "Nice watch.",
+          fa: "ساعت مچی زیبا.",
+          fr: "Belle montre.",
+          de: "Schöne Uhr.",
+          it: "Bell'orologio.",
+          es: "Bonito reloj.",
+          ru: "Красивые часы.",
+          zh: "漂亮的手表。",
+          ar: "ساعة جميلة.",
+          ko: "멋진 시계."
         }
       },
       {
-        id: "a1_a1_new_51",
+        id: "bread_loaf",
         word: {
           en: "Bread",
           fa: "نان",
@@ -3107,11 +3557,20 @@ const wordCollections = [
           ko: "빵"
         },
         sentence: {
-          en: "I eat bread."
+          en: "I eat bread.",
+          fa: "من نان می‌خورم.",
+          fr: "Je mange du pain.",
+          de: "Ich esse Brot.",
+          it: "Mangio pane.",
+          es: "Como pan.",
+          ru: "Я ем хлеб.",
+          zh: "我吃面包。",
+          ar: "أكل خبزا.",
+          ko: "나는 빵을 먹습니다."
         }
       },
       {
-        id: "a1_a1_new_52",
+        id: "milk_drink",
         word: {
           en: "Milk",
           fa: "شیر",
@@ -3125,11 +3584,20 @@ const wordCollections = [
           ko: "우유"
         },
         sentence: {
-          en: "Drink milk."
+          en: "Drink milk.",
+          fa: "شیر بنوش.",
+          fr: "Bois du lait.",
+          de: "Trink Milch.",
+          it: "Bevi latte.",
+          es: "Bebe leche.",
+          ru: "Пей молоко.",
+          zh: "喝牛奶。",
+          ar: "اشرب حليب.",
+          ko: "우유를 마시세요."
         }
       },
       {
-        id: "a1_a1_new_53",
+        id: "egg",
         word: {
           en: "Egg",
           fa: "تخم‌مرغ",
@@ -3143,11 +3611,20 @@ const wordCollections = [
           ko: "계란"
         },
         sentence: {
-          en: "Boiled egg."
+          en: "Boiled egg.",
+          fa: "تخم مرغ آب پز.",
+          fr: "Œuf dur.",
+          de: "Gekochtes Ei.",
+          it: "Uovo sodo.",
+          es: "Huevo duro.",
+          ru: "Вареное яйцо.",
+          zh: "煮鸡蛋。",
+          ar: "بيضة مسلوقة.",
+          ko: "삶은 계란."
         }
       },
       {
-        id: "a1_a1_new_54",
+        id: "cheese",
         word: {
           en: "Cheese",
           fa: "پنیر",
@@ -3161,11 +3638,20 @@ const wordCollections = [
           ko: "치즈"
         },
         sentence: {
-          en: "I like cheese."
+          en: "I like cheese.",
+          fa: "من پنیر دوست دارم.",
+          fr: "J'aime le fromage.",
+          de: "Ich mag Käse.",
+          it: "Mi piace il formaggio.",
+          es: "Me gusta el queso.",
+          ru: "Я люблю сыр.",
+          zh: "我喜欢奶酪。",
+          ar: "أحب الجبن.",
+          ko: "나는 치즈를 좋아합니다."
         }
       },
       {
-        id: "a1_a1_new_55",
+        id: "meat",
         word: {
           en: "Meat",
           fa: "گوشت",
@@ -3179,11 +3665,20 @@ const wordCollections = [
           ko: "고기"
         },
         sentence: {
-          en: "Red meat."
+          en: "Red meat.",
+          fa: "گوشت قرمز.",
+          fr: "Viande rouge.",
+          de: "Rotes Fleisch.",
+          it: "Carne rossa.",
+          es: "Carne roja.",
+          ru: "Красное мясо.",
+          zh: "红肉。",
+          ar: "لحم أحمر.",
+          ko: "붉은 고기."
         }
       },
       {
-        id: "a1_a1_new_56",
+        id: "chicken",
         word: {
           en: "Chicken",
           fa: "مرغ",
@@ -3197,11 +3692,20 @@ const wordCollections = [
           ko: "닭고기"
         },
         sentence: {
-          en: "Fried chicken."
+          en: "Fried chicken.",
+          fa: "مرغ سرخ شده.",
+          fr: "Poulet frit.",
+          de: "Gebratenes Hähnchen.",
+          it: "Pollo fritto.",
+          es: "Pollo frito.",
+          ru: "Жареная курица.",
+          zh: "炸鸡。",
+          ar: "دجاج مقلي.",
+          ko: "후라이드 치킨."
         }
       },
       {
-        id: "a1_a1_new_57",
+        id: "rice",
         word: {
           en: "Rice",
           fa: "برنج",
@@ -3215,11 +3719,20 @@ const wordCollections = [
           ko: "밥"
         },
         sentence: {
-          en: "White rice."
+          en: "White rice.",
+          fa: "برنج سفید.",
+          fr: "Riz blanc.",
+          de: "Weißer Reis.",
+          it: "Riso bianco.",
+          es: "Arroz blanco.",
+          ru: "Белый рис.",
+          zh: "白米饭。",
+          ar: "أرز أبيض.",
+          ko: "흰 쌀밥."
         }
       },
       {
-        id: "a1_a1_new_58",
+        id: "salt",
         word: {
           en: "Salt",
           fa: "نمک",
@@ -3233,11 +3746,20 @@ const wordCollections = [
           ko: "소금"
         },
         sentence: {
-          en: "Pass the salt."
+          en: "Pass the salt.",
+          fa: "نمک را بده.",
+          fr: "Passe le sel.",
+          de: "Gib mir das Salz.",
+          it: "Passami il sale.",
+          es: "Pásame la sal.",
+          ru: "Передай соль.",
+          zh: "递给我盐。",
+          ar: "ناولني الملح.",
+          ko: "소금을 주세요."
         }
       },
       {
-        id: "a1_a1_new_59",
+        id: "sugar",
         word: {
           en: "Sugar",
           fa: "شکر",
@@ -3251,11 +3773,20 @@ const wordCollections = [
           ko: "설탕"
         },
         sentence: {
-          en: "Sugar is sweet."
+          en: "Sugar is sweet.",
+          fa: "شکر شیرین است.",
+          fr: "Le sucre est doux.",
+          de: "Zucker ist süß.",
+          it: "Lo zucchero è dolce.",
+          es: "El azúcar es dulce.",
+          ru: "Сахар сладкий.",
+          zh: "糖很甜。",
+          ar: "السكر حلو.",
+          ko: "설탕은 달콤합니다."
         }
       },
       {
-        id: "a1_a1_new_60",
+        id: "tea",
         word: {
           en: "Tea",
           fa: "چای",
@@ -3269,11 +3800,20 @@ const wordCollections = [
           ko: "차"
         },
         sentence: {
-          en: "Hot tea."
+          en: "Hot tea.",
+          fa: "چای داغ.",
+          fr: "Thé chaud.",
+          de: "Heißer Tee.",
+          it: "Tè caldo.",
+          es: "Té caliente.",
+          ru: "Горячий чай.",
+          zh: "热茶。",
+          ar: "شاي ساخن.",
+          ko: "뜨거운 차."
         }
       },
       {
-        id: "a1_a1_new_61",
+        id: "shirt",
         word: {
           en: "Shirt",
           fa: "Shirt",
@@ -3287,11 +3827,20 @@ const wordCollections = [
           ko: "Shirt"
         },
         sentence: {
-          en: "A white shirt."
+          en: "A white shirt.",
+          fa: "یک پیراهن سفید.",
+          fr: "Une chemise blanche.",
+          de: "Ein weißes Hemd.",
+          it: "Una camicia bianca.",
+          es: "Una camisa blanca.",
+          ru: "Белая рубашка.",
+          zh: "白衬衫。",
+          ar: "قميص أبيض.",
+          ko: "흰 셔츠."
         }
       },
       {
-        id: "a1_a1_new_62",
+        id: "shoes",
         word: {
           en: "Shoes",
           fa: "Shoes",
@@ -3305,11 +3854,20 @@ const wordCollections = [
           ko: "Shoes"
         },
         sentence: {
-          en: "New shoes."
+          en: "New shoes.",
+          fa: "کفش‌های نو.",
+          fr: "Nouvelles chaussures.",
+          de: "Neue Schuhe.",
+          it: "Scarpe nuove.",
+          es: "Zapatos nuevos.",
+          ru: "Новые ботинки.",
+          zh: "新鞋。",
+          ar: "أحذية جديدة.",
+          ko: "새 신발."
         }
       },
       {
-        id: "a1_a1_new_63",
+        id: "hat",
         word: {
           en: "Hat",
           fa: "Hat",
@@ -3323,11 +3881,20 @@ const wordCollections = [
           ko: "Hat"
         },
         sentence: {
-          en: "Wear a hat."
+          en: "Wear a hat.",
+          fa: "کلاه بپوش.",
+          fr: "Porte un chapeau.",
+          de: "Trag einen Hut.",
+          it: "Indossa un cappello.",
+          es: "Usa un sombrero.",
+          ru: "Надень шляпу.",
+          zh: "戴上帽子。",
+          ar: "ارتد قبعة.",
+          ko: "모자를 쓰세요."
         }
       },
       {
-        id: "a1_a1_new_64",
+        id: "dress",
         word: {
           en: "Dress",
           fa: "Dress",
@@ -3341,11 +3908,20 @@ const wordCollections = [
           ko: "Dress"
         },
         sentence: {
-          en: "A nice dress."
+          en: "A nice dress.",
+          fa: "یک لباس زیبا.",
+          fr: "Une belle robe.",
+          de: "Ein schönes Kleid.",
+          it: "Un bel vestito.",
+          es: "Un bonito vestido.",
+          ru: "Красивое платье.",
+          zh: "漂亮的连衣裙。",
+          ar: "فستان جميل.",
+          ko: "예쁜 드레스."
         }
       },
       {
-        id: "a1_a1_new_65",
+        id: "coat",
         word: {
           en: "Coat",
           fa: "Coat",
@@ -3359,11 +3935,20 @@ const wordCollections = [
           ko: "Coat"
         },
         sentence: {
-          en: "It is cold, wear a coat."
+          en: "It is cold, wear a coat.",
+          fa: "سرد است، کت بپوش.",
+          fr: "Il fait froid, porte un manteau.",
+          de: "Es ist kalt, zieh einen Mantel an.",
+          it: "Fa freddo, metti un cappotto.",
+          es: "Hace frío, usa un abrigo.",
+          ru: "Холодно, надень пальто.",
+          zh: "天冷，穿上外套。",
+          ar: "الجو بارد، ارتد معطفا.",
+          ko: "추우니 코트를 입으세요."
         }
       },
       {
-        id: "a1_a1_new_66",
+        id: "school",
         word: {
           en: "School",
           fa: "School",
@@ -3377,11 +3962,20 @@ const wordCollections = [
           ko: "School"
         },
         sentence: {
-          en: "Go to school."
+          en: "Go to school.",
+          fa: "به مدرسه برو.",
+          fr: "Va à l'école.",
+          de: "Geh zur Schule.",
+          it: "Vai a scuola.",
+          es: "Ve a la escuela.",
+          ru: "Иди в школу.",
+          zh: "去学校。",
+          ar: "اذهب للمدرسة.",
+          ko: "학교에 가세요."
         }
       },
       {
-        id: "a1_a1_new_67",
+        id: "park",
         word: {
           en: "Park",
           fa: "Park",
@@ -3395,11 +3989,20 @@ const wordCollections = [
           ko: "Park"
         },
         sentence: {
-          en: "Play in the park."
+          en: "Play in the park.",
+          fa: "در پارک بازی کن.",
+          fr: "Joue dans le parc.",
+          de: "Spiel im Park.",
+          it: "Gioca nel parco.",
+          es: "Juega en el parque.",
+          ru: "Играй в парке.",
+          zh: "在公园玩。",
+          ar: "العب في الحديقة.",
+          ko: "공원에서 놀아요."
         }
       },
       {
-        id: "a1_a1_new_68",
+        id: "shop",
         word: {
           en: "Shop",
           fa: "Shop",
@@ -3413,11 +4016,20 @@ const wordCollections = [
           ko: "Shop"
         },
         sentence: {
-          en: "A big shop."
+          en: "A big shop.",
+          fa: "یک مغازه بزرگ.",
+          fr: "Un grand magasin.",
+          de: "Ein großes Geschäft.",
+          it: "Un grande negozio.",
+          es: "Una gran tienda.",
+          ru: "Большой магазин.",
+          zh: "一家大商店。",
+          ar: "محل كبير.",
+          ko: "큰 가게."
         }
       },
       {
-        id: "a1_a1_new_69",
+        id: "street",
         word: {
           en: "Street",
           fa: "Street",
@@ -3431,11 +4043,20 @@ const wordCollections = [
           ko: "Street"
         },
         sentence: {
-          en: "Cross the street."
+          en: "Cross the street.",
+          fa: "از خیابان رد شو.",
+          fr: "Traverse la rue.",
+          de: "Überquere die Straße.",
+          it: "Attraversa la strada.",
+          es: "Cruza la calle.",
+          ru: "Перейди улицу.",
+          zh: "过马路。",
+          ar: "اعبر الشارع.",
+          ko: "길을 건너세요."
         }
       },
       {
-        id: "a1_a1_new_70",
+        id: "bus",
         word: {
           en: "Bus",
           fa: "Bus",
@@ -3449,11 +4070,20 @@ const wordCollections = [
           ko: "Bus"
         },
         sentence: {
-          en: "Wait for the bus."
+          en: "Wait for the bus.",
+          fa: "منتظر اتوبوس باش.",
+          fr: "Attends le bus.",
+          de: "Warte auf den Bus.",
+          it: "Aspetta l'autobus.",
+          es: "Espera el autobús.",
+          ru: "Жди автобус.",
+          zh: "等公交车.",
+          ar: "انتظر الحافلة.",
+          ko: "버스를 기다리세요."
         }
       },
       {
-        id: "a1_a1_new_71",
+        id: "hot_adj",
         word: {
           en: "Hot",
           fa: "Hot",
@@ -3467,11 +4097,20 @@ const wordCollections = [
           ko: "Hot"
         },
         sentence: {
-          en: "Hot water."
+          en: "Hot water.",
+          fa: "آب داغ.",
+          fr: "Eau chaude.",
+          de: "Heißes Wasser.",
+          it: "Acqua calda.",
+          es: "Agua caliente.",
+          ru: "Горячая вода.",
+          zh: "热水。",
+          ar: "ماء ساخن.",
+          ko: "뜨거운 물."
         }
       },
       {
-        id: "a1_a1_new_72",
+        id: "cold_adj",
         word: {
           en: "Cold",
           fa: "Cold",
@@ -3485,11 +4124,20 @@ const wordCollections = [
           ko: "Cold"
         },
         sentence: {
-          en: "Cold weather."
+          en: "Cold weather.",
+          fa: "هوای سرد.",
+          fr: "Temps froid.",
+          de: "Kaltes Wetter.",
+          it: "Tempo freddo.",
+          es: "Clima frío.",
+          ru: "Холодная погода.",
+          zh: "冷天气。",
+          ar: "طقس بارد.",
+          ko: "추운 날씨."
         }
       },
       {
-        id: "a1_a1_new_73",
+        id: "old",
         word: {
           en: "Old",
           fa: "Old",
@@ -3503,11 +4151,20 @@ const wordCollections = [
           ko: "Old"
         },
         sentence: {
-          en: "Old car."
+          en: "Old car.",
+          fa: "ماشین قدیمی.",
+          fr: "Vieille voiture.",
+          de: "Altes Auto.",
+          it: "Vecchia auto.",
+          es: "Coche viejo.",
+          ru: "Старая машина.",
+          zh: "旧车。",
+          ar: "سيارة قديمة.",
+          ko: "오래된 차."
         }
       },
       {
-        id: "a1_a1_new_74",
+        id: "new",
         word: {
           en: "New",
           fa: "New",
@@ -3521,11 +4178,20 @@ const wordCollections = [
           ko: "New"
         },
         sentence: {
-          en: "New house."
+          en: "New house.",
+          fa: "خانه جدید.",
+          fr: "Nouvelle maison.",
+          de: "Neues Haus.",
+          it: "Nuova casa.",
+          es: "Casa nueva.",
+          ru: "Новый дом.",
+          zh: "新房子。",
+          ar: "منزل جديد.",
+          ko: "새 집."
         }
       },
       {
-        id: "a1_a1_new_75",
+        id: "happy",
         word: {
           en: "Happy",
           fa: "Happy",
@@ -3539,11 +4205,20 @@ const wordCollections = [
           ko: "Happy"
         },
         sentence: {
-          en: "Happy face."
+          en: "Happy face.",
+          fa: "صورت خوشحال.",
+          fr: "Visage heureux.",
+          de: "Glückliches Gesicht.",
+          it: "Faccia felice.",
+          es: "Cara feliz.",
+          ru: "Счастливое лицо.",
+          zh: "快乐的脸。",
+          ar: "وجه سعيد.",
+          ko: "행복한 얼굴."
         }
       },
       {
-        id: "a1_a1_new_76",
+        id: "sad",
         word: {
           en: "Sad",
           fa: "Sad",
@@ -3557,11 +4232,20 @@ const wordCollections = [
           ko: "Sad"
         },
         sentence: {
-          en: "Sad movie."
+          en: "Sad movie.",
+          fa: "فیلم غمگین.",
+          fr: "Film triste.",
+          de: "Trauriger Film.",
+          it: "Film triste.",
+          es: "Película triste.",
+          ru: "Грустный фильм.",
+          zh: "悲伤的电影。",
+          ar: "فيلم حزين.",
+          ko: "슬픈 영화."
         }
       },
       {
-        id: "a1_a1_new_77",
+        id: "big_adj",
         word: {
           en: "Big",
           fa: "Big",
@@ -3575,11 +4259,20 @@ const wordCollections = [
           ko: "Big"
         },
         sentence: {
-          en: "Big dog."
+          en: "Big dog.",
+          fa: "سگ بزرگ.",
+          fr: "Grand chien.",
+          de: "Großer Hund.",
+          it: "Grande cane.",
+          es: "Perro grande.",
+          ru: "Большая собака.",
+          zh: "大狗。",
+          ar: "كلب كبير.",
+          ko: "큰 개."
         }
       },
       {
-        id: "a1_a1_new_78",
+        id: "small_adj",
         word: {
           en: "Small",
           fa: "Small",
@@ -3593,11 +4286,20 @@ const wordCollections = [
           ko: "Small"
         },
         sentence: {
-          en: "Small cat."
+          en: "Small cat.",
+          fa: "گربه کوچک.",
+          fr: "Petit chat.",
+          de: "Kleine Katze.",
+          it: "Piccolo gatto.",
+          es: "Gato pequeño.",
+          ru: "Маленькая кошка.",
+          zh: "小猫。",
+          ar: "قطة صغيرة.",
+          ko: "작은 고양이."
         }
       },
       {
-        id: "a1_a1_new_79",
+        id: "good_adj",
         word: {
           en: "Good",
           fa: "Good",
@@ -3611,11 +4313,20 @@ const wordCollections = [
           ko: "Good"
         },
         sentence: {
-          en: "Good boy."
+          en: "Good boy.",
+          fa: "پسر خوب.",
+          fr: "Bon garçon.",
+          de: "Guter Junge.",
+          it: "Bravo ragazzo.",
+          es: "Buen chico.",
+          ru: "Хороший мальчик.",
+          zh: "好孩子。",
+          ar: "ولد جيد.",
+          ko: "착한 소년."
         }
       },
       {
-        id: "a1_a1_new_80",
+        id: "bad_adj",
         word: {
           en: "Bad",
           fa: "Bad",
@@ -3629,11 +4340,20 @@ const wordCollections = [
           ko: "Bad"
         },
         sentence: {
-          en: "Bad weather."
+          en: "Bad weather.",
+          fa: "هوای بد.",
+          fr: "Mauvais temps.",
+          de: "Schlechtes Wetter.",
+          it: "Brutto tempo.",
+          es: "Mal tiempo.",
+          ru: "Плохая погода.",
+          zh: "坏天气。",
+          ar: "طقس سيء.",
+          ko: "나쁜 날씨."
         }
       },
       {
-        id: "a1_a1_new_81",
+        id: "run",
         word: {
           en: "Run",
           fa: "Run",
@@ -3647,11 +4367,20 @@ const wordCollections = [
           ko: "Run"
         },
         sentence: {
-          en: "Run fast."
+          en: "Run fast.",
+          fa: "سریع بدو.",
+          fr: "Cours vite.",
+          de: "Lauf schnell.",
+          it: "Corri veloce.",
+          es: "Corre rápido.",
+          ru: "Беги быстро.",
+          zh: "快跑。",
+          ar: "اركض بسرعة.",
+          ko: "빨리 뛰세요."
         }
       },
       {
-        id: "a1_a1_new_82",
+        id: "walk",
         word: {
           en: "Walk",
           fa: "Walk",
@@ -3665,11 +4394,20 @@ const wordCollections = [
           ko: "Walk"
         },
         sentence: {
-          en: "Walk slowly."
+          en: "Walk slowly.",
+          fa: "آهسته راه برو.",
+          fr: "Marche lentement.",
+          de: "Geh langsam.",
+          it: "Cammina lentamente.",
+          es: "Camina despacio.",
+          ru: "Иди медленно.",
+          zh: "慢走。",
+          ar: "امش ببطء.",
+          ko: "천천히 걸으세요."
         }
       },
       {
-        id: "a1_a1_new_83",
+        id: "eat_verb",
         word: {
           en: "Eat",
           fa: "Eat",
@@ -3683,11 +4421,20 @@ const wordCollections = [
           ko: "Eat"
         },
         sentence: {
-          en: "Eat food."
+          en: "Eat food.",
+          fa: "غذا بخور.",
+          fr: "Mange de la nourriture.",
+          de: "Iss Essen.",
+          it: "Mangia cibo.",
+          es: "Come comida.",
+          ru: "Ешь еду.",
+          zh: "吃饭。",
+          ar: "تناول الطعام.",
+          ko: "음식을 먹으세요."
         }
       },
       {
-        id: "a1_a1_new_84",
+        id: "drink_verb",
         word: {
           en: "Drink",
           fa: "Drink",
@@ -3701,11 +4448,20 @@ const wordCollections = [
           ko: "Drink"
         },
         sentence: {
-          en: "Drink water."
+          en: "Drink water.",
+          fa: "آب بنوش.",
+          fr: "Bois de l'eau.",
+          de: "Trink Wasser.",
+          it: "Bevi acqua.",
+          es: "Bebe agua.",
+          ru: "Пей воду.",
+          zh: "喝水。",
+          ar: "اشرب ماء.",
+          ko: "물을 마시세요."
         }
       },
       {
-        id: "a1_a1_new_85",
+        id: "sleep_verb",
         word: {
           en: "Sleep",
           fa: "Sleep",
@@ -3719,11 +4475,20 @@ const wordCollections = [
           ko: "Sleep"
         },
         sentence: {
-          en: "Sleep well."
+          en: "Sleep well.",
+          fa: "خوب بخوابی.",
+          fr: "Dors bien.",
+          de: "Schlaf gut.",
+          it: "Dormi bene.",
+          es: "Duerme bien.",
+          ru: "Спи хорошо.",
+          zh: "睡个好觉。",
+          ar: "نم جيدا.",
+          ko: "잘 자요."
         }
       },
       {
-        id: "a1_a1_new_86",
+        id: "read",
         word: {
           en: "Read",
           fa: "Read",
@@ -3737,11 +4502,20 @@ const wordCollections = [
           ko: "Read"
         },
         sentence: {
-          en: "Read a book."
+          en: "Read a book.",
+          fa: "کتاب بخوان.",
+          fr: "Lis un livre.",
+          de: "Lies ein Buch.",
+          it: "Leggi un libro.",
+          es: "Lee un libro.",
+          ru: "Читай книгу.",
+          zh: "读书。",
+          ar: "اقرأ كتابا.",
+          ko: "책을 읽으세요."
         }
       },
       {
-        id: "a1_a1_new_87",
+        id: "write",
         word: {
           en: "Write",
           fa: "Write",
@@ -3755,11 +4529,20 @@ const wordCollections = [
           ko: "Write"
         },
         sentence: {
-          en: "Write a letter."
+          en: "Write a letter.",
+          fa: "نامه بنویس.",
+          fr: "Écris une lettre.",
+          de: "Schreib einen Brief.",
+          it: "Scrivi una lettera.",
+          es: "Escribe una carta.",
+          ru: "Напиши письмо.",
+          zh: "写信。",
+          ar: "اكتب رسالة.",
+          ko: "편지를 쓰세요."
         }
       },
       {
-        id: "a1_a1_new_88",
+        id: "speak",
         word: {
           en: "Speak",
           fa: "Speak",
@@ -3773,11 +4556,20 @@ const wordCollections = [
           ko: "Speak"
         },
         sentence: {
-          en: "Speak English."
+          en: "Speak English.",
+          fa: "انگلیسی صحبت کن.",
+          fr: "Parle anglais.",
+          de: "Sprich Englisch.",
+          it: "Parla inglese.",
+          es: "Habla inglés.",
+          ru: "Говори по-английски.",
+          zh: "说英语。",
+          ar: "تحدث الإنجليزية.",
+          ko: "영어로 말하세요."
         }
       },
       {
-        id: "a1_a1_new_89",
+        id: "listen",
         word: {
           en: "Listen",
           fa: "Listen",
@@ -3791,11 +4583,20 @@ const wordCollections = [
           ko: "Listen"
         },
         sentence: {
-          en: "Listen to music."
+          en: "Listen to music.",
+          fa: "به موسیقی گوش کن.",
+          fr: "Écoute de la musique.",
+          de: "Hör Musik.",
+          it: "Ascolta la musica.",
+          es: "Escucha música.",
+          ru: "Слушай музыку.",
+          zh: "听音乐。",
+          ar: "استمع إلى الموسيقى.",
+          ko: "음악을 들으세요."
         }
       },
       {
-        id: "a1_a1_new_90",
+        id: "open",
         word: {
           en: "Open",
           fa: "Open",
@@ -3809,11 +4610,20 @@ const wordCollections = [
           ko: "Open"
         },
         sentence: {
-          en: "Open the box."
+          en: "Open the box.",
+          fa: "جعبه را باز کن.",
+          fr: "Ouvre la boîte.",
+          de: "Öffne die Schachtel.",
+          it: "Apri la scatola.",
+          es: "Abre la caja.",
+          ru: "Открой коробку.",
+          zh: "打开盒子。",
+          ar: "افتح الصندوق.",
+          ko: "상자를 여세요."
         }
       },
       {
-        id: "a1_a1_new_91",
+        id: "paper",
         word: {
           en: "Paper",
           fa: "Paper",
@@ -3827,11 +4637,20 @@ const wordCollections = [
           ko: "Paper"
         },
         sentence: {
-          en: "Write on paper."
+          en: "Write on paper.",
+          fa: "روی کاغذ بنویس.",
+          fr: "Écris sur le papier.",
+          de: "Schreib auf Papier.",
+          it: "Scrivi su carta.",
+          es: "Escribe en papel.",
+          ru: "Пиши на бумаге.",
+          zh: "写在纸上。",
+          ar: "اكتب على الورق.",
+          ko: "종이에 쓰세요."
         }
       },
       {
-        id: "a1_a1_new_92",
+        id: "box",
         word: {
           en: "Box",
           fa: "Box",
@@ -3845,11 +4664,20 @@ const wordCollections = [
           ko: "Box"
         },
         sentence: {
-          en: "A heavy box."
+          en: "A heavy box.",
+          fa: "یک جعبه سنگین.",
+          fr: "Une boîte lourde.",
+          de: "Eine schwere Kiste.",
+          it: "Una scatola pesante.",
+          es: "Una caja pesada.",
+          ru: "Тяжелая коробка.",
+          zh: "一个重盒子。",
+          ar: "صندوق ثقيل.",
+          ko: "무거운 상자."
         }
       },
       {
-        id: "a1_a1_new_93",
+        id: "cup",
         word: {
           en: "Cup",
           fa: "Cup",
@@ -3863,11 +4691,20 @@ const wordCollections = [
           ko: "Cup"
         },
         sentence: {
-          en: "A cup of tea."
+          en: "A cup of tea.",
+          fa: "یک فنجان چای.",
+          fr: "Une tasse de thé.",
+          de: "Eine Tasse Tee.",
+          it: "Una tazza di tè.",
+          es: "Una taza de té.",
+          ru: "Чашка чая.",
+          zh: "一杯茶。",
+          ar: "كوب شاي.",
+          ko: "차 한 잔."
         }
       },
       {
-        id: "a1_a1_new_94",
+        id: "glass",
         word: {
           en: "Glass",
           fa: "Glass",
@@ -3881,11 +4718,20 @@ const wordCollections = [
           ko: "Glass"
         },
         sentence: {
-          en: "A glass of water."
+          en: "A glass of water.",
+          fa: "یک لیوان آب.",
+          fr: "Un verre d'eau.",
+          de: "Ein Glas Wasser.",
+          it: "Un bicchiere d'acqua.",
+          es: "Un vaso de agua.",
+          ru: "Стакан воды.",
+          zh: "一杯水。",
+          ar: "كوب ماء.",
+          ko: "물 한 잔."
         }
       },
       {
-        id: "a1_a1_new_95",
+        id: "plate",
         word: {
           en: "Plate",
           fa: "Plate",
@@ -3899,11 +4745,20 @@ const wordCollections = [
           ko: "Plate"
         },
         sentence: {
-          en: "Clean plate."
+          en: "Clean plate.",
+          fa: "بشقاب تمیز.",
+          fr: "Assiette propre.",
+          de: "Sauberer Teller.",
+          it: "Piatto pulito.",
+          es: "Plato limpio.",
+          ru: "Чистая тарелка.",
+          zh: "干净的盘子。",
+          ar: "طبق نظيف.",
+          ko: "깨끗한 접시."
         }
       },
       {
-        id: "a1_a1_new_96",
+        id: "spoon",
         word: {
           en: "Spoon",
           fa: "Spoon",
@@ -3917,11 +4772,20 @@ const wordCollections = [
           ko: "Spoon"
         },
         sentence: {
-          en: "Eat with a spoon."
+          en: "Eat with a spoon.",
+          fa: "با قاشق بخور.",
+          fr: "Mange avec une cuillère.",
+          de: "Iss mit einem Löffel.",
+          it: "Mangia con un cucchiaio.",
+          es: "Come con una cuchara.",
+          ru: "Ешь ложкой.",
+          zh: "用勺子吃。",
+          ar: "كل بملعقة.",
+          ko: "숟가락으로 드세요."
         }
       },
       {
-        id: "a1_a1_new_97",
+        id: "fork",
         word: {
           en: "Fork",
           fa: "Fork",
@@ -3935,11 +4799,20 @@ const wordCollections = [
           ko: "Fork"
         },
         sentence: {
-          en: "Knife and fork."
+          en: "Knife and fork.",
+          fa: "کارد و چنگال.",
+          fr: "Couteau et fourchette.",
+          de: "Messer und Gabel.",
+          it: "Coltello e forchetta.",
+          es: "Cuchillo y tenedor.",
+          ru: "Нож и вилка.",
+          zh: "刀和叉。",
+          ar: "سكين وشوكة.",
+          ko: "나이프와 포크."
         }
       },
       {
-        id: "a1_a1_new_98",
+        id: "knife",
         word: {
           en: "Knife",
           fa: "Knife",
@@ -3953,11 +4826,20 @@ const wordCollections = [
           ko: "Knife"
         },
         sentence: {
-          en: "Sharp knife."
+          en: "Sharp knife.",
+          fa: "چاقوی تیز.",
+          fr: "Couteau tranchant.",
+          de: "Scharfes Messer.",
+          it: "Coltello affilato.",
+          es: "Cuchillo afilado.",
+          ru: "Острый нож.",
+          zh: "锋利的刀。",
+          ar: "سكين حاد.",
+          ko: "날카로운 칼."
         }
       },
       {
-        id: "a1_a1_new_99",
+        id: "bottle",
         word: {
           en: "Bottle",
           fa: "Bottle",
@@ -3971,11 +4853,20 @@ const wordCollections = [
           ko: "Bottle"
         },
         sentence: {
-          en: "Plastic bottle."
+          en: "Plastic bottle.",
+          fa: "بطری پلاستیکی.",
+          fr: "Bouteille en plastique.",
+          de: "Plastikflasche.",
+          it: "Bottiglia di plastica.",
+          es: "Botella de plástico.",
+          ru: "Пластиковая бутылка.",
+          zh: "塑料瓶。",
+          ar: "زجاجة بلاستيكية.",
+          ko: "플라스틱 병."
         }
       },
       {
-        id: "a1_a1_new_100",
+        id: "bag_shopping",
         word: {
           en: "Bag",
           fa: "کیف",
@@ -3989,11 +4880,20 @@ const wordCollections = [
           ko: "가방"
         },
         sentence: {
-          en: "Shopping bag."
+          en: "Shopping bag.",
+          fa: "کیف خرید.",
+          fr: "Sac de courses.",
+          de: "Einkaufstasche.",
+          it: "Borsa della spesa.",
+          es: "Bolsa de compras.",
+          ru: "Супка для покупок.",
+          zh: "购物袋。",
+          ar: "حقيبة تسوق.",
+          ko: "쇼핑백."
         }
       },
       {
-        id: "a1_a1_new_101",
+        id: "red",
         word: {
           en: "Red",
           fa: "قرمز",
@@ -4007,11 +4907,20 @@ const wordCollections = [
           ko: "빨간색"
         },
         sentence: {
-          en: "Red apple."
+          en: "Red apple.",
+          fa: "سیب قرمز.",
+          fr: "Pomme rouge.",
+          de: "Roter Apfel.",
+          it: "Mela rossa.",
+          es: "Manzana roja.",
+          ru: "Красное яблоко.",
+          zh: "红苹果.",
+          ar: "تفاحة حمراء.",
+          ko: "빨간 사과."
         }
       },
       {
-        id: "a1_a1_new_102",
+        id: "blue",
         word: {
           en: "Blue",
           fa: "آبی",
@@ -4025,11 +4934,20 @@ const wordCollections = [
           ko: "파란색"
         },
         sentence: {
-          en: "Blue sky."
+          en: "Blue sky.",
+          fa: "آسمان آبی.",
+          fr: "Ciel bleu.",
+          de: "Blauer Himmel.",
+          it: "Cielo blu.",
+          es: "Cielo azul.",
+          ru: "Голубое небо.",
+          zh: "蓝天.",
+          ar: "سماء زرقاء.",
+          ko: "파란 하늘."
         }
       },
       {
-        id: "a1_a1_new_103",
+        id: "green",
         word: {
           en: "Green",
           fa: "سبز",
@@ -4043,11 +4961,20 @@ const wordCollections = [
           ko: "초록색"
         },
         sentence: {
-          en: "Green grass."
+          en: "Green grass.",
+          fa: "چمن سبز.",
+          fr: "Herbe verte.",
+          de: "Grünes Gras.",
+          it: "Erba verde.",
+          es: "Hierba verde.",
+          ru: "Зеленая трава.",
+          zh: "绿草.",
+          ar: "عشب أخضر.",
+          ko: "푸른 잔디."
         }
       },
       {
-        id: "a1_a1_new_104",
+        id: "yellow",
         word: {
           en: "Yellow",
           fa: "زرد",
@@ -4061,11 +4988,20 @@ const wordCollections = [
           ko: "노란색"
         },
         sentence: {
-          en: "Yellow sun."
+          en: "Yellow sun.",
+          fa: "خورشید زرد.",
+          fr: "Soleil jaune.",
+          de: "Gelbe Sonne.",
+          it: "Sole giallo.",
+          es: "Sol amarillo.",
+          ru: "Желтое солнце.",
+          zh: "黄太阳。",
+          ar: "شمس صفراء.",
+          ko: "노란 해."
         }
       },
       {
-        id: "a1_a1_new_105",
+        id: "black",
         word: {
           en: "Black",
           fa: "سیاه",
@@ -4079,11 +5015,20 @@ const wordCollections = [
           ko: "검은색"
         },
         sentence: {
-          en: "Black cat."
+          en: "Black cat.",
+          fa: "گربه سیاه.",
+          fr: "Chat noir.",
+          de: "Schwarze Katze.",
+          it: "Gatto nero.",
+          es: "Gato negro.",
+          ru: "Черная кошка.",
+          zh: "黑猫。",
+          ar: "قطة سوداء.",
+          ko: "검은 고양이."
         }
       },
       {
-        id: "a1_a1_new_106",
+        id: "white",
         word: {
           en: "White",
           fa: "سفید",
@@ -4097,11 +5042,20 @@ const wordCollections = [
           ko: "흰색"
         },
         sentence: {
-          en: "White snow."
+          en: "White snow.",
+          fa: "برف سفید.",
+          fr: "Neige blanche.",
+          de: "Weißer Schnee.",
+          it: "Neve bianca.",
+          es: "Nieve blanca.",
+          ru: "Белый снег.",
+          zh: "白雪。",
+          ar: "ثلج أبيض.",
+          ko: "하얀 눈."
         }
       },
       {
-        id: "a1_a1_new_107",
+        id: "orange",
         word: {
           en: "Orange",
           fa: "نارنجی",
@@ -4115,11 +5069,20 @@ const wordCollections = [
           ko: "주황색"
         },
         sentence: {
-          en: "Orange fruit."
+          en: "Orange fruit.",
+          fa: "میوه نارنجی.",
+          fr: "Fruit orange.",
+          de: "Orange Frucht.",
+          it: "Frutta arancione.",
+          es: "Fruta naranja.",
+          ru: "Оранжевый фрукт.",
+          zh: "橙色水果。",
+          ar: "فاكهة برتقالية.",
+          ko: "주황색 과일."
         }
       },
       {
-        id: "a1_a1_new_108",
+        id: "pink",
         word: {
           en: "Pink",
           fa: "صورتی",
@@ -4133,11 +5096,20 @@ const wordCollections = [
           ko: "분홍색"
         },
         sentence: {
-          en: "Pink flower."
+          en: "Pink flower.",
+          fa: "گل صورتی.",
+          fr: "Fleur rose.",
+          de: "Rosa Blume.",
+          it: "Fiore rosa.",
+          es: "Flor rosa.",
+          ru: "Розовый цветок.",
+          zh: "粉红色的花。",
+          ar: "زهرة وردية.",
+          ko: "분홍색 꽃."
         }
       },
       {
-        id: "a1_a1_new_109",
+        id: "grey",
         word: {
           en: "Grey",
           fa: "خاکستری",
@@ -4151,11 +5123,20 @@ const wordCollections = [
           ko: "회색"
         },
         sentence: {
-          en: "Grey cloud."
+          en: "Grey cloud.",
+          fa: "ابر خاکستری.",
+          fr: "Nuage gris.",
+          de: "Graue Wolke.",
+          it: "Nuvola grigia.",
+          es: "Nube gris.",
+          ru: "Серые облака.",
+          zh: "灰云。",
+          ar: "سحابة رمادية.",
+          ko: "회색 구름."
         }
       },
       {
-        id: "a1_a1_new_110",
+        id: "brown",
         word: {
           en: "Brown",
           fa: "قهوه‌ای",
@@ -4169,11 +5150,20 @@ const wordCollections = [
           ko: "갈색"
         },
         sentence: {
-          en: "Brown bear."
+          en: "Brown bear.",
+          fa: "خرس قهوه‌ای.",
+          fr: "Ours brun.",
+          de: "Brauner Bär.",
+          it: "Orso bruno.",
+          es: "Oso marrón.",
+          ru: "Бурый медведь.",
+          zh: "棕熊。",
+          ar: "دب بني.",
+          ko: "갈색 곰."
         }
       },
       {
-        id: "a1_a1_new_111",
+        id: "one",
         word: {
           en: "One",
           fa: "یک",
@@ -4187,11 +5177,20 @@ const wordCollections = [
           ko: "하나"
         },
         sentence: {
-          en: "One cat."
+          en: "One cat.",
+          fa: "یک گربه.",
+          fr: "Un chat.",
+          de: "Eine Katze.",
+          it: "Un gatto.",
+          es: "Un gato.",
+          ru: "Одна кошка.",
+          zh: "一只猫。",
+          ar: "قطة واحدة.",
+          ko: "고양이 한 마리."
         }
       },
       {
-        id: "a1_a1_new_112",
+        id: "two",
         word: {
           en: "Two",
           fa: "دو",
@@ -4205,11 +5204,20 @@ const wordCollections = [
           ko: "둘"
         },
         sentence: {
-          en: "Two dogs."
+          en: "Two dogs.",
+          fa: "دو سگ.",
+          fr: "Deux chiens.",
+          de: "Zwei Hunde.",
+          it: "Due cani.",
+          es: "Dos perros.",
+          ru: "Две собаки.",
+          zh: "两只狗。",
+          ar: "كلبان.",
+          ko: "개 두 마리."
         }
       },
       {
-        id: "a1_a1_new_113",
+        id: "three",
         word: {
           en: "Three",
           fa: "سه",
@@ -4223,11 +5231,20 @@ const wordCollections = [
           ko: "셋"
         },
         sentence: {
-          en: "Three cars."
+          en: "Three cars.",
+          fa: "سه ماشین.",
+          fr: "Trois voitures.",
+          de: "Drei Autos.",
+          it: "Tre auto.",
+          es: "Tres coches.",
+          ru: "Три машины.",
+          zh: "三辆车。",
+          ar: "ثلاث سيارات.",
+          ko: "차 세 대."
         }
       },
       {
-        id: "a1_a1_new_114",
+        id: "four",
         word: {
           en: "Four",
           fa: "چهار",
@@ -4241,11 +5258,20 @@ const wordCollections = [
           ko: "넷"
         },
         sentence: {
-          en: "Four legs."
+          en: "Four legs.",
+          fa: "چهار پا.",
+          fr: "Quatre jambes.",
+          de: "Vier Beine.",
+          it: "Quattro gambe.",
+          es: "Cuatro patas.",
+          ru: "Четыре ноги.",
+          zh: "四条腿。",
+          ar: "أربعة أرجل.",
+          ko: "다리 네 개."
         }
       },
       {
-        id: "a1_a1_new_115",
+        id: "five",
         word: {
           en: "Five",
           fa: "پنج",
@@ -4259,11 +5285,20 @@ const wordCollections = [
           ko: "다섯"
         },
         sentence: {
-          en: "Five fingers."
+          en: "Five fingers.",
+          fa: "پنج انگشت.",
+          fr: "Cinq doigts.",
+          de: "Fünf Finger.",
+          it: "Cinque dita.",
+          es: "Cinco dedos.",
+          ru: "Пять пальцев.",
+          zh: "五个手指。",
+          ar: "خمسة أصابع.",
+          ko: "손가락 다섯 개."
         }
       },
       {
-        id: "a1_a1_new_116",
+        id: "six",
         word: {
           en: "Six",
           fa: "شش",
@@ -4277,11 +5312,20 @@ const wordCollections = [
           ko: "여섯"
         },
         sentence: {
-          en: "Six eggs."
+          en: "Six eggs.",
+          fa: "شش تخم مرغ.",
+          fr: "Six œufs.",
+          de: "Sechs Eier.",
+          it: "Sei uova.",
+          es: "Seis huevos.",
+          ru: "Шесть яиц.",
+          zh: "六个鸡蛋。",
+          ar: "ست بيضات.",
+          ko: "계란 여섯 개."
         }
       },
       {
-        id: "a1_a1_new_117",
+        id: "seven",
         word: {
           en: "Seven",
           fa: "هفت",
@@ -4295,11 +5339,20 @@ const wordCollections = [
           ko: "일곱"
         },
         sentence: {
-          en: "Seven days."
+          en: "Seven days.",
+          fa: "هفت روز.",
+          fr: "Sept jours.",
+          de: "Sieben Tage.",
+          it: "Sette giorni.",
+          es: "Siete días.",
+          ru: "Семь дней.",
+          zh: "七天。",
+          ar: "سبعة أيام.",
+          ko: "7일."
         }
       },
       {
-        id: "a1_a1_new_118",
+        id: "eight",
         word: {
           en: "Eight",
           fa: "هشت",
@@ -4313,11 +5366,20 @@ const wordCollections = [
           ko: "여덟"
         },
         sentence: {
-          en: "Eight hours."
+          en: "Eight hours.",
+          fa: "هشت ساعت.",
+          fr: "Huit heures.",
+          de: "Acht Stunden.",
+          it: "Otto ore.",
+          es: "Ocho horas.",
+          ru: "Восемь часов.",
+          zh: "八小时。",
+          ar: "ثماني ساعات.",
+          ko: "8시간."
         }
       },
       {
-        id: "a1_a1_new_119",
+        id: "nine",
         word: {
           en: "Nine",
           fa: "نه",
@@ -4331,11 +5393,20 @@ const wordCollections = [
           ko: "아홉"
         },
         sentence: {
-          en: "Nine lives."
+          en: "Nine lives.",
+          fa: "نه جان.",
+          fr: "Neuf vies.",
+          de: "Neun Leben.",
+          it: "Nove vite.",
+          es: "Nueve vidas.",
+          ru: "Девять жизней.",
+          zh: "九条命。",
+          ar: "تسع حيوات.",
+          ko: "아홉 개의 생명."
         }
       },
       {
-        id: "a1_a1_new_120",
+        id: "ten",
         word: {
           en: "Ten",
           fa: "ده",
@@ -4349,7 +5420,16 @@ const wordCollections = [
           ko: "열"
         },
         sentence: {
-          en: "Ten dollars."
+          en: "Ten dollars.",
+          fa: "ده دلار.",
+          fr: "Dix dollars.",
+          de: "Zehn Dollar.",
+          it: "Dieci dollari.",
+          es: "Diez dólares.",
+          ru: "Десять долларов.",
+          zh: "十美元。",
+          ar: "عشرة دولارات.",
+          ko: "10달러."
         }
       }
     ]
@@ -4427,15 +5507,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I am at the office.",
-          fa: "من در دفتر کار هستم.",
-          fr: "Je suis au bureau.",
-          de: "Ich bin im Büro.",
-          it: "Sono in ufficio.",
-          es: "Estoy en la oficina.",
-          ru: "Я в офисе.",
-          zh: "我在办公室。",
-          ar: "أنا في المكتب.",
-          ko: "나는 사무실에 있습니다."
+          fa: "من در یک اداره کار می‌کنم.",
+          fr: "Je travaille dans un bureau.",
+          de: "Ich arbeite in einem Büro.",
+          it: "Lavoro in un ufficio.",
+          es: "Trabajo en una oficina.",
+          ru: "Я работаю в офисе.",
+          zh: "我在办公室工作.",
+          ar: "أعمل في مكتب.",
+          ko: "나는 사무실에서 일합니다."
         }
       },
       {
@@ -4454,15 +5534,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Talk to the manager.",
-          fa: "با مدیر صحبت کن.",
-          fr: "Parle au manager.",
-          de: "Sprich mit dem Manager.",
-          it: "Parla con il manager.",
-          es: "Habla con el gerente.",
-          ru: "Поговори с менеджером.",
-          zh: "跟经理谈谈。",
-          ar: "تحدث إلى المدير.",
-          ko: "매니저와 이야기하세요."
+          fa: "با مدیر تماس بگیر.",
+          fr: "Appelle le directeur.",
+          de: "Ruf den Manager an.",
+          it: "Chiama il manager.",
+          es: "Llama al gerente.",
+          ru: "Позвони менеджеру.",
+          zh: "给经理打电话.",
+          ar: "اتصل بالمدير.",
+          ko: "매니저에게 전화하세요."
         }
       },
       {
@@ -4481,15 +5561,15 @@ const wordCollections = [
         },
         sentence: {
           en: "We are at the airport.",
-          fa: "ما در فرودگاه هستیم.",
-          fr: "Nous sommes à l'aéroport.",
-          de: "Wir sind am Flughafen.",
-          it: "Siamo all'aeroporto.",
-          es: "Estamos en el aeropuerto.",
-          ru: "Мы в аэропорту.",
-          zh: "我们在机场。",
-          ar: "نحن في المطار.",
-          ko: "우리는 공항에 있습니다."
+          fa: "به سمت فرودگاه.",
+          fr: "Vers l'aéroport.",
+          de: "Zum Flughafen.",
+          it: "All'aeroporto.",
+          es: "Al aeropuerto.",
+          ru: "В аэропорт.",
+          zh: "去机场.",
+          ar: "إلى المطار.",
+          ko: "공항으로."
         }
       },
       {
@@ -4508,15 +5588,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Where is my ticket?",
-          fa: "بلیط من کجاست؟",
-          fr: "Où est mon billet ?",
-          de: "Wo ist mein Ticket?",
-          it: "Dov'è il mio biglietto?",
-          es: "¿Dónde está mi billete?",
-          ru: "Где мой билет?",
-          zh: "我的票在哪里？",
-          ar: "أين تذكرتي؟",
-          ko: "내 티켓은 어디에 있습니까?"
+          fa: "یک بلیط لطفا.",
+          fr: "Un billet, s'il vous plaît.",
+          de: "Ein Ticket bitte.",
+          it: "Un biglietto, per favore.",
+          es: "Un boleto, por favor.",
+          ru: "Один билет, пожалуйста.",
+          zh: "请给我一张票.",
+          ar: "تذكرة واحدة من فضلك.",
+          ko: "티켓 한 장 주세요."
         }
       },
       {
@@ -4616,15 +5696,15 @@ const wordCollections = [
         },
         sentence: {
           en: "He is angry with me.",
-          fa: "او از دست من عصبانی است.",
-          fr: "Il est en colère contre moi.",
-          de: "Er ist wütend auf mich.",
-          it: "È arrabbiato con me.",
-          es: "Está enojado conmigo.",
-          ru: "Он злится на меня.",
-          zh: "他生我的气。",
-          ar: "هو غاضب مني.",
-          ko: "그는 나에게 화가 났습니다."
+          fa: "عصبانی نشو.",
+          fr: "Ne te fâche pas.",
+          de: "Sei nicht wütend.",
+          it: "Non arrabbiarti.",
+          es: "No te enojes.",
+          ru: "Не сердись.",
+          zh: "别生气.",
+          ar: "لا تغضب.",
+          ko: "화내지 마세요."
         }
       },
       {
@@ -4643,15 +5723,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I am too tired.",
-          fa: "من بیش از حد خسته هستم.",
-          fr: "Je suis trop fatigué.",
-          de: "Ich bin zu müde.",
-          it: "Sono troppo stanco.",
-          es: "Estoy demasiado cansado.",
-          ru: "Я слишком устал.",
-          zh: "我太累了。",
-          ar: "أنا متعب جدا.",
-          ko: "나는 너무 피곤합니다."
+          fa: "من خسته‌ام.",
+          fr: "Je suis fatigué.",
+          de: "Ich bin müde.",
+          it: "Sono stanco.",
+          es: "Estoy cansado.",
+          ru: "Я устал.",
+          zh: "我累了.",
+          ar: "أنا متعب.",
+          ko: "나는 피곤합니다."
         }
       },
       {
@@ -4832,15 +5912,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Do you sell books?",
-          fa: "آیا شما کتاب می‌فروشید؟",
-          fr: "Vendez-vous des livres ?",
-          de: "Verkaufen Sie Bücher?",
-          it: "Vendi libri?",
-          es: "¿Vendes libros?",
-          ru: "Вы продаете книги?",
-          zh: "你卖书吗？",
-          ar: "هل تبيع كتباً؟",
-          ko: "책을 팝니까?"
+          fa: "خانه را بفروش.",
+          fr: "Vends la maison.",
+          de: "Verkauf das Haus.",
+          it: "Vendi la casa.",
+          es: "Vende la casa.",
+          ru: "Продай дом.",
+          zh: "卖掉房子.",
+          ar: "بع المنزل.",
+          ko: "집을 파세요."
         }
       },
       {
@@ -4886,15 +5966,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I feel sick today.",
-          fa: "امروز احساس بیماری می‌کنم.",
-          fr: "Je me sens malade aujourd'hui.",
-          de: "Ich fühle mich heute krank.",
-          it: "Mi sento malato oggi.",
-          es: "Me siento enfermo hoy.",
-          ru: "Я чувствую себя больным сегодня.",
-          zh: "我今天感觉不舒服。",
-          ar: "أشعر بالمرض اليوم.",
-          ko: "오늘 아픈 것 같습니다."
+          fa: "احساس بیماری می‌کنم.",
+          fr: "Je me sens malade.",
+          de: "Ich fühle mich krank.",
+          it: "Mi sento male.",
+          es: "Me siento enfermo.",
+          ru: "Я чувствую себя плохо.",
+          zh: "我不舒服.",
+          ar: "أشعر بالملل.",
+          ko: "나는 아픕니다."
         }
       },
       {
@@ -4913,15 +5993,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Call a doctor.",
-          fa: "یک دکتر خبر کن.",
-          fr: "Appelle un médecin.",
-          de: "Ruf einen Arzt.",
-          it: "Chiama un medico.",
-          es: "Llama a un médico.",
-          ru: "Вызови врача.",
-          zh: "叫医生。",
-          ar: "اتصل بالطبيب.",
-          ko: "의사를 부르세요."
+          fa: "دکتر به بیماران کمک می‌کند.",
+          fr: "Le médecin aide les malades.",
+          de: "Der Arzt hilft kranken Menschen.",
+          it: "Il medico aiuta i malati.",
+          es: "El médico ayuda a los enfermos.",
+          ru: "Врач помогает больным.",
+          zh: "医生帮助病人.",
+          ar: "الطبيب يساعد المرضى.",
+          ko: "의사는 아픈 사람들을 돕습니다."
         }
       },
       {
@@ -4940,15 +6020,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Take your medicine.",
-          fa: "دارویت را بخور.",
-          fr: "Prends ton médicament.",
-          de: "Nimm deine Medizin.",
-          it: "Prendi la tua medicina.",
-          es: "Toma tu medicina.",
-          ru: "Прими лекарство.",
-          zh: "吃药。",
-          ar: "تناول دواءك.",
-          ko: "약을 드세요."
+          fa: "این دارو را مصرف کن.",
+          fr: "Prends ce médicament.",
+          de: "Nimm diese Medizin.",
+          it: "Prendi questa medicina.",
+          es: "Toma esta medicina.",
+          ru: "Прими это лекарство.",
+          zh: "吃这药.",
+          ar: "تناول هذا الدواء.",
+          ko: "이 약을 드세요."
         }
       },
       {
@@ -4967,15 +6047,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I have back pain.",
-          fa: "من کمردرد دارم.",
+          fa: "کمردرد دارم.",
           fr: "J'ai mal au dos.",
           de: "Ich habe Rückenschmerzen.",
           it: "Ho mal di schiena.",
           es: "Tengo dolor de espalda.",
           ru: "У меня болит спина.",
-          zh: "我背痛。",
+          zh: "我背痛.",
           ar: "لدي ألم في الظهر.",
-          ko: "나는 허리 통증이 있습니다."
+          ko: "나는 등 통증이 있습니다."
         }
       },
       {
@@ -5183,15 +6263,15 @@ const wordCollections = [
         },
         sentence: {
           en: "My computer is old.",
-          fa: "کامپیوتر من قدیمی است.",
-          fr: "Mon ordinateur est vieux.",
-          de: "Mein Computer ist alt.",
-          it: "Il mio computer è vecchio.",
-          es: "Mi computadora es vieja.",
-          ru: "Мой компьютер старый.",
-          zh: "我的电脑很旧。",
-          ar: "حاسوبي قديم.",
-          ko: "내 컴퓨터는 오래되었습니다."
+          fa: "کامپیوتر من سریع است.",
+          fr: "Mon ordinateur est rapide.",
+          de: "Mein Computer ist schnell.",
+          it: "Il mio computer è veloce.",
+          es: "Mi computadora es rápida.",
+          ru: "Мой компьютер быстрый.",
+          zh: "我的电脑很快.",
+          ar: "حاسوبي سريع.",
+          ko: "내 컴퓨터는 빠릅니다."
         }
       },
       {
@@ -5318,13 +6398,13 @@ const wordCollections = [
         },
         sentence: {
           en: "Show me your passport.",
-          fa: "پاسپورتت را نشان بده.",
+          fa: "پاسپورت خود را نشان دهید.",
           fr: "Montrez-moi votre passeport.",
           de: "Zeigen Sie mir Ihren Reisepass.",
-          it: "Mostrami il tuo passaporto.",
+          it: "Mostrami il passaporto.",
           es: "Muéstrame tu pasaporte.",
-          ru: "Покажи мне свой паспорт.",
-          zh: "给我看你的护照。",
+          ru: "Покажите ваш паспорт.",
+          zh: "出示你的护照.",
           ar: "أرني جواز سفرك.",
           ko: "여권을 보여주세요."
         }
@@ -5345,15 +6425,15 @@ const wordCollections = [
         },
         sentence: {
           en: "The hotel is nice.",
-          fa: "هتل خوب است.",
-          fr: "L'hôtel est agréable.",
-          de: "Das Hotel ist schön.",
-          it: "L'hotel è bello.",
-          es: "El hotel es agradable.",
-          ru: "Отель хороший.",
-          zh: "这家酒店很好。",
-          ar: "الفندق جميل.",
-          ko: "호텔이 좋습니다."
+          fa: "یک هتل رزرو کن.",
+          fr: "Réserve un hôtel.",
+          de: "Buche ein Hotel.",
+          it: "Prenota un hotel.",
+          es: "Reserva un hotel.",
+          ru: "Забронируй отель.",
+          zh: "预订酒店.",
+          ar: "احجز فندقا.",
+          ko: "호텔을 예약하세요."
         }
       },
       {
@@ -5426,15 +6506,15 @@ const wordCollections = [
         },
         sentence: {
           en: "The train is late.",
-          fa: "قطار تأخیر دارد.",
-          fr: "Le train est en retard.",
-          de: "Der Zug hat Verspätung.",
-          it: "Il treno è in ritardo.",
-          es: "El tren llega tarde.",
-          ru: "Поезд опаздывает.",
-          zh: "火车晚点了。",
-          ar: "القطار متأخر.",
-          ko: "기차가 늦었습니다."
+          fa: "قطار سریع است.",
+          fr: "Le train est rapide.",
+          de: "Der Zug ist schnell.",
+          it: "Il treno è veloce.",
+          es: "El tren es rápido.",
+          ru: "Поезд быстрый.",
+          zh: "火车很快.",
+          ar: "القطار سريع.",
+          ko: "기차는 빠릅니다."
         }
       },
       {
@@ -5486,7 +6566,7 @@ const wordCollections = [
           it: "Guarda la mappa.",
           es: "Mira el mapa.",
           ru: "Посмотри на карту.",
-          zh: "看地图。",
+          zh: "看地图.",
           ar: "انظر إلى الخريطة.",
           ko: "지도를 보세요."
         }
@@ -5885,15 +6965,15 @@ const wordCollections = [
         },
         sentence: {
           en: "We climbed the mountain.",
-          fa: "ما از کوه بالا رفتیم.",
-          fr: "Nous avons escaladé la montagne.",
-          de: "Wir sind auf den Berg gestiegen.",
-          it: "Abbiamo scalato la montagna.",
-          es: "Escalamos la montaña.",
-          ru: "Мы поднялись на гору.",
-          zh: "我们爬了山。",
-          ar: "تسلقنا الجبل.",
-          ko: "우리는 산에 올랐습니다."
+          fa: "از کوه بالا برو.",
+          fr: "Escalade la montagne.",
+          de: "Klettere auf den Berg.",
+          it: "Scala la montagna.",
+          es: "Sube la montaña.",
+          ru: "Поднимись на гору.",
+          zh: "爬山.",
+          ar: "تسلق الجبل.",
+          ko: "산을 오르세요."
         }
       },
       {
@@ -5966,15 +7046,15 @@ const wordCollections = [
         },
         sentence: {
           en: "The forest is green.",
-          fa: "جنگل سبز است.",
-          fr: "La forêt est verte.",
-          de: "Der Wald ist grün.",
-          it: "La foresta è verde.",
-          es: "El bosque es verde.",
-          ru: "Лес зеленый.",
-          zh: "森林是绿色的。",
-          ar: "الغابة خضراء.",
-          ko: "숲은 푸르다."
+          fa: "در جنگل قدم بزن.",
+          fr: "Marche dans la forêt.",
+          de: "Geh im Wald spazieren.",
+          it: "Cammina nella foresta.",
+          es: "Camina en el bosque.",
+          ru: "Гуляй в лесу.",
+          zh: "在森林里散步.",
+          ar: "امش في الغابة.",
+          ko: "숲에서 걷습니다."
         }
       },
       {
@@ -6938,15 +8018,15 @@ const wordCollections = [
         },
         sentence: {
           en: "What is the answer?",
-          fa: "جواب چیست؟",
-          fr: "Quelle est la réponse ?",
-          de: "Was ist die Antwort?",
-          it: "Qual è la risposta?",
-          es: "¿Cuál es la respuesta?",
-          ru: "Какой ответ?",
-          zh: "答案是什么？",
-          ar: "ما هي الإجابة؟",
-          ko: "대답은 무엇입니까?"
+          fa: "به من پاسخ بده.",
+          fr: "Réponds-moi.",
+          de: "Antworte mir.",
+          it: "Rispondimi.",
+          es: "Respóndeme.",
+          ru: "Ответь мне.",
+          zh: "回答我.",
+          ar: "أجبني.",
+          ko: "대답해 주세요."
         }
       },
       {
@@ -6998,8 +8078,8 @@ const wordCollections = [
           it: "Vai all'ospedale.",
           es: "Ve al hospital.",
           ru: "Иди в больницу.",
-          zh: "去医院。",
-          ar: "اذهب إلى المستشفى.",
+          zh: "去医院.",
+          ar: "اذهب للمستشفى.",
           ko: "병원에 가세요."
         }
       },
@@ -7052,7 +8132,7 @@ const wordCollections = [
           it: "Ha la febbre alta.",
           es: "Tiene fiebre alta.",
           ru: "У него высокая температура.",
-          zh: "他发高烧。",
+          zh: "他发高烧.",
           ar: "لديه حمى شديدة.",
           ko: "그는 고열이 있습니다."
         }
@@ -7073,15 +8153,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Where is the pharmacy?",
-          fa: "داروخانه کجاست؟",
-          fr: "Où est la pharmacie ?",
-          de: "Wo ist die Apotheke?",
-          it: "Dov'è la farmacia?",
-          es: "¿Dónde está la farmacia?",
-          ru: "Где аптека?",
-          zh: "药房在哪里？",
-          ar: "أين الصيدلية؟",
-          ko: "약국은 어디있습니까?"
+          fa: "آیا داروخانه‌ای نزدیک است؟",
+          fr: "Y a-t-il une pharmacie à proximité ?",
+          de: "Gibt es eine Apotheke in der Nähe?",
+          it: "C'è una farmacia qui vicino?",
+          es: "¿Hay una farmacia cerca?",
+          ru: "Есть ли поблизости аптека?",
+          zh: "附近有药店吗？",
+          ar: "هل هناك صيدلية قريبة؟",
+          ko: "근처에 약국이 있습니까?"
         }
       },
       {
@@ -7262,15 +8342,15 @@ const wordCollections = [
         },
         sentence: {
           en: "The world is round.",
-          fa: "زمین گرد است.",
-          fr: "Le monde est rond.",
-          de: "Die Welt ist rund.",
-          it: "Il mondo è rotondo.",
-          es: "El mundo es redondo.",
-          ru: "Мир круглый.",
-          zh: "世界是圆的。",
-          ar: "العالم كروي.",
-          ko: "세계는 둥글다."
+          fa: "جهان را نجات بده.",
+          fr: "Sauve le monde.",
+          de: "Rette die Welt.",
+          it: "Salva il mondo.",
+          es: "Salva el mundo.",
+          ru: "Спаси мир.",
+          zh: "拯救世界.",
+          ar: "أنقذ العالم.",
+          ko: "세상을 구하세요."
         }
       },
       {
@@ -7343,15 +8423,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I like animals.",
-          fa: "من حیوانات را دوست دارم.",
-          fr: "J'aime les animaux.",
-          de: "Ich mag Tiere.",
-          it: "Mi piacciono gli animali.",
-          es: "Me gustan los animales.",
-          ru: "Я люблю животных.",
-          zh: "我喜欢动物。",
-          ar: "أحب الحيوانات.",
-          ko: "나는 동물을 좋아합니다."
+          fa: "حیوان وحشی.",
+          fr: "Animal sauvage.",
+          de: "Wildes Tier.",
+          it: "Animale selvatico.",
+          es: "Animal salvaje.",
+          ru: "Дикое животное.",
+          zh: "野生动物.",
+          ar: "حيوان بري.",
+          ko: "야생 동물."
         }
       },
       {
@@ -8342,14 +9422,14 @@ const wordCollections = [
         },
         sentence: {
           en: "Meet me at the station.",
-          fa: "مرا در ایستگاه ببین.",
-          fr: "Retrouve-moi à la gare.",
-          de: "Triff mich am Bahnhof.",
-          it: "Incontrami alla stazione.",
-          es: "Encuéntrame en la estación.",
-          ru: "Встретимся на станции.",
-          zh: "在车站见我。",
-          ar: "قابلني في المحطة.",
+          fa: "ملاقات در ایستگاه.",
+          fr: "Rendez-vous à la gare.",
+          de: "Treffen am Bahnhof.",
+          it: "Ci vediamo alla stazione.",
+          es: "Encuentro en la estación.",
+          ru: "Встреча на станции.",
+          zh: "在车站见面.",
+          ar: "مقابلة في المحطة.",
           ko: "역에서 만나요."
         }
       },
@@ -8396,13 +9476,13 @@ const wordCollections = [
         },
         sentence: {
           en: "I am bored.",
-          fa: "حوصله‌ام سر رفته.",
+          fa: "حوصلم سر رفته.",
           fr: "Je m'ennuie.",
           de: "Ich bin gelangweilt.",
           it: "Sono annoiato.",
           es: "Estoy aburrido.",
           ru: "Мне скучно.",
-          zh: "我很无聊。",
+          zh: "我很无聊.",
           ar: "أشعر بالملل.",
           ko: "나는 지루합니다."
         }
@@ -8423,15 +9503,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I am so excited.",
-          fa: "من خیلی هیجان‌زده هستم.",
-          fr: "Je suis tellement excité.",
-          de: "Ich bin so aufgeregt.",
-          it: "Sono così eccitato.",
-          es: "Estoy tan emocionado.",
-          ru: "Я так взволнован.",
-          zh: "我太兴奋了。",
-          ar: "أنا متحمس جدا.",
-          ko: "나는 매우 흥분됩니다."
+          fa: "من هیجان‌زده‌ام.",
+          fr: "Je suis excité.",
+          de: "Ich bin aufgeregt.",
+          it: "Sono eccitato.",
+          es: "Estoy emocionado.",
+          ru: "Я взволнован.",
+          zh: "我很兴奋.",
+          ar: "أنا متحمس.",
+          ko: "나는 신이 납니다."
         }
       },
       {
@@ -8477,15 +9557,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Hate brings pain.",
-          fa: "نفرت درد می‌آورد.",
-          fr: "La haine apporte la douleur.",
-          de: "Hass bringt Schmerz.",
-          it: "L'odio porta dolore.",
-          es: "El odio trae dolor.",
-          ru: "Ненависть приносит боль.",
-          zh: "恨带来痛苦。",
-          ar: "الكره يجلب الألم.",
-          ko: "미움은 고통을 가져옵니다."
+          fa: "از ترافیک متنفرم.",
+          fr: "Je déteste la circulation.",
+          de: "Ich hasse Verkehr.",
+          it: "Odio il traffico.",
+          es: "Odio el tráfico.",
+          ru: "Я ненавижу пробки.",
+          zh: "我讨厌交通.",
+          ar: "أكره حركة المرور.",
+          ko: "나는 교통 체증이 싫습니다."
         }
       },
       {
@@ -8882,15 +9962,15 @@ const wordCollections = [
         },
         sentence: {
           en: "I work in the garden.",
-          fa: "من در باغ کار می‌کنم.",
-          fr: "Je travaille dans le jardin.",
-          de: "Ich arbeite im Garten.",
-          it: "Lavoro in giardino.",
-          es: "Trabajo en el jardín.",
-          ru: "Я работаю в саду.",
-          zh: "我在花园里工作。",
-          ar: "أعمل في الحديقة.",
-          ko: "나는 정원에서 일합니다."
+          fa: "باغ زیبا.",
+          fr: "Beau jardin.",
+          de: "Schöner Garten.",
+          it: "Bel giardino.",
+          es: "Hermoso jardín.",
+          ru: "Красивый сад.",
+          zh: "漂亮的花园.",
+          ar: "حديقة جميلة.",
+          ko: "아름다운 정원."
         }
       },
       {
@@ -11317,15 +12397,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Health is more important than wealth.",
-          fa: "سلامت از ثروت مهم‌تر است.",
-          fr: "La santé est plus importante que la richesse.",
-          de: "Gesundheit ist wichtiger als Reichtum.",
-          ko: "건강은 부보다 더 중요합니다.",
-          it: "La salute è la cosa più importante.",
-          es: "La salud es lo más importante.",
-          ru: "Здоровье - это самое главное.",
-          zh: "健康是最重要的。",
-          ar: "الصحة هي أهم شيء."
+          fa: "سلامتی ثروت است.",
+          fr: "La santé est une richesse.",
+          de: "Gesundheit ist Reichtum.",
+          it: "La salute è ricchezza.",
+          es: "La salud es riqueza.",
+          ru: "Здоровье - это богатство.",
+          zh: "健康就是财富.",
+          ar: "الصحة ثروة.",
+          ko: "건강은 재산입니다."
         }
       },
       {
@@ -11371,15 +12451,15 @@ const wordCollections = [
         },
         sentence: {
           en: "This method is very effective.",
-          fa: "این روش بسیار موثر است.",
-          fr: "Cette méthode est très efficace.",
-          de: "Diese Methode ist sehr effektiv.",
-          ko: "이 방법은 매우 효과적입니다.",
-          it: "Questo è un metodo nuovo.",
-          es: "Este es un método nuevo.",
-          ru: "Это новый метод.",
-          zh: "这是一种新方法。",
-          ar: "أهذه طريقة جديدة."
+          fa: "روش علمی.",
+          fr: "Méthode scientifique.",
+          de: "Wissenschaftliche Methode.",
+          it: "Metodo scientifico.",
+          es: "Método científico.",
+          ru: "Научный метод.",
+          zh: "科学方法。",
+          ar: "طريقة علمية.",
+          ko: "과학적 방법."
         }
       },
       {
@@ -11398,15 +12478,15 @@ const wordCollections = [
         },
         sentence: {
           en: "That is just a theory, not a fact.",
-          fa: "این فقط یک نظریه است، نه یک واقعیت.",
-          fr: "C'est juste une théorie, pas un fait.",
-          de: "Das ist nur eine Theorie, keine Tatsache.",
-          ko: "저것은 단지 이론일 뿐, 사실이 아닙니다.",
-          it: "È solo una teoria, non un fatto.",
-          es: "Eso es solo una teoría, no un hecho.",
-          ru: "Это всего лишь теория, а не факт.",
-          zh: "那只是个理论，不是事实。",
-          ar: "هذه مجرد نظرية، وليست حقيقة."
+          fa: "نظریه بیگ بنگ.",
+          fr: "Théorie du Big Bang.",
+          de: "Big-Bang-Theorie.",
+          it: "Teoria del Big Bang.",
+          es: "Teoría del Big Bang.",
+          ru: "Теория Большого взрыва.",
+          zh: "大爆炸理论。",
+          ar: "نظرية الانفجار الكبير.",
+          ko: "빅뱅 이론."
         }
       },
       {
@@ -13504,15 +14584,15 @@ const wordCollections = [
         },
         sentence: {
           en: "Detailed analysis.",
-          fa: "تحلیل دقیق.",
-          fr: "Analyse détaillée.",
-          de: "Detaillierte Analyse.",
-          it: "Analisi dettagliata.",
-          es: "Análisis detallado.",
-          ru: "Подробный анализ.",
-          zh: "详细分析。",
-          ar: "تحليل مفصل.",
-          ko: "상세 분석."
+          fa: "تحلیل داده‌ها.",
+          fr: "Analyse des données.",
+          de: "Datenanalyse.",
+          it: "Analisi dei dati.",
+          es: "Análisis de datos.",
+          ru: "Анализ данных.",
+          zh: "数据分析。",
+          ar: "تحليل البيانات.",
+          ko: "데이터 분석."
         }
       },
       {
@@ -13558,15 +14638,15 @@ const wordCollections = [
         },
         sentence: {
           en: "We need a strategy.",
-          fa: "ما به یک استراتژی نیاز داریم.",
-          fr: "Nous avons besoin d'une stratégie.",
-          de: "Wir brauchen eine Strategie.",
-          it: "Abbiamo bisogno di una strategia.",
-          es: "Necesitamos una estrategia.",
-          ru: "Нам нужна стратегия.",
-          zh: "我们需要一个策略。",
-          ar: "نحن بحاجة إلى استراتيجية.",
-          ko: "우리는 전략이 필요합니다."
+          fa: "ما به یک استراتژی خوب نیاز داریم.",
+          fr: "Nous avons besoin d'une bonne stratégie.",
+          de: "Wir brauchen eine gute Strategie.",
+          it: "Abbiamo bisogno di una buona strategia.",
+          es: "Necesitamos una buena estrategia.",
+          ru: "Нам нужна хорошая стратегия.",
+          zh: "我们需要一个好的策略。",
+          ar: "نحن بحاجة إلى استراتيجية جيدة.",
+          ko: "우리는 좋은 전략이 필요합니다."
         }
       },
       {
@@ -13585,15 +14665,15 @@ const wordCollections = [
         },
         sentence: {
           en: "A new concept.",
-          fa: "یک مفهوم جدید.",
-          fr: "Un nouveau concept.",
-          de: "Ein neues Konzept.",
-          it: "Un nuovo concetto.",
-          es: "Un nuevo concepto.",
-          ru: "Новая концепция.",
-          zh: "一个新概念。",
-          ar: "مفهوم جديد.",
-          ko: "새로운 개념."
+          fa: "مفهوم انتزاعی.",
+          fr: "Concept abstrait.",
+          de: "Abstraktes Konzept.",
+          it: "Concetto astratto.",
+          es: "Concepto abstracto.",
+          ru: "Абстрактное понятие.",
+          zh: "抽象概念。",
+          ar: "مفهوم مجرد.",
+          ko: "추상적 개념."
         }
       },
       {
@@ -14704,7 +15784,7 @@ const wordCollections = [
         }
       },
       {
-        id: "b1_b1_new_1",
+        id: "engineer",
         word: {
           en: "Engineer",
           fa: "مهندس",
@@ -14718,11 +15798,20 @@ const wordCollections = [
           ko: "기술자"
         },
         sentence: {
-          en: "The engineer designs bridges."
+          en: "The engineer designs bridges.",
+          fa: "مهندس پل‌ها را طراحی می‌کند.",
+          fr: "L'ingénieur conçoit des ponts.",
+          de: "Der Ingenieur entwirft Brücken.",
+          it: "L'ingegnere progetta ponti.",
+          es: "El ingeniero diseña puentes.",
+          ru: "Инженер проектирует мосты.",
+          zh: "工程师设计桥梁。",
+          ar: "المهندس يصمم الجسور.",
+          ko: "엔지니어는 다리를 설계합니다."
         }
       },
       {
-        id: "b1_b1_new_2",
+        id: "doctor",
         word: {
           en: "Doctor",
           fa: "دکتر",
@@ -14736,11 +15825,20 @@ const wordCollections = [
           ko: "의사"
         },
         sentence: {
-          en: "The doctor helps sick people."
+          en: "The doctor helps sick people.",
+          fa: "دکتر به بیماران کمک می‌کند.",
+          fr: "Le médecin aide les malades.",
+          de: "Der Arzt hilft kranken Menschen.",
+          it: "Il medico aiuta i malati.",
+          es: "El médico ayuda a los enfermos.",
+          ru: "Врач помогает больным.",
+          zh: "医生帮助病人.",
+          ar: "الطبيب يساعد المرضى.",
+          ko: "의사는 아픈 사람들을 돕습니다."
         }
       },
       {
-        id: "b1_b1_new_3",
+        id: "nurse",
         word: {
           en: "Nurse",
           fa: "پرستار",
@@ -14754,11 +15852,20 @@ const wordCollections = [
           ko: "간호사"
         },
         sentence: {
-          en: "The nurse works in the hospital."
+          en: "The nurse works in the hospital.",
+          fa: "پرستار در بیمارستان کار می‌کند.",
+          fr: "L'infirmière travaille à l'hôpital.",
+          de: "Die Krankenschwester arbeitet im Krankenhaus.",
+          it: "L'infermiera lavora in ospedale.",
+          es: "La enfermera trabaja en el hospital.",
+          ru: "Медсестра работает в больнице.",
+          zh: "护士在医院工作。",
+          ar: "الممرضة تعمل في المستشفى.",
+          ko: "간호사는 병원에서 일합니다."
         }
       },
       {
-        id: "b1_b1_new_4",
+        id: "teacher",
         word: {
           en: "Teacher",
           fa: "معلم",
@@ -14772,11 +15879,20 @@ const wordCollections = [
           ko: "선생님"
         },
         sentence: {
-          en: "The teacher loves students."
+          en: "The teacher loves students.",
+          fa: "معلم دانش‌آموزان را دوست دارد.",
+          fr: "L'enseignant aime les élèves.",
+          de: "Der Lehrer liebt Schüler.",
+          it: "L'insegnante ama gli studenti.",
+          es: "El maestro ama a los estudiantes.",
+          ru: "Учитель любит учеников.",
+          zh: "老师爱学生。",
+          ar: "المعلم يحب الطلاب.",
+          ko: "선생님은 학생들을 사랑합니다."
         }
       },
       {
-        id: "b1_b1_new_5",
+        id: "driver",
         word: {
           en: "Driver",
           fa: "راننده",
@@ -14790,11 +15906,20 @@ const wordCollections = [
           ko: "운전사"
         },
         sentence: {
-          en: "The bus driver is late."
+          en: "The bus driver is late.",
+          fa: "راننده اتوبوس دیر کرده است.",
+          fr: "Le chauffeur de bus est en retard.",
+          de: "Der Busfahrer ist spät dran.",
+          it: "L'autista dell'autobus è in ritardo.",
+          es: "El conductor del autobús llega tarde.",
+          ru: "Водитель автобуса опаздывает.",
+          zh: "公交司机迟到了。",
+          ar: "سائق الحافلة متأخر.",
+          ko: "버스 기사가 늦었습니다."
         }
       },
       {
-        id: "b1_b1_new_6",
+        id: "worker",
         word: {
           en: "Worker",
           fa: "کارگر",
@@ -14808,11 +15933,20 @@ const wordCollections = [
           ko: "노동자"
         },
         sentence: {
-          en: "He is a hard worker."
+          en: "He is a hard worker.",
+          fa: "او یک کارگر سخت‌کوش است.",
+          fr: "C'est un travailleur acharné.",
+          de: "Er ist ein harter Arbeiter.",
+          it: "Lui è un gran lavoratore.",
+          es: "Él es un trabajador duro.",
+          ru: "Он трудолюбивый работник.",
+          zh: "他是一个勤奋的工人。",
+          ar: "هو عامل مجد.",
+          ko: "그는 열심히 일하는 일꾼입니다."
         }
       },
       {
-        id: "b1_b1_new_7",
+        id: "artist",
         word: {
           en: "Artist",
           fa: "هنرمند",
@@ -14826,11 +15960,20 @@ const wordCollections = [
           ko: "예술가"
         },
         sentence: {
-          en: "An artist paints pictures."
+          en: "An artist paints pictures.",
+          fa: "هنرمند نقاشی می‌کشد.",
+          fr: "Un artiste peint des tableaux.",
+          de: "Ein Künstler malt Bilder.",
+          it: "Un artista dipinge quadri.",
+          es: "Un artista pinta cuadros.",
+          ru: "Художник рисует картины.",
+          zh: "艺术家画画。",
+          ar: "الفنان يرسم لوحات.",
+          ko: "예술가는 그림을 그립니다."
         }
       },
       {
-        id: "b1_b1_new_8",
+        id: "manager",
         word: {
           en: "Manager",
           fa: "مدیر",
@@ -14844,11 +15987,20 @@ const wordCollections = [
           ko: "매니저"
         },
         sentence: {
-          en: "Call the manager."
+          en: "Call the manager.",
+          fa: "با مدیر تماس بگیر.",
+          fr: "Appelle le directeur.",
+          de: "Ruf den Manager an.",
+          it: "Chiama il manager.",
+          es: "Llama al gerente.",
+          ru: "Позвони менеджеру.",
+          zh: "给经理打电话.",
+          ar: "اتصل بالمدير.",
+          ko: "매니저에게 전화하세요."
         }
       },
       {
-        id: "b1_b1_new_9",
+        id: "office",
         word: {
           en: "Office",
           fa: "اداره",
@@ -14862,11 +16014,20 @@ const wordCollections = [
           ko: "사무실"
         },
         sentence: {
-          en: "I work in an office."
+          en: "I work in an office.",
+          fa: "من در یک اداره کار می‌کنم.",
+          fr: "Je travaille dans un bureau.",
+          de: "Ich arbeite in einem Büro.",
+          it: "Lavoro in un ufficio.",
+          es: "Trabajo en una oficina.",
+          ru: "Я работаю в офисе.",
+          zh: "我在办公室工作.",
+          ar: "أعمل في مكتب.",
+          ko: "나는 사무실에서 일합니다."
         }
       },
       {
-        id: "b1_b1_new_10",
+        id: "computer",
         word: {
           en: "Computer",
           fa: "کامپیوتر",
@@ -14880,11 +16041,20 @@ const wordCollections = [
           ko: "컴퓨터"
         },
         sentence: {
-          en: "My computer is fast."
+          en: "My computer is fast.",
+          fa: "کامپیوتر من سریع است.",
+          fr: "Mon ordinateur est rapide.",
+          de: "Mein Computer ist schnell.",
+          it: "Il mio computer è veloce.",
+          es: "Mi computadora es rápida.",
+          ru: "Мой компьютер быстрый.",
+          zh: "我的电脑很快.",
+          ar: "حاسوبي سريع.",
+          ko: "내 컴퓨터는 빠릅니다."
         }
       },
       {
-        id: "b1_b1_new_11",
+        id: "health",
         word: {
           en: "Health",
           fa: "سلامتی",
@@ -14898,11 +16068,20 @@ const wordCollections = [
           ko: "건강"
         },
         sentence: {
-          en: "Health is wealth."
+          en: "Health is wealth.",
+          fa: "سلامتی ثروت است.",
+          fr: "La santé est une richesse.",
+          de: "Gesundheit ist Reichtum.",
+          it: "La salute è ricchezza.",
+          es: "La salud es riqueza.",
+          ru: "Здоровье - это богатство.",
+          zh: "健康就是财富.",
+          ar: "الصحة ثروة.",
+          ko: "건강은 재산입니다."
         }
       },
       {
-        id: "b1_b1_new_12",
+        id: "sick",
         word: {
           en: "Sick",
           fa: "بیمار",
@@ -14916,11 +16095,20 @@ const wordCollections = [
           ko: "아픈"
         },
         sentence: {
-          en: "I feel sick."
+          en: "I feel sick.",
+          fa: "احساس بیماری می‌کنم.",
+          fr: "Je me sens malade.",
+          de: "Ich fühle mich krank.",
+          it: "Mi sento male.",
+          es: "Me siento enfermo.",
+          ru: "Я чувствую себя плохо.",
+          zh: "我不舒服.",
+          ar: "أشعر بالملل.",
+          ko: "나는 아픕니다."
         }
       },
       {
-        id: "b1_b1_new_13",
+        id: "medicine",
         word: {
           en: "Medicine",
           fa: "دارو",
@@ -14934,11 +16122,20 @@ const wordCollections = [
           ko: "약"
         },
         sentence: {
-          en: "Take this medicine."
+          en: "Take this medicine.",
+          fa: "این دارو را مصرف کن.",
+          fr: "Prends ce médicament.",
+          de: "Nimm diese Medizin.",
+          it: "Prendi questa medicina.",
+          es: "Toma esta medicina.",
+          ru: "Прими это лекарство.",
+          zh: "吃这药.",
+          ar: "تناول هذا الدواء.",
+          ko: "이 약을 드세요."
         }
       },
       {
-        id: "b1_b1_new_14",
+        id: "pain",
         word: {
           en: "Pain",
           fa: "درد",
@@ -14952,11 +16149,20 @@ const wordCollections = [
           ko: "통증"
         },
         sentence: {
-          en: "I have back pain."
+          en: "I have back pain.",
+          fa: "کمردرد دارم.",
+          fr: "J'ai mal au dos.",
+          de: "Ich habe Rückenschmerzen.",
+          it: "Ho mal di schiena.",
+          es: "Tengo dolor de espalda.",
+          ru: "У меня болит спина.",
+          zh: "我背痛.",
+          ar: "لدي ألم في الظهر.",
+          ko: "나는 등 통증이 있습니다."
         }
       },
       {
-        id: "b1_b1_new_15",
+        id: "hospital",
         word: {
           en: "Hospital",
           fa: "بیمارستان",
@@ -14970,11 +16176,20 @@ const wordCollections = [
           ko: "병원"
         },
         sentence: {
-          en: "Go to the hospital."
+          en: "Go to the hospital.",
+          fa: "به بیمارستان برو.",
+          fr: "Va à l'hôpital.",
+          de: "Geh ins Krankenhaus.",
+          it: "Vai all'ospedale.",
+          es: "Ve al hospital.",
+          ru: "Иди в больницу.",
+          zh: "去医院.",
+          ar: "اذهب للمستشفى.",
+          ko: "병원에 가세요."
         }
       },
       {
-        id: "b1_b1_new_16",
+        id: "pharmacy",
         word: {
           en: "Pharmacy",
           fa: "داروخانه",
@@ -14988,11 +16203,20 @@ const wordCollections = [
           ko: "약국"
         },
         sentence: {
-          en: "Is there a pharmacy nearby?"
+          en: "Is there a pharmacy nearby?",
+          fa: "آیا داروخانه‌ای نزدیک است؟",
+          fr: "Y a-t-il une pharmacie à proximité ?",
+          de: "Gibt es eine Apotheke in der Nähe?",
+          it: "C'è una farmacia qui vicino?",
+          es: "¿Hay una farmacia cerca?",
+          ru: "Есть ли поблизости аптека?",
+          zh: "附近有药店吗？",
+          ar: "هل هناك صيدلية قريبة؟",
+          ko: "근처에 약국이 있습니까?"
         }
       },
       {
-        id: "b1_b1_new_17",
+        id: "fever",
         word: {
           en: "Fever",
           fa: "تب",
@@ -15006,11 +16230,20 @@ const wordCollections = [
           ko: "열"
         },
         sentence: {
-          en: "He has a high fever."
+          en: "He has a high fever.",
+          fa: "او تب بالایی دارد.",
+          fr: "Il a une forte fièvre.",
+          de: "Er hat hohes Fieber.",
+          it: "Ha la febbre alta.",
+          es: "Tiene fiebre alta.",
+          ru: "У него высокая температура.",
+          zh: "他发高烧.",
+          ar: "لديه حمى شديدة.",
+          ko: "그는 고열이 있습니다."
         }
       },
       {
-        id: "b1_b1_new_18",
+        id: "cold_noun",
         word: {
           en: "Cold",
           fa: "سرماخوردگی",
@@ -15024,11 +16257,20 @@ const wordCollections = [
           ko: "감기"
         },
         sentence: {
-          en: "It is just a cold."
+          en: "It is just a cold.",
+          fa: "این فقط یک سرماخوردگی است.",
+          fr: "C'est juste un rhume.",
+          de: "Es ist nur eine Erkältung.",
+          it: "È solo un raffreddore.",
+          es: "Es solo un resfriado.",
+          ru: "Это просто простуда.",
+          zh: "这只是感冒。",
+          ar: "إنها مجرد نزلة برد.",
+          ko: "그냥 감기입니다."
         }
       },
       {
-        id: "b1_b1_new_19",
+        id: "strong",
         word: {
           en: "Strong",
           fa: "قوی",
@@ -15042,11 +16284,20 @@ const wordCollections = [
           ko: "강한"
         },
         sentence: {
-          en: "You are strong."
+          en: "You are strong.",
+          fa: "تو قوی هستی.",
+          fr: "Tu es fort.",
+          de: "Du bist stark.",
+          it: "Sei forte.",
+          es: "Eres fuerte.",
+          ru: "Ты сильный.",
+          zh: "你很强壮。",
+          ar: "أنت قوي.",
+          ko: "당신은 강합니다."
         }
       },
       {
-        id: "b1_b1_new_20",
+        id: "weak",
         word: {
           en: "Weak",
           fa: "ضعیف",
@@ -15060,11 +16311,20 @@ const wordCollections = [
           ko: "약한"
         },
         sentence: {
-          en: "I feel weak today."
+          en: "I feel weak today.",
+          fa: "امروز احساس ضعف می‌کنم.",
+          fr: "Je me sens faible aujourd'hui.",
+          de: "Ich fühle mich heute schwach.",
+          it: "Oggi mi sento debole.",
+          es: "Hoy me siento débil.",
+          ru: "Я чувствую слабость сегодня.",
+          zh: "我今天感觉虚弱。",
+          ar: "أشعر بالضعف اليوم.",
+          ko: "오늘 나는 약하다고 느낍니다."
         }
       },
       {
-        id: "b1_b1_new_21",
+        id: "travel",
         word: {
           en: "Travel",
           fa: "سفر",
@@ -15078,11 +16338,20 @@ const wordCollections = [
           ko: "여행"
         },
         sentence: {
-          en: "I love to travel."
+          en: "I love to travel.",
+          fa: "من عاشق سفر هستم.",
+          fr: "J'adore voyager.",
+          de: "Ich liebe Reisen.",
+          it: "Amo viaggiare.",
+          es: "Amo viajar.",
+          ru: "Я люблю путешествовать.",
+          zh: "我喜欢旅行。",
+          ar: "أحب السفر.",
+          ko: "나는 여행을 좋아합니다."
         }
       },
       {
-        id: "b1_b1_new_22",
+        id: "trip",
         word: {
           en: "Trip",
           fa: "سفر کوتاه",
@@ -15096,11 +16365,20 @@ const wordCollections = [
           ko: "여행"
         },
         sentence: {
-          en: "Have a nice trip."
+          en: "Have a nice trip.",
+          fa: "سفر خوبی داشته باشید.",
+          fr: "Bon voyage.",
+          de: "Gute Reise.",
+          it: "Buon viaggio.",
+          es: "Buen viaje.",
+          ru: "Приятного путешествия.",
+          zh: "旅途愉快。",
+          ar: "رحلة سعيدة.",
+          ko: "좋은 여행 되세요."
         }
       },
       {
-        id: "b1_b1_new_23",
+        id: "ticket",
         word: {
           en: "Ticket",
           fa: "بلیط",
@@ -15114,11 +16392,20 @@ const wordCollections = [
           ko: "표"
         },
         sentence: {
-          en: "One ticket, please."
+          en: "One ticket, please.",
+          fa: "یک بلیط لطفا.",
+          fr: "Un billet, s'il vous plaît.",
+          de: "Ein Ticket bitte.",
+          it: "Un biglietto, per favore.",
+          es: "Un boleto, por favor.",
+          ru: "Один билет, пожалуйста.",
+          zh: "请给我一张票.",
+          ar: "تذكرة واحدة من فضلك.",
+          ko: "티켓 한 장 주세요."
         }
       },
       {
-        id: "b1_b1_new_24",
+        id: "passport",
         word: {
           en: "Passport",
           fa: "پاسپورت",
@@ -15132,11 +16419,20 @@ const wordCollections = [
           ko: "여권"
         },
         sentence: {
-          en: "Show me your passport."
+          en: "Show me your passport.",
+          fa: "پاسپورت خود را نشان دهید.",
+          fr: "Montrez-moi votre passeport.",
+          de: "Zeigen Sie mir Ihren Reisepass.",
+          it: "Mostrami il passaporto.",
+          es: "Muéstrame tu pasaporte.",
+          ru: "Покажите ваш паспорт.",
+          zh: "出示你的护照.",
+          ar: "أرني جواز سفرك.",
+          ko: "여권을 보여주세요."
         }
       },
       {
-        id: "b1_b1_new_25",
+        id: "airport",
         word: {
           en: "Airport",
           fa: "فرودگاه",
@@ -15150,11 +16446,20 @@ const wordCollections = [
           ko: "공항"
         },
         sentence: {
-          en: "To the airport."
+          en: "To the airport.",
+          fa: "به سمت فرودگاه.",
+          fr: "Vers l'aéroport.",
+          de: "Zum Flughafen.",
+          it: "All'aeroporto.",
+          es: "Al aeropuerto.",
+          ru: "В аэропорт.",
+          zh: "去机场.",
+          ar: "إلى المطار.",
+          ko: "공항으로."
         }
       },
       {
-        id: "b1_b1_new_26",
+        id: "plane",
         word: {
           en: "Plane",
           fa: "هواپیما",
@@ -15168,11 +16473,20 @@ const wordCollections = [
           ko: "비행기"
         },
         sentence: {
-          en: "The plane takes off."
+          en: "The plane takes off.",
+          fa: "هواپیما پرواز می‌کند.",
+          fr: "L'avion décolle.",
+          de: "Das Flugzeug hebt ab.",
+          it: "L'aereo decolla.",
+          es: "El avión despega.",
+          ru: "Самолет взлетает.",
+          zh: "飞机起飞。",
+          ar: "الطائرة تقلع.",
+          ko: "비행기가 이륙합니다."
         }
       },
       {
-        id: "b1_b1_new_27",
+        id: "train",
         word: {
           en: "Train",
           fa: "قطار",
@@ -15186,11 +16500,20 @@ const wordCollections = [
           ko: "기차"
         },
         sentence: {
-          en: "The train is fast."
+          en: "The train is fast.",
+          fa: "قطار سریع است.",
+          fr: "Le train est rapide.",
+          de: "Der Zug ist schnell.",
+          it: "Il treno è veloce.",
+          es: "El tren es rápido.",
+          ru: "Поезд быстрый.",
+          zh: "火车很快.",
+          ar: "القطار سريع.",
+          ko: "기차는 빠릅니다."
         }
       },
       {
-        id: "b1_b1_new_28",
+        id: "station",
         word: {
           en: "Station",
           fa: "ایستگاه",
@@ -15204,11 +16527,20 @@ const wordCollections = [
           ko: "역"
         },
         sentence: {
-          en: "Meet at the station."
+          en: "Meet at the station.",
+          fa: "ملاقات در ایستگاه.",
+          fr: "Rendez-vous à la gare.",
+          de: "Treffen am Bahnhof.",
+          it: "Ci vediamo alla stazione.",
+          es: "Encuentro en la estación.",
+          ru: "Встреча на станции.",
+          zh: "在车站见面.",
+          ar: "مقابلة في المحطة.",
+          ko: "역에서 만나요."
         }
       },
       {
-        id: "b1_b1_new_29",
+        id: "hotel",
         word: {
           en: "Hotel",
           fa: "هتل",
@@ -15222,11 +16554,20 @@ const wordCollections = [
           ko: "호텔"
         },
         sentence: {
-          en: "Book a hotel."
+          en: "Book a hotel.",
+          fa: "یک هتل رزرو کن.",
+          fr: "Réserve un hôtel.",
+          de: "Buche ein Hotel.",
+          it: "Prenota un hotel.",
+          es: "Reserva un hotel.",
+          ru: "Забронируй отель.",
+          zh: "预订酒店.",
+          ar: "احجز فندقا.",
+          ko: "호텔을 예약하세요."
         }
       },
       {
-        id: "b1_b1_new_30",
+        id: "map",
         word: {
           en: "Map",
           fa: "نقشه",
@@ -15240,11 +16581,20 @@ const wordCollections = [
           ko: "지도"
         },
         sentence: {
-          en: "Look at the map."
+          en: "Look at the map.",
+          fa: "به نقشه نگاه کن.",
+          fr: "Regarde la carte.",
+          de: "Schau auf die Karte.",
+          it: "Guarda la mappa.",
+          es: "Mira el mapa.",
+          ru: "Посмотри на карту.",
+          zh: "看地图.",
+          ar: "انظر إلى الخريطة.",
+          ko: "지도를 보세요."
         }
       },
       {
-        id: "b1_b1_new_31",
+        id: "world",
         word: {
           en: "World",
           fa: "جهان",
@@ -15258,11 +16608,20 @@ const wordCollections = [
           ko: "세계"
         },
         sentence: {
-          en: "Save the world."
+          en: "Save the world.",
+          fa: "جهان را نجات بده.",
+          fr: "Sauve le monde.",
+          de: "Rette die Welt.",
+          it: "Salva il mondo.",
+          es: "Salva el mundo.",
+          ru: "Спаси мир.",
+          zh: "拯救世界.",
+          ar: "أنقذ العالم.",
+          ko: "세상을 구하세요."
         }
       },
       {
-        id: "b1_b1_new_32",
+        id: "earth",
         word: {
           en: "Earth",
           fa: "زمین",
@@ -15276,11 +16635,20 @@ const wordCollections = [
           ko: "지구"
         },
         sentence: {
-          en: "Planet Earth."
+          en: "Planet Earth.",
+          fa: "سیاره زمین.",
+          fr: "Planète Terre.",
+          de: "Planet Erde.",
+          it: "Pianeta Terra.",
+          es: "Planeta Tierra.",
+          ru: "Планета Земля.",
+          zh: "地球。",
+          ar: "كوكب الأرض.",
+          ko: "지구."
         }
       },
       {
-        id: "b1_b1_new_33",
+        id: "forest",
         word: {
           en: "Forest",
           fa: "جنگل",
@@ -15294,11 +16662,20 @@ const wordCollections = [
           ko: "숲"
         },
         sentence: {
-          en: "Walk in the forest."
+          en: "Walk in the forest.",
+          fa: "در جنگل قدم بزن.",
+          fr: "Marche dans la forêt.",
+          de: "Geh im Wald spazieren.",
+          it: "Cammina nella foresta.",
+          es: "Camina en el bosque.",
+          ru: "Гуляй в лесу.",
+          zh: "在森林里散步.",
+          ar: "امش في الغابة.",
+          ko: "숲에서 걷습니다."
         }
       },
       {
-        id: "b1_b1_new_34",
+        id: "mountain",
         word: {
           en: "Mountain",
           fa: "کوه",
@@ -15312,11 +16689,20 @@ const wordCollections = [
           ko: "산"
         },
         sentence: {
-          en: "Climb the mountain."
+          en: "Climb the mountain.",
+          fa: "از کوه بالا برو.",
+          fr: "Escalade la montagne.",
+          de: "Klettere auf den Berg.",
+          it: "Scala la montagna.",
+          es: "Sube la montaña.",
+          ru: "Поднимись на гору.",
+          zh: "爬山.",
+          ar: "تسلق الجبل.",
+          ko: "산을 오르세요."
         }
       },
       {
-        id: "b1_b1_new_35",
+        id: "lake",
         word: {
           en: "Lake",
           fa: "دریاچه",
@@ -15330,11 +16716,20 @@ const wordCollections = [
           ko: "호수"
         },
         sentence: {
-          en: "Swim in the lake."
+          en: "Swim in the lake.",
+          fa: "در دریاچه شنا کن.",
+          fr: "Nage dans le lac.",
+          de: "Schwimm im See.",
+          it: "Nuota nel lago.",
+          es: "Nada en el lago.",
+          ru: "Плавай в озере.",
+          zh: "在湖里游泳。",
+          ar: "اسبح في البحيرة.",
+          ko: "호수에서 수영하세요."
         }
       },
       {
-        id: "b1_b1_new_36",
+        id: "sky",
         word: {
           en: "Sky",
           fa: "آسمان",
@@ -15348,11 +16743,20 @@ const wordCollections = [
           ko: "하늘"
         },
         sentence: {
-          en: "Blue sky."
+          en: "Blue sky.",
+          fa: "آسمان آبی.",
+          fr: "Ciel bleu.",
+          de: "Blauer Himmel.",
+          it: "Cielo blu.",
+          es: "Cielo azul.",
+          ru: "Голубое небо.",
+          zh: "蓝天。",
+          ar: "سماء زرقاء.",
+          ko: "파란 하늘."
         }
       },
       {
-        id: "b1_b1_new_37",
+        id: "cloud",
         word: {
           en: "Cloud",
           fa: "ابر",
@@ -15366,11 +16770,20 @@ const wordCollections = [
           ko: "구름"
         },
         sentence: {
-          en: "White cloud."
+          en: "White cloud.",
+          fa: "ابر سفید.",
+          fr: "Nuage blanc.",
+          de: "Weiße Wolke.",
+          it: "Nuvola bianca.",
+          es: "Nube blanca.",
+          ru: "Белое облако.",
+          zh: "白云。",
+          ar: "سحابة بيضاء.",
+          ko: "흰 구름."
         }
       },
       {
-        id: "b1_b1_new_38",
+        id: "animal",
         word: {
           en: "Animal",
           fa: "حیوان",
@@ -15384,11 +16797,20 @@ const wordCollections = [
           ko: "동물"
         },
         sentence: {
-          en: "Wild animal."
+          en: "Wild animal.",
+          fa: "حیوان وحشی.",
+          fr: "Animal sauvage.",
+          de: "Wildes Tier.",
+          it: "Animale selvatico.",
+          es: "Animal salvaje.",
+          ru: "Дикое животное.",
+          zh: "野生动物.",
+          ar: "حيوان بري.",
+          ko: "야생 동물."
         }
       },
       {
-        id: "b1_b1_new_39",
+        id: "plant",
         word: {
           en: "Plant",
           fa: "گیاه",
@@ -15402,11 +16824,20 @@ const wordCollections = [
           ko: "식물"
         },
         sentence: {
-          en: "Water the plant."
+          en: "Water the plant.",
+          fa: "به گیاه آب بده.",
+          fr: "Arrose la plante.",
+          de: "Gieß die Pflanze.",
+          it: "Annaffia la pianta.",
+          es: "Riega la planta.",
+          ru: "Полей растение.",
+          zh: "给植物浇水。",
+          ar: "اسق النبات.",
+          ko: "식물에 물을 주십시오."
         }
       },
       {
-        id: "b1_b1_new_40",
+        id: "garden",
         word: {
           en: "Garden",
           fa: "باغ",
@@ -15420,11 +16851,20 @@ const wordCollections = [
           ko: "정원"
         },
         sentence: {
-          en: "Beautiful garden."
+          en: "Beautiful garden.",
+          fa: "باغ زیبا.",
+          fr: "Beau jardin.",
+          de: "Schöner Garten.",
+          it: "Bel giardino.",
+          es: "Hermoso jardín.",
+          ru: "Красивый сад.",
+          zh: "漂亮的花园.",
+          ar: "حديقة جميلة.",
+          ko: "아름다운 정원."
         }
       },
       {
-        id: "b1_b1_new_41",
+        id: "hate",
         word: {
           en: "Hate",
           fa: "تنفر",
@@ -15438,11 +16878,20 @@ const wordCollections = [
           ko: "미움"
         },
         sentence: {
-          en: "I hate traffic."
+          en: "I hate traffic.",
+          fa: "از ترافیک متنفرم.",
+          fr: "Je déteste la circulation.",
+          de: "Ich hasse Verkehr.",
+          it: "Odio il traffico.",
+          es: "Odio el tráfico.",
+          ru: "Я ненавижу пробки.",
+          zh: "我讨厌交通.",
+          ar: "أكره حركة المرور.",
+          ko: "나는 교통 체증이 싫습니다."
         }
       },
       {
-        id: "b1_b1_new_42",
+        id: "love_noun",
         word: {
           en: "Love",
           fa: "عشق",
@@ -15456,11 +16905,20 @@ const wordCollections = [
           ko: "사랑"
         },
         sentence: {
-          en: "Love is blind."
+          en: "Love is blind.",
+          fa: "عشق کور است.",
+          fr: "L'amour est aveugle.",
+          de: "Liebe ist blind.",
+          it: "L'amore è cieco.",
+          es: "El amor es ciego.",
+          ru: "Любовь слепа.",
+          zh: "爱情是盲目的。",
+          ar: "الحب أعمى.",
+          ko: "사랑은 눈이 멉니다."
         }
       },
       {
-        id: "b1_b1_new_43",
+        id: "fear",
         word: {
           en: "Fear",
           fa: "ترس",
@@ -15474,11 +16932,20 @@ const wordCollections = [
           ko: "두려움"
         },
         sentence: {
-          en: "No fear."
+          en: "No fear.",
+          fa: "نترس.",
+          fr: "Pas de peur.",
+          de: "Keine Angst.",
+          it: "Nessuna paura.",
+          es: "Sin miedo.",
+          ru: "Нет страха.",
+          zh: "没有恐惧。",
+          ar: "لا خوف.",
+          ko: "두려움 없음."
         }
       },
       {
-        id: "b1_b1_new_44",
+        id: "hope",
         word: {
           en: "Hope",
           fa: "امید",
@@ -15492,11 +16959,20 @@ const wordCollections = [
           ko: "희망"
         },
         sentence: {
-          en: "I hope so."
+          en: "I hope so.",
+          fa: "امیدوارم.",
+          fr: "J'espère.",
+          de: "Ich hoffe es.",
+          it: "Spero.",
+          es: "Espero que sí.",
+          ru: "Я надеюсь.",
+          zh: "我希望如此。",
+          ar: "آمل ذلك.",
+          ko: "그러길 바랍니다."
         }
       },
       {
-        id: "b1_b1_new_45",
+        id: "angry",
         word: {
           en: "Angry",
           fa: "عصبانی",
@@ -15510,11 +16986,20 @@ const wordCollections = [
           ko: "화난"
         },
         sentence: {
-          en: "Don't be angry."
+          en: "Don't be angry.",
+          fa: "عصبانی نشو.",
+          fr: "Ne te fâche pas.",
+          de: "Sei nicht wütend.",
+          it: "Non arrabbiarti.",
+          es: "No te enojes.",
+          ru: "Не сердись.",
+          zh: "别生气.",
+          ar: "لا تغضب.",
+          ko: "화내지 마세요."
         }
       },
       {
-        id: "b1_b1_new_46",
+        id: "tired",
         word: {
           en: "Tired",
           fa: "خسته",
@@ -15528,11 +17013,20 @@ const wordCollections = [
           ko: "피곤한"
         },
         sentence: {
-          en: "I am tired."
+          en: "I am tired.",
+          fa: "من خسته‌ام.",
+          fr: "Je suis fatigué.",
+          de: "Ich bin müde.",
+          it: "Sono stanco.",
+          es: "Estoy cansado.",
+          ru: "Я устал.",
+          zh: "我累了.",
+          ar: "أنا متعب.",
+          ko: "나는 피곤합니다."
         }
       },
       {
-        id: "b1_b1_new_47",
+        id: "hungry",
         word: {
           en: "Hungry",
           fa: "گرسنه",
@@ -15546,11 +17040,20 @@ const wordCollections = [
           ko: "배고픈"
         },
         sentence: {
-          en: "I am hungry."
+          en: "I am hungry.",
+          fa: "من گرسنه‌ام.",
+          fr: "J'ai faim.",
+          de: "Ich habe Hunger.",
+          it: "Ho fame.",
+          es: "Tengo hambre.",
+          ru: "Я голоден.",
+          zh: "我饿了。",
+          ar: "أنا جائع.",
+          ko: "나는 배고픕니다."
         }
       },
       {
-        id: "b1_b1_new_48",
+        id: "thirsty",
         word: {
           en: "Thirsty",
           fa: "تشنه",
@@ -15564,11 +17067,20 @@ const wordCollections = [
           ko: "목마른"
         },
         sentence: {
-          en: "I am thirsty."
+          en: "I am thirsty.",
+          fa: "من تشنه‌ام.",
+          fr: "J'ai soif.",
+          de: "Ich habe Durst.",
+          it: "Ho sete.",
+          es: "Tengo sed.",
+          ru: "Я хочу пить.",
+          zh: "我渴了。",
+          ar: "أنا عطشان.",
+          ko: "나는 목마릅니다."
         }
       },
       {
-        id: "b1_b1_new_49",
+        id: "bored",
         word: {
           en: "Bored",
           fa: "کسل",
@@ -15582,11 +17094,20 @@ const wordCollections = [
           ko: "지루한"
         },
         sentence: {
-          en: "I am bored."
+          en: "I am bored.",
+          fa: "حوصلم سر رفته.",
+          fr: "Je m'ennuie.",
+          de: "Ich bin gelangweilt.",
+          it: "Sono annoiato.",
+          es: "Estoy aburrido.",
+          ru: "Мне скучно.",
+          zh: "我很无聊.",
+          ar: "أشعر بالملل.",
+          ko: "나는 지루합니다."
         }
       },
       {
-        id: "b1_b1_new_50",
+        id: "excited",
         word: {
           en: "Excited",
           fa: "هیجان‌زده",
@@ -15600,11 +17121,20 @@ const wordCollections = [
           ko: "신난"
         },
         sentence: {
-          en: "I am excited."
+          en: "I am excited.",
+          fa: "من هیجان‌زده‌ام.",
+          fr: "Je suis excité.",
+          de: "Ich bin aufgeregt.",
+          it: "Sono eccitato.",
+          es: "Estoy emocionado.",
+          ru: "Я взволнован.",
+          zh: "我很兴奋.",
+          ar: "أنا متحمس.",
+          ko: "나는 신이 납니다."
         }
       },
       {
-        id: "b1_b1_new_51",
+        id: "begin",
         word: {
           en: "Begin",
           fa: "شروع کردن",
@@ -15618,11 +17148,20 @@ const wordCollections = [
           ko: "시작하다"
         },
         sentence: {
-          en: "Let's begin."
+          en: "Let's begin.",
+          fa: "بیایید شروع کنیم.",
+          fr: "Commençons.",
+          de: "Lass uns anfangen.",
+          it: "Iniziamo.",
+          es: "Empecemos.",
+          ru: "Давай начнем.",
+          zh: "我们要开始了。",
+          ar: "لنبدأ.",
+          ko: "시작합시다."
         }
       },
       {
-        id: "b1_b1_new_52",
+        id: "finish",
         word: {
           en: "Finish",
           fa: "تمام کردن",
@@ -15636,11 +17175,20 @@ const wordCollections = [
           ko: "끝내다"
         },
         sentence: {
-          en: "Finish your work."
+          en: "Finish your work.",
+          fa: "کارت را تمام کن.",
+          fr: "Finis ton travail.",
+          de: "Beende deine Arbeit.",
+          it: "Finisci il tuo lavoro.",
+          es: "Termina tu trabajo.",
+          ru: "Закончи свою работу.",
+          zh: "完成你的工作。",
+          ar: "أنه عملك.",
+          ko: "일을 끝내세요."
         }
       },
       {
-        id: "b1_b1_new_53",
+        id: "ask",
         word: {
           en: "Ask",
           fa: "پرسیدن",
@@ -15654,11 +17202,20 @@ const wordCollections = [
           ko: "묻다"
         },
         sentence: {
-          en: "Ask a question."
+          en: "Ask a question.",
+          fa: "یک سوال بپرس.",
+          fr: "Pose une question.",
+          de: "Stell eine Frage.",
+          it: "Fai una domanda.",
+          es: "Haz una pregunta.",
+          ru: "Задай вопрос.",
+          zh: "问一个问题。",
+          ar: "اطرح سؤالا.",
+          ko: "질문하세요."
         }
       },
       {
-        id: "b1_b1_new_54",
+        id: "answer",
         word: {
           en: "Answer",
           fa: "پاسخ دادن",
@@ -15672,11 +17229,20 @@ const wordCollections = [
           ko: "대답하다"
         },
         sentence: {
-          en: "Answer me."
+          en: "Answer me.",
+          fa: "به من پاسخ بده.",
+          fr: "Réponds-moi.",
+          de: "Antworte mir.",
+          it: "Rispondimi.",
+          es: "Respóndeme.",
+          ru: "Ответь мне.",
+          zh: "回答我.",
+          ar: "أجبني.",
+          ko: "대답해 주세요."
         }
       },
       {
-        id: "b1_b1_new_55",
+        id: "buy",
         word: {
           en: "Buy",
           fa: "خریدن",
@@ -15690,11 +17256,20 @@ const wordCollections = [
           ko: "사다"
         },
         sentence: {
-          en: "Buy a car."
+          en: "Buy a car.",
+          fa: "یک ماشین بخر.",
+          fr: "Achète une voiture.",
+          de: "Kauf ein Auto.",
+          it: "Compra un'auto.",
+          es: "Compra un coche.",
+          ru: "Купи машину.",
+          zh: "买一辆车。",
+          ar: "شراء سيارة.",
+          ko: "차를 사세요."
         }
       },
       {
-        id: "b1_b1_new_56",
+        id: "sell",
         word: {
           en: "Sell",
           fa: "فروختن",
@@ -15708,11 +17283,20 @@ const wordCollections = [
           ko: "팔다"
         },
         sentence: {
-          en: "Sell the house."
+          en: "Sell the house.",
+          fa: "خانه را بفروش.",
+          fr: "Vends la maison.",
+          de: "Verkauf das Haus.",
+          it: "Vendi la casa.",
+          es: "Vende la casa.",
+          ru: "Продай дом.",
+          zh: "卖掉房子.",
+          ar: "بع المنزل.",
+          ko: "집을 파세요."
         }
       },
       {
-        id: "b1_b1_new_57",
+        id: "give",
         word: {
           en: "Give",
           fa: "دادن",
@@ -15726,11 +17310,20 @@ const wordCollections = [
           ko: "주다"
         },
         sentence: {
-          en: "Give me that."
+          en: "Give me that.",
+          fa: "آن را به من بده.",
+          fr: "Donne-le-moi.",
+          de: "Gib es mir.",
+          it: "Dammelo.",
+          es: "Dámelo.",
+          ru: "Дай это мне.",
+          zh: "把它给我。",
+          ar: "أعطني إياه.",
+          ko: "그것을 내게 주세요."
         }
       },
       {
-        id: "b1_b1_new_58",
+        id: "take",
         word: {
           en: "Take",
           fa: "گرفتن",
@@ -15744,11 +17337,20 @@ const wordCollections = [
           ko: "가져가다"
         },
         sentence: {
-          en: "Take a photo."
+          en: "Take a photo.",
+          fa: "عکس بگیر.",
+          fr: "Prends une photo.",
+          de: "Mach ein Foto.",
+          it: "Fai una foto.",
+          es: "Toma una foto.",
+          ru: "Сделай фото.",
+          zh: "拍张照。",
+          ar: "التقط صورة.",
+          ko: "사진을 찍으세요."
         }
       },
       {
-        id: "b1_b1_new_59",
+        id: "find",
         word: {
           en: "Find",
           fa: "پیدا کردن",
@@ -15762,11 +17364,20 @@ const wordCollections = [
           ko: "찾다"
         },
         sentence: {
-          en: "Find the key."
+          en: "Find the key.",
+          fa: "کلید را پیدا کن.",
+          fr: "Trouve la clé.",
+          de: "Finde den Schlüssel.",
+          it: "Trova la chiave.",
+          es: "Encuentra la llave.",
+          ru: "Найди ключ.",
+          zh: "找到钥匙。",
+          ar: "جد المفتاح.",
+          ko: "열쇠를 찾으세요."
         }
       },
       {
-        id: "b1_b1_new_60",
+        id: "lose",
         word: {
           en: "Lose",
           fa: "گم کردن",
@@ -15780,7 +17391,16 @@ const wordCollections = [
           ko: "잃다"
         },
         sentence: {
-          en: "Don't lose hope."
+          en: "Don't lose hope.",
+          fa: "امیدت را از دست نده.",
+          fr: "Ne perds pas espoir.",
+          de: "Verliere nicht die Hoffnung.",
+          it: "Non perdere la speranza.",
+          es: "No pierdas la esperanza.",
+          ru: "Не теряй надежды.",
+          zh: "别失去希望。",
+          ar: "لا تفقد الأمل.",
+          ko: "희망을 잃지 마세요."
         }
       }
     ]
@@ -21135,7 +22755,7 @@ const wordCollections = [
         }
       },
       {
-        id: "b2_b2_new_1",
+        id: "strategy",
         word: {
           en: "Strategy",
           fa: "استراتژی",
@@ -21149,11 +22769,20 @@ const wordCollections = [
           ko: "전략"
         },
         sentence: {
-          en: "We need a good strategy."
+          en: "We need a good strategy.",
+          fa: "ما به یک استراتژی خوب نیاز داریم.",
+          fr: "Nous avons besoin d'une bonne stratégie.",
+          de: "Wir brauchen eine gute Strategie.",
+          it: "Abbiamo bisogno di una buona strategia.",
+          es: "Necesitamos una buena estrategia.",
+          ru: "Нам нужна хорошая стратегия.",
+          zh: "我们需要一个好的策略。",
+          ar: "نحن بحاجة إلى استراتيجية جيدة.",
+          ko: "우리는 좋은 전략이 필요합니다."
         }
       },
       {
-        id: "b2_b2_new_2",
+        id: "method",
         word: {
           en: "Method",
           fa: "روش",
@@ -21167,11 +22796,20 @@ const wordCollections = [
           ko: "방법"
         },
         sentence: {
-          en: "Scientific method."
+          en: "Scientific method.",
+          fa: "روش علمی.",
+          fr: "Méthode scientifique.",
+          de: "Wissenschaftliche Methode.",
+          it: "Metodo scientifico.",
+          es: "Método científico.",
+          ru: "Научный метод.",
+          zh: "科学方法。",
+          ar: "طريقة علمية.",
+          ko: "과학적 방법."
         }
       },
       {
-        id: "b2_b2_new_3",
+        id: "analysis",
         word: {
           en: "Analysis",
           fa: "تحلیل",
@@ -21185,11 +22823,20 @@ const wordCollections = [
           ko: "분석"
         },
         sentence: {
-          en: "Data analysis."
+          en: "Data analysis.",
+          fa: "تحلیل داده‌ها.",
+          fr: "Analyse des données.",
+          de: "Datenanalyse.",
+          it: "Analisi dei dati.",
+          es: "Análisis de datos.",
+          ru: "Анализ данных.",
+          zh: "数据分析。",
+          ar: "تحليل البيانات.",
+          ko: "데이터 분석."
         }
       },
       {
-        id: "b2_b2_new_4",
+        id: "theory",
         word: {
           en: "Theory",
           fa: "نظریه",
@@ -21203,11 +22850,20 @@ const wordCollections = [
           ko: "이론"
         },
         sentence: {
-          en: "Big Bang theory."
+          en: "Big Bang theory.",
+          fa: "نظریه بیگ بنگ.",
+          fr: "Théorie du Big Bang.",
+          de: "Big-Bang-Theorie.",
+          it: "Teoria del Big Bang.",
+          es: "Teoría del Big Bang.",
+          ru: "Теория Большого взрыва.",
+          zh: "大爆炸理论。",
+          ar: "نظرية الانفجار الكبير.",
+          ko: "빅뱅 이론."
         }
       },
       {
-        id: "b2_b2_new_5",
+        id: "concept",
         word: {
           en: "Concept",
           fa: "مفهوم",
@@ -21221,7 +22877,16 @@ const wordCollections = [
           ko: "개념"
         },
         sentence: {
-          en: "Abstract concept."
+          en: "Abstract concept.",
+          fa: "مفهوم انتزاعی.",
+          fr: "Concept abstrait.",
+          de: "Abstraktes Konzept.",
+          it: "Concetto astratto.",
+          es: "Concepto abstracto.",
+          ru: "Абстрактное понятие.",
+          zh: "抽象概念。",
+          ar: "مفهوم مجرد.",
+          ko: "추상적 개념."
         }
       }
     ]
