@@ -1,6 +1,12 @@
 <div align="center">
   <img src="logo-128.png" alt="LinguaFlash Logo" width="128" height="128">
   <h1>LinguaFlash ⚡</h1>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+  ![Version](https://img.shields.io/badge/version-1.2.0-blue)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/su6i/LinguaFlash/pulls)
+  
+  [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/kbnggdhjaflioffhgjngoopojcmoaano)
 </div>
 
 ![LinguaFlash Promo](media/marquee_promo.png)
@@ -79,7 +85,11 @@
 
 
 ## 📦 Installation
+ 
+### 🌟 Recommended: Chrome Web Store
+**[Download LinguaFlash from the Chrome Web Store](https://chromewebstore.google.com/detail/kbnggdhjaflioffhgjngoopojcmoaano)** for the best experience and automatic updates.
 
+### 🛠 Manual Installation (Developer Mode)
 1. Clone or download this repository.
 2. Open Google Chrome and navigate to `chrome://extensions`.
 3. Enable **"Developer mode"** (top right toggle).
