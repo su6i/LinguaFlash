@@ -25,7 +25,7 @@ function updateContextMenu(lang) {
 
 chrome.runtime.onInstalled.addListener(() => {
     console.log("LinguaFlash installed.");
-    chrome.storage.local.get(['sourceLang'], (result) => {
+    chrome.storage.local.get(['sourceLang', 'isPaused'], (result) => {
         const lang = result.sourceLang || 'en';
 
         // Initialize defaults if not present
@@ -37,7 +37,13 @@ chrome.runtime.onInstalled.addListener(() => {
                 frequency: 5
             });
         }
-        createAlarm(5);
+
+        // Root Cause Fix: Only start timer if NOT paused
+        if (!result.isPaused) {
+            createAlarm(5);
+        } else {
+            console.log("LinguaFlash started in PAUSED state. Timer skipped.");
+        }
 
         chrome.contextMenus.create({
             id: "add_to_linguaflash",
@@ -125,10 +131,9 @@ function showNotification() {
     chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify', 'contentMode', 'isPaused'], (settings) => {
         const { targetLang, level, sourceLang, customItems, muteAudio, showNotify, contentMode, isPaused } = settings;
 
-        if (isPaused) {
-            console.log("LinguaFlash: App is PAUSED. Skipping notification/audio.");
-            return;
-        }
+        // Note: Startup logic now prevents alarm creation if paused. 
+        // Double-check here just in case, but rely on alarm management.
+        if (isPaused) return;
 
         let filteredItems = [];
 
