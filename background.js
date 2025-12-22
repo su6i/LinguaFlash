@@ -122,8 +122,14 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 
 function showNotification() {
-    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify', 'contentMode'], (settings) => {
-        const { targetLang, level, sourceLang, customItems, muteAudio, showNotify, contentMode } = settings;
+    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify', 'contentMode', 'isPaused'], (settings) => {
+        const { targetLang, level, sourceLang, customItems, muteAudio, showNotify, contentMode, isPaused } = settings;
+
+        if (isPaused) {
+            console.log("LinguaFlash: App is PAUSED. Skipping notification/audio.");
+            return;
+        }
+
         let filteredItems = [];
 
         if (level === 'Favorites') {
