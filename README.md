@@ -105,6 +105,20 @@
 3.  **Set Timer**: Choose how often you want to see a card.
 4.  **Manage Favorites**: Use the 📂 button to view, edit, import, or export your custom list.
 
+## 🗄️ Database Management (For Developers/Customizers)
+
+LinguaFlash now uses **IndexedDB** for high performance. The "Source of Truth" is the provided SQLite database.
+
+### How to update or add new vocabulary:
+1.  **Edit the SQLite DB**: Open `linguaflash.db` using any SQLite editor (like DB Browser for SQLite) and modify the `vocabulary` table.
+2.  **Export to JSON**: Run the export script to sync the changes for the extension:
+    ```bash
+    python3 export_json.py
+    ```
+3.  **Bootstrap in Extension**:
+    - The extension automatically loads `vocabulary_db.json` into IndexedDB on the first install.
+    - To force an update in your browser, go to `chrome://extensions`, click **Update**, or toggle **Developer Mode** off and on.
+
 ## 🔮 Roadmap
 
 -   [x] **Advanced Database Architecture**: Migrated from a bulky 1.3MB JS file to a high-performance **IndexedDB** system.
