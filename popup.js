@@ -29,7 +29,7 @@ const translations = {
             languages: { en: "🇬🇧 English", fa: "🇮🇷 Persian", fr: "🇫🇷 French", de: "🇩🇪 German", it: "🇮🇹 Italian", es: "🇪🇸 Spanish", ru: "🇷🇺 Russian", zh: "🇨🇳 Chinese", ar: "🇸🇦 Arabic", ko: "🇰🇷 Korean" },
             levels: {
                 A1: "Beginner (A1)", A2: "Elementary (A2)", B1: "Intermediate (B1)", B2: "Upper Int. (B2)", C1: "Advanced (C1)", C2: "Mastery (C2)",
-                Grammar_Tips: "Grammar Tips", Favorites: "My Favorites"
+                Grammar_Rules: "Grammar Rules", Confusing_Words: "Confusing Words", Phrasal_Verbs: "Phrasal Verbs", Wisdom: "Wisdom (Proverbs)", Favorites: "My Favorites"
             },
             contentTypes: { word: "Word", sentence: "Sentence" }
         }
@@ -60,7 +60,7 @@ const translations = {
         lblContent: "نوع محتوا:",
         dropdowns: {
             languages: { en: "🇬🇧 English", fa: "🇮🇷 Persian", fr: "🇫🇷 French", de: "🇩🇪 German", it: "🇮🇹 Italian", es: "🇪🇸 Spanish", ru: "🇷🇺 Russian", zh: "🇨🇳 Chinese", ar: "🇸🇦 Arabic", ko: "🇰🇷 Korean" },
-            levels: { A1: "مبتدی (A1)", A2: "مقدماتی (A2)", B1: "متوسط (B1)", B2: "پیشرفته (B2)", C1: "پیشرفته (C1)", C2: "پیشرفته (C2)", Grammar_Tips: "نکات گرامری", Favorites: "جملات منتخب" },
+            levels: { A1: "مبتدی (A1)", A2: "مقدماتی (A2)", B1: "متوسط (B1)", B2: "پیشرفته (B2)", C1: "پیشرفته (C1)", C2: "پیشرفته (C2)", Grammar_Rules: "قواعد گرامر", Confusing_Words: "کلمات گمراه‌کننده", Phrasal_Verbs: "افعال دو‌کلمه‌ای", Wisdom: "حکمت و ضرب‌المثل", Favorites: "جملات منتخب" },
             contentTypes: { word: "کلمه", sentence: "جمله" }
         }
     },
@@ -92,7 +92,7 @@ const translations = {
             languages: { en: "🇬🇧 Anglais", fa: "🇮🇷 Persan", fr: "🇫🇷 Français", de: "🇩🇪 Allemand", it: "🇮🇹 Italien", es: "🇪🇸 Espagnol", ru: "🇷🇺 Russe", zh: "🇨🇳 Chinois", ar: "🇸🇦 Arabe", ko: "🇰🇷 Coréen" },
             levels: {
                 A1: "Débutant (A1)", A2: "Élémentaire (A2)", B1: "Intermédiaire (B1)", B2: "Intermédiaire + (B2)", C1: "Avancé (C1)", C2: "Maîtrise (C2)",
-                Grammar_Tips: "Grammaire", Favorites: "Favoris"
+                Grammar_Rules: "Grammaire", Confusing_Words: "Mots confus", Phrasal_Verbs: "Verbes à particule", Wisdom: "Sagesse (Proverbes)", Favorites: "Favoris"
             },
             contentTypes: { word: "Mot", sentence: "Phrase" }
         }
@@ -125,7 +125,7 @@ const translations = {
         lblContent: "Inhalt:",
         dropdowns: {
             languages: { en: "🇬🇧 Englisch", fa: "🇮🇷 Persisch", fr: "🇫🇷 Französisch", de: "🇩🇪 Deutsch", it: "🇮🇹 Italienisch", es: "🇪🇸 Spanisch", ru: "🇷🇺 Russisch", zh: "🇨🇳 Chinesisch", ar: "🇸🇦 Arabisch", ko: "🇰🇷 Koreanisch" },
-            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Tips: "Grammatik", Favorites: "Favoriten" },
+            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Rules: "Grammatik", Confusing_Words: "Verwechslungsgefahr", Phrasal_Verbs: "Phrasal Verbs", Wisdom: "Lebensweisheiten", Favorites: "Favoriten" },
             contentTypes: { word: "Wort", sentence: "Satz" }
         }
     },
@@ -155,7 +155,7 @@ const translations = {
         lblContent: "Contenuto:",
         dropdowns: {
             languages: { en: "🇬🇧 Inglese", fa: "🇮🇷 Persiano", fr: "🇫🇷 Francese", de: "🇩🇪 Tedesco", it: "🇮🇹 Italiano", es: "🇪🇸 Spagnolo", ru: "🇷🇺 Russo", zh: "🇨🇳 Cinese", ar: "🇸🇦 Arabo", ko: "🇰🇷 Coreano" },
-            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Tips: "Grammatica", Favorites: "Preferiti" },
+            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Rules: "Grammatica", Confusing_Words: "Parole confuse", Phrasal_Verbs: "Verbi frasali", Wisdom: "Saggezza", Favorites: "Preferiti" },
             contentTypes: { word: "Parola", sentence: "Frase" }
         }
     },
@@ -185,7 +185,7 @@ const translations = {
         lblContent: "Contenido:",
         dropdowns: {
             languages: { en: "🇬🇧 Inglés", fa: "🇮🇷 Persa", fr: "🇫🇷 Francés", de: "🇩🇪 Alemán", it: "🇮🇹 Italiano", es: "🇪🇸 Español", ru: "🇷🇺 Ruso", zh: "🇨🇳 Chino", ar: "🇸🇦 Árabe", ko: "🇰🇷 Coreano" },
-            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Tips: "Gramática", Favorites: "Favoritos" },
+            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Rules: "Gramática", Confusing_Words: "Palabras confusas", Phrasal_Verbs: "Verbos frasales", Wisdom: "Sabiduría", Favorites: "Favoritos" },
             contentTypes: { word: "Palabra", sentence: "Frase" }
         }
     },
@@ -215,7 +215,7 @@ const translations = {
         lblContent: "Контент:",
         dropdowns: {
             languages: { en: "🇬🇧 Английский", fa: "🇮🇷 Персидский", fr: "🇫🇷 Французский", de: "🇩🇪 Немецкий", it: "🇮🇹 Итальянский", es: "🇪🇸 Испанский", ru: "🇷🇺 Русский", zh: "🇨🇳 Китайский", ar: "🇸🇦 Арабский", ko: "🇰🇷 Корейский" },
-            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Tips: "Грамматика", Favorites: "Избранное" },
+            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Rules: "Грамматика", Confusing_Words: "Путаница", Phrasal_Verbs: "Фразовые глаголы", Wisdom: "Мудрость", Favorites: "Избранное" },
             contentTypes: { word: "Слово", sentence: "Предложение" }
         }
     },
@@ -245,7 +245,7 @@ const translations = {
         lblContent: "内容:",
         dropdowns: {
             languages: { en: "🇬🇧 英语", fa: "🇮🇷 波斯语", fr: "🇫🇷 法语", de: "🇩🇪 德语", it: "🇮🇹 意大利语", es: "🇪🇸 西班牙语", ru: "🇷🇺 俄语", zh: "🇨🇳 中文", ar: "🇸🇦 阿拉伯语", ko: "🇰🇷 韩语" },
-            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Tips: "语法", Favorites: "收藏" },
+            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Rules: "语法", Confusing_Words: "易混词", Phrasal_Verbs: "短语动词", Wisdom: "智慧 (谚语)", Favorites: "收藏" },
             contentTypes: { word: "单词", sentence: "句子" }
         }
     },
@@ -275,7 +275,7 @@ const translations = {
         lblContent: "محتوى:",
         dropdowns: {
             languages: { en: "🇬🇧 الإنجليزية", fa: "🇮🇷 الفارسية", fr: "🇫🇷 الفرنسية", de: "🇩🇪 الألمانية", it: "🇮🇹 الإيطالية", es: "🇪🇸 الأسبانية", ru: "🇷🇺 الروسية", zh: "🇨🇳 الصينية", ar: "🇸🇦 العربية", ko: "🇰🇷 الكورية" },
-            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Tips: "قواعد", Favorites: "المفضلة" },
+            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Rules: "قواعد", Confusing_Words: "كلمات محيرة", Phrasal_Verbs: "أفعال مركبة", Wisdom: "حكمة", Favorites: "المفضلة" },
             contentTypes: { word: "كلمة", sentence: "جملة" }
         }
     },
@@ -305,7 +305,7 @@ const translations = {
         lblContent: "콘텐츠:",
         dropdowns: {
             languages: { en: "🇬🇧 영어", fa: "🇮🇷 페르시아어", fr: "🇫🇷 프랑스어", de: "🇩🇪 독일어", it: "🇮탈리아어", es: "🇪🇸 스페인어", ru: "🇷🇺 러시아어", zh: "🇨🇳 중국어", ar: "🇸🇦 아랍어", ko: "🇰🇷 한국어" },
-            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Tips: "문법", Favorites: "즐겨찾기" },
+            levels: { A1: "A1", A2: "A2", B1: "B1", B2: "B2", C1: "C1", C2: "C2", Grammar_Rules: "문법", Confusing_Words: "헷갈리는 단어", Phrasal_Verbs: "구동사", Wisdom: "지혜 (속담)", Favorites: "즐겨찾기" },
             contentTypes: { word: "단어", sentence: "문장" }
         }
     }
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // NEW: Populate Dropdowns dynamically since HTML is empty
     const langKeys = ['en', 'fa', 'fr', 'de', 'it', 'es', 'ru', 'zh', 'ar', 'ko'];
-    const levelKeys = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Grammar_Tips', 'Favorites'];
+    const levelKeys = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Grammar_Rules', 'Confusing_Words', 'Phrasal_Verbs', 'Wisdom', 'Favorites'];
 
     function populateSelect(element, keys, defaultVal) {
         element.innerHTML = '';

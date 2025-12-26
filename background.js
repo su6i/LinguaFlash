@@ -216,6 +216,8 @@ async function showNotification() {
         }
 
         const mode = contentMode || 'word';
+        const isSpecialLevel = ['Grammar_Rules', 'Confusing_Words', 'Phrasal_Verbs', 'Wisdom'].includes(level);
+
         let displayTarget = targetEntry.word_text;
         let displaySource = sourceEntry ? sourceEntry.word_text : "---";
 
@@ -224,10 +226,10 @@ async function showNotification() {
             displaySource = sourceEntry ? sourceEntry.sentence_text : "---";
         }
 
-        // Special UI for Grammar Tips
-        if (level === 'Grammar_Tips') {
+        // --- Special Logic for Grammar / Wisdom ---
+        if (isSpecialLevel) {
+            // Notifications: ALWAYS show TITLE (word) and EXAMPLE (sentence)
             displayTarget = `🔹 ${targetEntry.word_text}`;
-            // Only add sentence if it's different (to avoid: Topic \n Topic)
             if (targetEntry.sentence_text && targetEntry.sentence_text.trim() !== targetEntry.word_text.trim()) {
                 displayTarget += `\n${targetEntry.sentence_text}`;
             }
@@ -237,8 +239,6 @@ async function showNotification() {
                 if (sourceEntry.sentence_text && sourceEntry.sentence_text.trim() !== sourceEntry.word_text.trim()) {
                     displaySource += `\n${sourceEntry.sentence_text}`;
                 }
-            } else {
-                displaySource = "---";
             }
         }
 
@@ -254,10 +254,18 @@ async function showNotification() {
 
         if (muteAudio !== true) {
             // TTS logic
-            const speechText = mode === 'sentence' ? targetEntry.sentence_text : targetEntry.word_text;
+            let speechText = targetEntry.word_text;
+            let sourceSpeech = sourceEntry ? sourceEntry.word_text : "";
+
+            if (mode === 'sentence' || isSpecialLevel) {
+                // For Special Levels, ALWAYS speak the sentence (meaning/example), NOT the title/topic
+                speechText = targetEntry.sentence_text || targetEntry.word_text;
+                sourceSpeech = sourceEntry ? (sourceEntry.sentence_text || sourceEntry.word_text) : "";
+            }
+
             // CLEAN TEXT for TTS: Strip emojis/shapes
             const cleanSpeechText = speechText.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
-            const cleanSourceText = displaySource.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
+            const cleanSourceText = sourceSpeech.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
 
             playAudio(cleanSpeechText, targetLang, cleanSourceText, sourceLang);
         }

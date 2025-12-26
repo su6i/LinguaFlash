@@ -90,18 +90,29 @@ def migrate_to_sqlite_simple(js_path, db_path):
             sentence = item['translations'][lang]['sentence']
             
             is_fake = False
-            if lang != 'en':
-                if word == item['translations']['en']['word'] or not has_native(word, lang):
-                    is_fake = True
-            
-            # Note: For 'Favorites', we can mark as valid or handle in SQL query. 
-            # Let's keep is_valid based on content for now.
             is_valid = not is_fake and bool(word.strip())
-            
+
+            # Smart Categorization for Grammar_Tips
+            final_level = item['level']
+            if final_level == "Grammar_Tips":
+                en_word = item['translations']['en']['word'].lower()
+                en_sentence = item['translations']['en']['sentence'].lower()
+                
+                if " vs " in en_word or " vs " in en_sentence:
+                    final_level = "Confusing_Words"
+                elif "+" in en_word or "phrasal verb" in en_word: # Matches "Verb + Preposition"
+                    final_level = "Phrasal_Verbs"
+                elif any(x in en_word for x in ["proverb", "quote", "wisdom", "idiom"]):
+                    final_level = "Wisdom"
+                elif any(x in en_sentence for x in ["proverb", "quote", "wisdom", "idiom"]):
+                    final_level = "Wisdom"
+                else:
+                    final_level = "Grammar_Rules"
+
             cursor.execute('''
                 INSERT INTO vocabulary (word_id, level, lang, word_text, sentence_text, is_valid)
                 VALUES (?, ?, ?, ?, ?, ?)
-            ''', (final_id, item['level'], lang, word, sentence, is_valid))
+            ''', (final_id, final_level, lang, word, sentence, is_valid))
             
             if is_valid: valid_count += 1
 
