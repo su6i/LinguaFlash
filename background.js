@@ -288,14 +288,6 @@ async function showNotification() {
             const cleanSpeechText = speechText.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
             const cleanSourceText = sourceSpeech.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
 
-            console.log("LinguaFlash TTS:", {
-                level,
-                target: targetLang,
-                source: sourceLang,
-                textToSpeak: cleanSpeechText.substring(0, 30) + "...",
-                sourceToSpeak: cleanSourceText.substring(0, 30) + "..."
-            });
-
             playAudio(cleanSpeechText, targetLang, cleanSourceText, sourceLang);
         }
     });
