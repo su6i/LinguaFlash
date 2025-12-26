@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "LinguaFlash",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "description": "Learn vocabulary with automated pronunciation based on CEFR levels",
     "icons": {
         "128": "logo-128.png",

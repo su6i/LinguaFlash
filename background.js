@@ -5,12 +5,17 @@ let isDBReady = false;
 
 async function bootstrapDB() {
     try {
+        const currentVersion = chrome.runtime.getManifest().version;
+        const result = await chrome.storage.local.get(['dbVersion']);
         const empty = await isDBEmpty();
-        if (empty) {
-            console.log("LinguaFlash: Database is empty. Bootstrapping...");
+
+        // FORCE reload if version changed OR DB is empty
+        if (empty || result.dbVersion !== currentVersion) {
+            console.log(`LinguaFlash: Database needs update (${result.dbVersion} -> ${currentVersion}). Bootstrapping...`);
             const response = await fetch(chrome.runtime.getURL('vocabulary_db.json'));
             const data = await response.json();
             await populateDB(data);
+            await chrome.storage.local.set({ dbVersion: currentVersion });
             console.log("LinguaFlash: Database bootstrapped with data.");
         }
         isDBReady = true;
@@ -39,7 +44,8 @@ function updateContextMenu(lang) {
 }
 
 chrome.runtime.onInstalled.addListener(async () => {
-    console.log("LinguaFlash: Installed/Updated (v1.2.3)");
+    const v = chrome.runtime.getManifest().version;
+    console.log(`LinguaFlash: Installed/Updated (v${v})`);
 
     // Bootstrap DB
     await bootstrapDB();
