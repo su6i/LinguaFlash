@@ -235,7 +235,7 @@ async function showNotification() {
                 type: 'basic',
                 iconUrl: 'logo-128.png',
                 title: `LinguaFlash (${targetLang.toUpperCase()})`,
-                message: `${displayTarget}\n\n${displaySource}\n\n[Debug: ${level} / ${sourceLang}→${targetLang}]`,
+                message: `${displayTarget}\n\n${displaySource}`,
                 priority: 2
             });
         }
