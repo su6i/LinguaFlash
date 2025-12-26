@@ -226,8 +226,20 @@ async function showNotification() {
 
         // Special UI for Grammar Tips
         if (level === 'Grammar_Tips') {
-            displayTarget = `🔹 ${targetEntry.word_text}\n${targetEntry.sentence_text}`;
-            displaySource = sourceEntry ? `🔸 ${sourceEntry.word_text}\n${sourceEntry.sentence_text}` : "---";
+            displayTarget = `🔹 ${targetEntry.word_text}`;
+            // Only add sentence if it's different (to avoid: Topic \n Topic)
+            if (targetEntry.sentence_text && targetEntry.sentence_text.trim() !== targetEntry.word_text.trim()) {
+                displayTarget += `\n${targetEntry.sentence_text}`;
+            }
+
+            if (sourceEntry) {
+                displaySource = `🔸 ${sourceEntry.word_text}`;
+                if (sourceEntry.sentence_text && sourceEntry.sentence_text.trim() !== sourceEntry.word_text.trim()) {
+                    displaySource += `\n${sourceEntry.sentence_text}`;
+                }
+            } else {
+                displaySource = "---";
+            }
         }
 
         if (showNotify !== false) {
@@ -243,7 +255,11 @@ async function showNotification() {
         if (muteAudio !== true) {
             // TTS logic
             const speechText = mode === 'sentence' ? targetEntry.sentence_text : targetEntry.word_text;
-            playAudio(speechText, targetLang, displaySource, sourceLang); // Call playAudio with appropriate texts
+            // CLEAN TEXT for TTS: Strip emojis/shapes
+            const cleanSpeechText = speechText.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
+            const cleanSourceText = displaySource.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
+
+            playAudio(cleanSpeechText, targetLang, cleanSourceText, sourceLang);
         }
     });
 }
