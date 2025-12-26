@@ -90,7 +90,11 @@ def migrate_to_sqlite_simple(js_path, db_path):
             sentence = item['translations'][lang]['sentence']
             
             is_fake = False
-            is_valid = not is_fake and bool(word.strip())
+            # Relax is_valid for special categories (they often have English in Persian fields)
+            if item['level'] == 'Grammar_Tips':
+                is_valid = bool(word.strip())
+            else:
+                is_valid = not is_fake and bool(word.strip())
 
             # Smart Categorization for Grammar_Tips
             final_level = item['level']

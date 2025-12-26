@@ -184,9 +184,17 @@ async function showNotification() {
     if (!isDBReady) await bootstrapDB();
 
     chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify', 'contentMode', 'isPaused'], async (settings) => {
-        const { targetLang, level, sourceLang, customItems, muteAudio, showNotify, contentMode, isPaused } = settings;
+        let { targetLang, level, sourceLang, customItems, muteAudio, showNotify, contentMode, isPaused } = settings;
 
         if (isPaused === true) return;
+
+        // --- Compatibility Fix for 1.3.x ---
+        // If user was on the old "Grammar_Tips" level, redirect them to "Grammar_Rules"
+        if (level === 'Grammar_Tips') {
+            level = 'Grammar_Rules';
+            console.log("LinguaFlash: Migrating legacy Grammar_Tips level to Grammar_Rules.");
+            chrome.storage.local.set({ level: 'Grammar_Rules' });
+        }
 
         let targetEntry = null;
         let sourceEntry = null;
@@ -316,7 +324,12 @@ function playAudio(targetText, targetLang, sourceText, sourceLang) {
     const sourceLocale = localeMap[sourceLang] || sourceLang;
 
     // 1. Stop any previous audio to prevent overlap/stuck queue
-    chrome.tts.stop();
+    try {
+        chrome.tts.stop();
+    } catch (e) { console.error("TTS stop failed", e); }
+
+    // Visual Debug for user (Temporary)
+    // chrome.notifications.create({ type: 'basic', iconUrl: 'logo-128.png', title: 'TTS Speaking...', message: `T: ${targetText}\nS: ${sourceText}`, priority: 0 });
 
     // 2. Play Target Language
     chrome.tts.speak(targetText, {
