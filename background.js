@@ -198,20 +198,33 @@ async function showNotification() {
                 sourceEntry = { word_text: "لیست خالی", sentence_text: "کلمات را اضافه کنید" };
             } else {
                 const fav = favorites[Math.floor(Math.random() * favorites.length)];
-                // Favorites are stored in older format, normalize them or just show
                 targetEntry = { word_text: fav.word, sentence_text: fav.sentence || "" };
                 sourceEntry = { word_text: fav.translations[sourceLang] || "", sentence_text: fav.translations['sentence_' + sourceLang] || "" };
             }
         } else {
             // Get from IndexedDB
             targetEntry = await getRandomWord(level, targetLang);
+            if (!targetEntry) {
+                console.log(`LinguaFlash: Level '${level}' not found. Attempting emergency bootstrap...`);
+                await bootstrapDB();
+                targetEntry = await getRandomWord(level, targetLang);
+            }
+
             if (targetEntry) {
                 sourceEntry = await getTranslation(targetEntry.word_id, sourceLang);
             }
         }
 
         if (!targetEntry) {
-            console.log(`LinguaFlash: No entries found for ${level}/${targetLang}`);
+            console.warn(`LinguaFlash: Still no entries found for ${level}/${targetLang} after bootstrap.`);
+            // Fallback notification so user knows SOMETHING happened
+            chrome.notifications.create({
+                type: 'basic',
+                iconUrl: 'logo-128.png',
+                title: 'LinguaFlash',
+                message: `No data found for level: ${level}. Please try choosing another level and save again.`,
+                priority: 1
+            });
             return;
         }
 
@@ -266,6 +279,14 @@ async function showNotification() {
             // CLEAN TEXT for TTS: Strip emojis/shapes
             const cleanSpeechText = speechText.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
             const cleanSourceText = sourceSpeech.replace(/[\u2100-\u2BFF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, '').trim();
+
+            console.log("LinguaFlash TTS:", {
+                level,
+                target: targetLang,
+                source: sourceLang,
+                textToSpeak: cleanSpeechText.substring(0, 30) + "...",
+                sourceToSpeak: cleanSourceText.substring(0, 30) + "..."
+            });
 
             playAudio(cleanSpeechText, targetLang, cleanSourceText, sourceLang);
         }
