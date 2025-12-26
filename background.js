@@ -1,4 +1,23 @@
-import { vocabulary } from './vocabulary.js';
+import { initDB, isDBEmpty, populateDB, getRandomWord, getTranslation } from './db.js';
+
+// Global to hold DB status
+let isDBReady = false;
+
+async function bootstrapDB() {
+    try {
+        const empty = await isDBEmpty();
+        if (empty) {
+            console.log("LinguaFlash: Database is empty. Bootstrapping...");
+            const response = await fetch(chrome.runtime.getURL('vocabulary_db.json'));
+            const data = await response.json();
+            await populateDB(data);
+            console.log("LinguaFlash: Database bootstrapped with data.");
+        }
+        isDBReady = true;
+    } catch (error) {
+        console.error("LinguaFlash: DB Bootstrap failed:", error);
+    }
+}
 
 const menuTranslations = {
     en: "Add to LinguaFlash Favorites",
@@ -14,36 +33,40 @@ const menuTranslations = {
 
 function updateContextMenu(lang) {
     const title = menuTranslations[lang] || menuTranslations['en'];
-    // Update if exists, otherwise create? 
-    // update only works if created. safe to call.
     chrome.contextMenus.update("add_to_linguaflash", { title: title }, () => {
-        if (chrome.runtime.lastError) {
-            // Ignore error if item doesn't exist yet (unlikely)
-        }
+        if (chrome.runtime.lastError) { /* ignore */ }
     });
 }
 
-chrome.runtime.onInstalled.addListener(() => {
-    console.log("LinguaFlash installed.");
-    chrome.storage.local.get(['sourceLang', 'isPaused'], (result) => {
+chrome.runtime.onInstalled.addListener(async () => {
+    console.log("LinguaFlash: Installed/Updated (v1.2.3)");
+
+    // Bootstrap DB
+    await bootstrapDB();
+
+    chrome.storage.local.get(['sourceLang', 'isPaused', 'frequency'], (result) => {
         const lang = result.sourceLang || 'en';
 
         // Initialize defaults if not present
         if (!result.sourceLang) {
             chrome.storage.local.set({
                 sourceLang: 'en',
-                targetLang: 'en', // Default target (user should change)
+                targetLang: 'en',
                 level: 'A1',
-                frequency: 5
+                frequency: 5,
+                isPaused: false
             });
         }
 
-        // Root Cause Fix: Only start timer if NOT paused
-        if (!result.isPaused) {
-            createAlarm(5);
-        } else {
-            console.log("LinguaFlash started in PAUSED state. Timer skipped.");
-        }
+        // Nuclear Clear: Remove EVERY alarm to ensure no leftovers from v1.2.2 or earlier
+        chrome.alarms.clearAll(() => {
+            if (result.isPaused === false) { // Explicitly NOT paused
+                createAlarm(result.frequency || 5);
+                console.log("LinguaFlash: Fresh alarm created on install.");
+            } else {
+                console.log("LinguaFlash: Started in PAUSED state. No alarms created.");
+            }
+        });
 
         chrome.contextMenus.create({
             id: "add_to_linguaflash",
@@ -53,10 +76,22 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
-// Listen for language changes to update context menu dynamically
+// Added: Watch for Storage changes (Instant Pause response)
 chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === 'local' && changes.sourceLang) {
-        updateContextMenu(changes.sourceLang.newValue);
+    if (area === 'local') {
+        if (changes.sourceLang) {
+            updateContextMenu(changes.sourceLang.newValue);
+        }
+        if (changes.isPaused) {
+            if (changes.isPaused.newValue === true) {
+                chrome.alarms.clearAll(() => console.log("LinguaFlash: Storage changed to PAUSED. Alarms nuked."));
+            } else {
+                chrome.storage.local.get(['frequency'], (res) => {
+                    createAlarm(res.frequency || 5);
+                    console.log("LinguaFlash: Storage changed to ACTIVE. Alarm restored.");
+                });
+            }
+        }
     }
 });
 
@@ -96,132 +131,119 @@ function addCustomSentence(text) {
     });
 }
 
-// Listen for popup messages (to reset timer)
+// Listen for popup messages
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "resetTimer") {
-        createAlarm(request.settings.frequency);
-        console.log(`Timer reset to ${request.settings.frequency} minutes.`);
-
-        // UX Enhancement: Show a notification immediately so user knows it's working
-        showNotification();
+        // Delay slightly to ensure storage.set is finalized across all contexts
+        setTimeout(() => {
+            createAlarm(request.settings.frequency);
+            console.log(`LinguaFlash: Alarm reset requested (${request.settings.frequency} min).`);
+            showNotification();
+        }, 300);
 
     } else if (request.action === "stopTimer") {
-        chrome.alarms.clearAll();
-        console.log("Timer stopped (Paused).");
+        chrome.alarms.clearAll(() => {
+            console.log("LinguaFlash: Stop requested. Alarms cleared.");
+        });
     }
 });
 
-// Alarm Creation Function
+// Alarm Creation Function - Aggressive Version 4
 function createAlarm(minutes) {
-    chrome.alarms.clearAll();
-    chrome.alarms.create("vocabAlarm", {
-        delayInMinutes: parseFloat(minutes),
-        periodInMinutes: parseFloat(minutes)
+    const alarmName = "linguaVocab_v4_FINAL";
+    // Clear EVERYTHING first, then create the one and only true alarm
+    chrome.alarms.clearAll(() => {
+        chrome.alarms.create(alarmName, {
+            delayInMinutes: parseFloat(minutes),
+            periodInMinutes: parseFloat(minutes)
+        });
+        console.log(`LinguaFlash: Alarm '${alarmName}' created (${minutes} min).`);
     });
 }
 
-// When alarm triggers (time to show word/sentence)
-chrome.alarms.onAlarm.addListener((alarm) => {
-    if (alarm.name === "vocabAlarm") {
-        showNotification();
+// When alarm triggers
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+    const currentName = "linguaVocab_v4_FINAL";
+    if (alarm.name !== currentName) {
+        console.log(`LinguaFlash: GHOST DETECTED! Killing '${alarm.name}'`);
+        chrome.alarms.clear(alarm.name);
+        return;
     }
+
+    chrome.storage.local.get(['isPaused'], async (result) => {
+        if (result.isPaused === true) {
+            console.log("LinguaFlash: Fired while PAUSED. Nuking all alarms.");
+            chrome.alarms.clearAll();
+            return;
+        }
+        await showNotification();
+    });
 });
 
-function showNotification() {
-    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify', 'contentMode', 'isPaused'], (settings) => {
+async function showNotification() {
+    if (!isDBReady) await bootstrapDB();
+
+    chrome.storage.local.get(['sourceLang', 'targetLang', 'level', 'customItems', 'muteAudio', 'showNotify', 'contentMode', 'isPaused'], async (settings) => {
         const { targetLang, level, sourceLang, customItems, muteAudio, showNotify, contentMode, isPaused } = settings;
 
-        // Note: Startup logic now prevents alarm creation if paused. 
-        // Double-check here just in case, but rely on alarm management.
-        if (isPaused) return;
+        if (isPaused === true) return;
 
-        let filteredItems = [];
+        let targetEntry = null;
+        let sourceEntry = null;
 
         if (level === 'Favorites') {
-            // Use custom items
-            filteredItems = customItems || [];
+            const favorites = customItems || [];
+            if (favorites.length === 0) {
+                targetEntry = { word_text: "Empty Favorites", sentence_text: "Add some words!" };
+                sourceEntry = { word_text: "لیست خالی", sentence_text: "کلمات را اضافه کنید" };
+            } else {
+                const fav = favorites[Math.floor(Math.random() * favorites.length)];
+                // Favorites are stored in older format, normalize them or just show
+                targetEntry = { word_text: fav.word, sentence_text: fav.sentence || "" };
+                sourceEntry = { word_text: fav.translations[sourceLang] || "", sentence_text: fav.translations['sentence_' + sourceLang] || "" };
+            }
         } else {
-            // Use main database
-            filteredItems = vocabulary.filter(item =>
-                item.lang === targetLang && item.level === level
-            );
+            // Get from IndexedDB
+            targetEntry = await getRandomWord(level, targetLang);
+            if (targetEntry) {
+                sourceEntry = await getTranslation(targetEntry.word_id, sourceLang);
+            }
         }
 
-        if (filteredItems.length === 0) {
-            console.log("No items found for this level/language.");
-            // Notify user instead of being silent
-            chrome.notifications.create({
-                type: 'basic',
-                iconUrl: 'logo-128.png',
-                title: 'LinguaFlash',
-                message: `No words found for level: ${level} / ${targetLang}`,
-                priority: 2
-            });
+        if (!targetEntry) {
+            console.log(`LinguaFlash: No entries found for ${level}/${targetLang}`);
             return;
         }
 
-        // 2. Select a random item
-        const randomItem = filteredItems[Math.floor(Math.random() * filteredItems.length)];
-
-        // Determine content based on settings (word or sentence)
-        // Default mode is 'word'
         const mode = contentMode || 'word';
+        let displayTarget = targetEntry.word_text;
+        let displaySource = sourceEntry ? sourceEntry.word_text : "---";
 
-        let targetText = randomItem.word;
-        let sourceText = randomItem.translations[sourceLang] || "---";
+        if (mode === 'sentence' && targetEntry.sentence_text) {
+            displayTarget = targetEntry.sentence_text;
+            displaySource = sourceEntry ? sourceEntry.sentence_text : "---";
+        }
 
-        // === Fix: Special logic for grammar ===
+        // Special UI for Grammar Tips
         if (level === 'Grammar_Tips') {
-            // In grammar, Word is the title and Sentence is the example. Show both.
-            const title = randomItem.word;
-            const example = randomItem.sentence || "";
-
-            // Combine main text
-            targetText = `🔹 ${title}\n${example}`;
-
-            // Combine translation (if available)
-            const transTitle = randomItem.translations[sourceLang] || "";
-            const transExample = randomItem.translations['sentence_' + sourceLang] || "";
-            sourceText = `🔸 ${transTitle}\n${transExample}`;
-        }
-        // === Normal logic for other levels ===
-        else if (mode === 'sentence' && randomItem.sentence) {
-            targetText = randomItem.sentence;
-            const sentenceKey = 'sentence_' + sourceLang;
-            if (randomItem.translations[sentenceKey]) {
-                sourceText = randomItem.translations[sentenceKey];
-            }
+            displayTarget = `🔹 ${targetEntry.word_text}\n${targetEntry.sentence_text}`;
+            displaySource = sourceEntry ? `🔸 ${sourceEntry.word_text}\n${sourceEntry.sentence_text}` : "---";
         }
 
-        // 3. Show Notification (if enabled)
-        if (showNotify !== false) { // Default is true if undefined
+        if (showNotify !== false) {
             chrome.notifications.create({
                 type: 'basic',
                 iconUrl: 'logo-128.png',
-                title: `LinguaFlash (${(randomItem.lang || targetLang).toUpperCase()})`,
-                message: `${targetText}\n\n${sourceText}`,
+                title: `LinguaFlash (${targetLang.toUpperCase()})`,
+                message: `${displayTarget}\n\n${displaySource}\n\n[Debug: ${level} / ${sourceLang}→${targetLang}]`,
                 priority: 2
             });
         }
 
-        // 4. Play Audio (TTS) (if not muted)
-        if (muteAudio !== true) { // Default is false if undefined
-            const itemLang = randomItem.lang || targetLang;
-
-            // Important: Send raw text to TTS, not decorated text with 🔹
-            let rawTargetText = randomItem.word;
-            let rawSourceText = randomItem.translations[sourceLang] || "";
-
-            if (level === 'Grammar_Tips') {
-                // For grammar, read the title or example?
-                rawTargetText = randomItem.sentence || randomItem.word;
-            } else if (mode === 'sentence' && randomItem.sentence) {
-                rawTargetText = randomItem.sentence;
-                const key = 'sentence_' + sourceLang;
-                if (randomItem.translations[key]) rawSourceText = randomItem.translations[key];
-            }
-
-            playAudio(rawTargetText, itemLang, rawSourceText, sourceLang);
+        if (muteAudio !== true) {
+            // TTS logic
+            const speechText = mode === 'sentence' ? targetEntry.sentence_text : targetEntry.word_text;
+            playAudio(speechText, targetLang, displaySource, sourceLang); // Call playAudio with appropriate texts
         }
     });
 }

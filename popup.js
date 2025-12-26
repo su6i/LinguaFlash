@@ -420,8 +420,8 @@ document.addEventListener('DOMContentLoaded', () => {
             frequency,
             muteAudio,
             showNotify,
-            contentMode, // Save contentMode
-            isPaused: false // <--- Force Unpause logic: Always reset to running state on save
+            contentMode,
+            isPaused: false // Explicitly unpause on save
         }, () => {
             saveBtn.textContent = t.saved_msg;
             saveBtn.style.backgroundColor = '#28a745';

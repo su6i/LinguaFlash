@@ -3,7 +3,7 @@
   <h1>LinguaFlash ⚡</h1>
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-  ![Version](https://img.shields.io/badge/version-1.2.0-blue)
+  ![Version](https://img.shields.io/badge/version-1.3.0-blue)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/su6i/LinguaFlash/pulls)
   
   [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/kbnggdhjaflioffhgjngoopojcmoaano)
@@ -107,12 +107,9 @@
 
 ## 🔮 Roadmap
 
--   [x] **Standardized Database**: Merged vocabulary and sentences into a unified structure.
--   [x] **Native Grammar Logic**: Replaced English-centric grammar rules with native explanations for all 8 target languages.
--   [x] **Data Quality Audit**: 
-    -   100% Native Example Coverage.
-    -   Zero Duplicate Items.
-    -   Zero "English Leakage" in translations.
+-   [x] **Advanced Database Architecture**: Migrated from a bulky 1.3MB JS file to a high-performance **IndexedDB** system.
+-   [x] **Data Integrity Guards**: Automated auditing to ensure 100% translation coverage and zero duplicate items.
+-   [x] **Native Grammar Logic**: Replaced English-centric grammar rules with native explanations for all target languages.
 -   [x] **Chrome Web Store Publishing**: **[Live on Store](https://chromewebstore.google.com/detail/kbnggdhjaflioffhgjngoopojcmoaano)** 🚀
     -   [x] Prepare promotional images.
     -   [x] Verify production build.

@@ -20,3 +20,6 @@ npm-debug.log*
 vocab_check.mjs
 check_syntax.mjs
 translate_vocab_ko.py
+*.db
+migrate_db.py
+export_json.py
