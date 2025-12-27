@@ -329,58 +329,54 @@ function playAudio(targetText, targetLang, sourceText, sourceLang) {
     // Visual Debug for user (Temporary)
     // chrome.notifications.create({ type: 'basic', iconUrl: 'logo-128.png', title: 'TTS Speaking...', message: `T: ${targetText}\nS: ${sourceText}`, priority: 0 });
 
-    // 2. Play Target Language
-    chrome.tts.speak(targetText, {
-        lang: targetLocale,
-        rate: 0.8,
-        pitch: 1.0,
-        volume: 1.0,
-        enqueue: false, // Start immediately
-        onEvent: function (event) {
-            if (event.type === 'error') console.error("TTS Target Error:", event.errorMessage);
-        }
-    });
-
-    // 3. Play Translation (if exists)
-    if (sourceText && sourceText !== "---" && sourceText !== "متن انتخابی کاربر") {
-
-        // Hack: Speak whitespace/punctuation to create a small gap using the TTS engine itself
-        // This avoids using setTimeout which kills the Service Worker
-        chrome.tts.speak(" . ", {
-            lang: targetLocale,
-            rate: 0.5,
-            volume: 0.01, // Low volume for the spacer
-            enqueue: true
-        });
-
-        // Split by comma (English/Persian) or Slash
-        // Regex: /[,،\/]/
-        const parts = sourceText.split(/[,،\/]/);
+    // Helper to speak text with pauses for special chars
+    function speakWithPauses(text, locale, isFirst = false) {
+        // Split by special chars: / = , -
+        // Regex logic: Split but KEEP content. We don't keep the separator itself as we want to pause instead.
+        // Actually user wants pause *at* these points.
+        const parts = text.split(/[\/=,\-،]/);
 
         parts.forEach((part, index) => {
             const trimmed = part.trim();
             if (!trimmed) return;
 
             chrome.tts.speak(trimmed, {
-                lang: sourceLocale,
-                rate: 1.0,
+                lang: locale,
+                rate: 0.85, // Slightly slower for better clarity with pauses
                 pitch: 1.0,
                 volume: 1.0,
-                enqueue: true, // Play after the target and spacer
+                enqueue: !isFirst || index > 0, // First chunk of target should NOT enqueue (to stop prev audio), everything else MUST enqueue
                 onEvent: function (e) {
-                    if (e.type === 'error') console.error("TTS Source Error:", e.errorMessage);
+                    if (e.type === 'error') console.error("TTS Error:", e.errorMessage, trimmed);
                 }
             });
 
-            // Add a mini pause between multiple meanings (but not after the last one)
+            // Add pause after part, but not after the very last part of everything
             if (index < parts.length - 1) {
                 chrome.tts.speak(" . ", {
-                    lang: sourceLocale,
-                    rate: 0.5,
+                    lang: locale,
+                    rate: 0.4, // Slower rate = longer pause (approx 0.5s)
                     volume: 0.01,
                     enqueue: true
                 });
             }
         });
+    }
+
+    // 2. Play Target Language
+    speakWithPauses(targetText, targetLocale, true);
+
+    // 3. Play Translation (if exists)
+    if (sourceText && sourceText !== "---" && sourceText !== "متن انتخابی کاربر") {
+
+        // Spacer between Target and Source
+        chrome.tts.speak(" . ", {
+            lang: targetLocale,
+            rate: 0.4,
+            volume: 0.01,
+            enqueue: true
+        });
+
+        speakWithPauses(sourceText, sourceLocale, false);
     }
 }
