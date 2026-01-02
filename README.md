@@ -137,8 +137,7 @@ LinguaFlash now uses **IndexedDB** for high performance. The "Source of Truth" i
     -   [ ] Optimized review intervals for long-term retention.
 -   [ ] **Cloud Sync**: Optional Google Drive sync for progress across devices.
 
-## 👨‍💻 Author
+## 🤝 Contributing
+Contributions are welcome! Please check the issues page or submit a Pull Request.
 
-**Developed by [Su6i](https://www.linkedin.com/in/su6i/)**
 
-Designed for language enthusiasts who want to turn every browsing session into a learning opportunity.
