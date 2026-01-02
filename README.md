@@ -1,10 +1,15 @@
 <div align="center">
+
+
   <img src="logo-128.png" alt="LinguaFlash Logo" width="128" height="128">
   <h1>LinguaFlash ⚡</h1>
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
   ![Version](https://img.shields.io/badge/version-1.3.0-blue)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/su6i/LinguaFlash/pulls)
+  <a href="https://www.linkedin.com/in/su6i/">
+    <img src="assets/linkedin_su6i.svg" height="20" alt="LinkedIn">
+  </a>
   
   [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/kbnggdhjaflioffhgjngoopojcmoaano)
 </div>
